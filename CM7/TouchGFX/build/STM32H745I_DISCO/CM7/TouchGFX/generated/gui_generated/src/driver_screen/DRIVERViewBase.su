@@ -1,0 +1,108 @@
+Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
+Drawable.hpp:147:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	0	static
+Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+Drawable.hpp:389:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	0	static
+Drawable.hpp:401:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
+Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	0	static
+Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
+Screen.hpp:93:18:virtual void touchgfx::Screen::setupScreen()	0	static
+Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	0	static
+Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
+Box.hpp:97:18:virtual void touchgfx::Box::invalidateContent() const	8	static
+AbstractProgressIndicator.hpp:270:18:virtual void touchgfx::AbstractProgressIndicator::invalidateContent() const	8	static
+AbstractPainter.hpp:61:34:virtual touchgfx::HAL::RenderingMethod touchgfx::AbstractPainter::getRenderingMethod() const	0	static
+AbstractPainter.hpp:78:18:virtual bool touchgfx::AbstractPainter::setup(const touchgfx::Rect&) const	0	static
+AbstractPainter.hpp:90:18:virtual void touchgfx::AbstractPainter::tearDown() const	0	static
+AbstractPainterBitmap.hpp:53:13:touchgfx::AbstractPainterBitmap::~AbstractPainterBitmap()	0	static
+AbstractPainterBitmap.hpp:89:18:virtual void touchgfx::AbstractPainterBitmap::setTiled(bool)	0	static
+AbstractPainterBitmap.hpp:113:18:virtual void touchgfx::AbstractPainterBitmap::setOffset(int16_t, int16_t)	0	static
+TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
+TextArea.hpp:48:18:virtual void touchgfx::TextArea::setWidth(int16_t)	32	static
+TextArea.hpp:54:18:virtual void touchgfx::TextArea::setHeight(int16_t)	32	static
+TextArea.hpp:60:18:virtual touchgfx::Rect touchgfx::TextArea::getSolidRect() const	0	static
+TextArea.hpp:89:18:virtual void touchgfx::TextArea::setAlpha(uint8_t)	0	static
+TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	16	static
+TextArea.hpp:403:41:virtual const UnicodeChar* touchgfx::TextArea::getWildcard2() const	0	static
+TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
+TextAreaWithWildcard.hpp:84:41:virtual const UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	0	static
+AbstractButtonContainer.hpp:114:18:virtual void touchgfx::AbstractButtonContainer::handlePressedUpdated()	0	static
+AbstractButtonContainer.hpp:119:18:virtual void touchgfx::AbstractButtonContainer::handleAlphaUpdated()	0	static
+AbstractButtonContainer.hpp:34:7:touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	0	static
+DRIVERViewBase.hpp:36:18:virtual void DRIVERViewBase::TransitionBegin_Driver()	0	static
+DRIVERViewBase.hpp:40:18:virtual void DRIVERViewBase::TransitionEnd_Driver()	0	static
+DRIVERViewBase.hpp:44:18:virtual void DRIVERViewBase::LORA_Begin()	0	static
+DRIVERViewBase.hpp:48:18:virtual void DRIVERViewBase::LORA_End()	0	static
+View.hpp:36:7:touchgfx::View<DRIVERPresenter>::~View()	0	static
+DRIVERViewBase.cpp:241:6:virtual void DRIVERViewBase::transitionBegins()	0	static
+TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
+ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	0	static
+BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	0	static
+Callback.hpp:357:8:touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	0	static
+Callback.hpp:357:8:touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
+BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	0	static
+FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::Box>::~FadeAnimator()	0	static
+FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard>::~FadeAnimator()	0	static
+FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::LineProgress>::~FadeAnimator()	0	static
+Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = DRIVERViewBase; T1 = const touchgfx::AbstractButtonContainer&]	8	static
+Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = DRIVERViewBase; T1 = const touchgfx::AbstractButtonContainer&]	0	static
+Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = DRIVERViewBase; T1 = const touchgfx::AbstractButton&]	8	static
+Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = DRIVERViewBase; T1 = const touchgfx::AbstractButton&]	0	static
+MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = LoRA_PopUp]	0	static
+MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = LoRA_PopUp]	0	static
+BoxWithBorderButtonStyle.hpp:131:18:void touchgfx::BoxWithBorderButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::ClickButtonTrigger]	0	static
+FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::Box]	0	static
+FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::Box]	0	static
+FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::TextAreaWithOneWildcard]	0	static
+FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::TextAreaWithOneWildcard]	0	static
+FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::LineProgress]	0	static
+FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::LineProgress]	0	static
+AbstractPainterBitmap.hpp:53:13:virtual touchgfx::AbstractPainterBitmap::~AbstractPainterBitmap()	8	static
+TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
+View.hpp:36:7:virtual touchgfx::View<DRIVERPresenter>::~View()	8	static
+AbstractButtonContainer.hpp:34:7:virtual touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	8	static
+ClickButtonTrigger.hpp:35:7:virtual touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	8	static
+FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::Box>::~FadeAnimator()	8	static
+BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	8	static
+TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
+FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard>::~FadeAnimator()	8	static
+FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::LineProgress>::~FadeAnimator()	8	static
+Callback.hpp:357:8:virtual touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
+Callback.hpp:357:8:virtual touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
+AbstractPainterBitmap.hpp:62:18:virtual void touchgfx::AbstractPainterBitmap::setBitmap(const touchgfx::Bitmap&)	16	static
+TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	16	static
+DRIVERViewBase.cpp:177:6:virtual void DRIVERViewBase::setupScreen()	8	static
+AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
+DRIVERViewBase.cpp:183:6:void DRIVERViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+DRIVERViewBase.cpp:230:6:void DRIVERViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	0	static
+ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	16	static
+DRIVERViewBase.cpp:249:6:virtual void DRIVERViewBase::handleTickEvent()	8	static
+MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = LoRA_PopUp]	24	static
+FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::Box]	16	static
+FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::TextAreaWithOneWildcard]	16	static
+MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<LoRA_PopUp>::~MoveAnimator()	8	static
+MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<LoRA_PopUp>::~MoveAnimator()	8	static
+DRIVERViewBase.cpp:172:1:DRIVERViewBase::~DRIVERViewBase()	8	static
+DRIVERViewBase.cpp:172:1:virtual DRIVERViewBase::~DRIVERViewBase()	8	static
+Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
+Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
+Box.hpp:33:5:touchgfx::Box::Box()	8	static
+Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	16	static
+AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	16	static
+Button.hpp:34:5:touchgfx::Button::Button()	8	static
+TextArea.hpp:429:9:touchgfx::TextArea::BoundingArea::BoundingArea()	0	static
+TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	8	static
+FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::TextAreaWithOneWildcard]	16	static
+DRIVERViewBase.cpp:10:1:DRIVERViewBase::DRIVERViewBase()	240	static
+FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::LineProgress]	16	static
+FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::LineProgress]	8	static

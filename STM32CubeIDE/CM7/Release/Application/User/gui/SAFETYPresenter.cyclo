@@ -1,0 +1,6 @@
+../../CM7/../../CM7/TouchGFX/gui/include/gui/safety_screen/SAFETYPresenter.hpp:28:13:SAFETYPresenter::~SAFETYPresenter()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/safety_screen/SAFETYPresenter.cpp:10:6:virtual void SAFETYPresenter::activate()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/safety_screen/SAFETYPresenter.cpp:20:6:virtual void SAFETYPresenter::updateTick()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/safety_screen/SAFETYPresenter.hpp:28:13:virtual SAFETYPresenter::~SAFETYPresenter()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/safety_screen/SAFETYPresenter.hpp:28:13:virtual void* SAFETYPresenter::_ZThn4_N15SAFETYPresenterD1Ev()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/safety_screen/SAFETYPresenter.cpp:4:1:SAFETYPresenter::SAFETYPresenter(SAFETYView&)	1

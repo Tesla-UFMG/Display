@@ -1,0 +1,5792 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "ANIMATION",
+        "Components": [
+          {
+            "Type": "Video",
+            "Name": "TESLA_carrosel",
+            "Width": 480,
+            "Height": 272,
+            "VideoFileName": "AnimacaoNK624.avi",
+            "AutoPlay": true,
+            "Loop": true
+          },
+          {
+            "Type": "Box",
+            "Name": "FRONTGROUND",
+            "Width": 480,
+            "Height": 272,
+            "LockPosition": true,
+            "Alpha": 0,
+            "Fadeable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "INIT_button",
+            "Width": 480,
+            "Height": 272,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 480,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction_INITIALIZATION_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "INIT_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Animation"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_INITIALIZATION_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_INITIALIZATION_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_Screen_INITIALIZATION_page_press",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_INITIALIZATION_page_press"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "DRIVER"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "DRIVER",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "BACKGROUND",
+            "X": 1,
+            "Width": 481,
+            "Height": 273,
+            "RelativeFilename": "DRIVE_page\\BACKGROUND\\PAGE_DRIVE.png"
+          },
+          {
+            "Type": "Gauge",
+            "Name": "POTENCIMETRO_gauge",
+            "X": 73,
+            "Y": 6,
+            "Width": 285,
+            "Height": 263,
+            "FileNameBackground": "DRIVE_page\\VELOCIMETRO_gauge\\VELOCIMETRO_BASE.png",
+            "RotationCenterX": 128.8,
+            "RotationCenterY": 131.5,
+            "StartAngle": -180.0,
+            "EndAngle": 80.0,
+            "RangeMax": 130.0,
+            "InitialValue": 130.0,
+            "UseAnimation": true,
+            "Easing": "Sine",
+            "EasingOption": "InOut",
+            "FileNameNeedle": "DRIVE_page\\VELOCIMETRO_gauge\\VELOCIMETRO_INDICATOR.png",
+            "NeedleRotationCenterX": 66.5,
+            "NeedleRotationCenterY": 111.5,
+            "NeedleMovingRenderingAlgorithm": "Bilinear Interpolation",
+            "NeedleSteadyRenderingAlgorithm": "Bilinear Interpolation",
+            "UseArc": true,
+            "FileNameArc": "DRIVE_page\\VELOCIMETRO_gauge\\VELOCIMETRO_PROGRESS.png",
+            "SetArcPosition": true,
+            "ArcX": 23.4,
+            "ArcY": 25.0,
+            "ArcWidth": 270.0,
+            "ArcHeight": 270.0,
+            "ArcRadius": 78.0,
+            "ArcLineWidth": 50.0,
+            "ArcCapStyle": "Butt",
+            "ArcOnTopOfNeedle": true
+          },
+          {
+            "Type": "LineProgress",
+            "Name": "CHARGE_Progress",
+            "X": 367,
+            "Y": -1,
+            "Width": 47,
+            "Height": 236,
+            "StartX": 25.0,
+            "EndY": 237.0,
+            "EndX": 25.0,
+            "LineWidth": 50.0,
+            "LineEndingStyle": "Butt",
+            "FileNameBackground": "DRIVE_page\\CHARGE_widget\\CHARGE_progress.png",
+            "ProgressRangeMax": 100,
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "PopUp",
+            "X": 279,
+            "Y": 236,
+            "Width": 201,
+            "Height": 36,
+            "Visible": false,
+            "RelativeFilename": "POP_UP_widget\\POPuP_CAN_OFF_1.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Debug",
+            "Y": 204,
+            "Width": 66,
+            "Height": 68,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_DOWN_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_DOWN_OFF.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Safety",
+            "Y": 137,
+            "Width": 66,
+            "Height": 66,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_DOWN_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_DOWN_OFF.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Control",
+            "Y": 69,
+            "Width": 66,
+            "Height": 66,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_UP_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_UP_OFF.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Drive",
+            "Width": 66,
+            "Height": 68,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_UP_OFF.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_UP_ON_SELECT.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "brake_bias",
+            "X": 429,
+            "Y": 134,
+            "Width": 39,
+            "Height": 15,
+            "TextId": "__SingleUse_MUJP",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Blue": 21
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_9RBT",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tensao_min",
+            "X": 423,
+            "Y": 174,
+            "Width": 54,
+            "Height": 15,
+            "TextId": "__SingleUse_Y52B",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_NBZU",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "temp_max",
+            "X": 429,
+            "Y": 213,
+            "Width": 47,
+            "Height": 15,
+            "TextId": "__SingleUse_P6H6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_VBXZ",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "VELOCIMETRO_digital",
+            "X": 161,
+            "Y": 95,
+            "Width": 84,
+            "Height": 76,
+            "TextId": "__SingleUse_G2QD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_CFOO",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "torque",
+            "X": 419,
+            "Y": 95,
+            "Width": 60,
+            "Height": 15,
+            "TextId": "__SingleUse_82UY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_SGXO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "charge_percent",
+            "X": 300,
+            "Y": 6,
+            "Width": 58,
+            "Height": 18,
+            "TextId": "__SingleUse_W9BV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_PEFS",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hodometro",
+            "X": 269,
+            "Y": 165,
+            "Width": 78,
+            "Height": 19,
+            "TextId": "__SingleUse_JCHU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_LLL4",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_Modo",
+            "X": 443,
+            "Y": 55,
+            "Width": 16,
+            "Height": 16,
+            "RelativeFilename": "DRIVE_page\\INFO_widget\\ICONS\\MODO_Erro.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "BOTTOM_Info_LoRa",
+            "X": 420,
+            "Width": 62,
+            "Height": 37,
+            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\INFO_LORA_SELECT.png",
+            "Released": "DRIVE_page\\INFO_widget\\BACKGROUND\\INFO_LORA.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_LoRa",
+            "X": 441,
+            "Y": 15,
+            "Width": 23,
+            "Height": 17,
+            "RelativeFilename": "DRIVE_page\\INFO_widget\\ICONS\\LORA_OFF.png"
+          },
+          {
+            "Type": "Box",
+            "Name": "FRONTGROUND",
+            "X": 66,
+            "Y": 1,
+            "Width": 414,
+            "Height": 272,
+            "LockPosition": true,
+            "Alpha": 0,
+            "Fadeable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_lora",
+            "X": 414,
+            "Y": 1,
+            "Width": 67,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 67,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "LORA_PopUp",
+            "X": 480,
+            "Width": 320,
+            "Height": 236,
+            "Visible": false,
+            "CustomContainerDefinitionName": "LoRA_PopUp",
+            "Moveable": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction_TransitionBegin",
+            "Trigger": {
+              "Type": "TriggerScreenTransitionBegins"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionBegin_Driver"
+            }
+          },
+          {
+            "InteractionName": "Interaction_CONTROL_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Control"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Driver"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_CONTROL_page",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_CONTROL_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Screen_CONTROL_page",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_CONTROL_page"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "CONTROL"
+            }
+          },
+          {
+            "InteractionName": "Interaction_SAFETY_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Safety"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Driver"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_SAFETY_page",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_SAFETY_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Screen_SAFETY_page",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_SAFETY_page"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SAFETY"
+            }
+          },
+          {
+            "InteractionName": "Interaction_DEBUG_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Debug"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Driver"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_DEBUG_page",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_DEBUG_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Screen_DEBUG_page_press",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_DEBUG_page"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "DEBUG"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTOM_Info_LoRa"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_lora"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_End"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "CONTROL",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "BACKGROUND",
+            "Width": 480,
+            "Height": 273,
+            "RelativeFilename": "CONTROL_page\\BACKGROUND\\PAGE_CONTROL.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "PopUp",
+            "X": 279,
+            "Y": 236,
+            "Width": 201,
+            "Height": 36,
+            "Visible": false,
+            "RelativeFilename": "POP_UP_widget\\POPuP_CAN_OFF_1.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Drive",
+            "Width": 66,
+            "Height": 68,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_UP_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_UP_OFF.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Control",
+            "Y": 69,
+            "Width": 66,
+            "Height": 66,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_UP_OFF_SELECT.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_UP_ON_SELECT.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Safety",
+            "Y": 137,
+            "Width": 66,
+            "Height": 66,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_DOWN_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_DOWN_OFF.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Debug",
+            "Y": 204,
+            "Width": 66,
+            "Height": 68,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_DOWN_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_DOWN_OFF.png"
+          },
+          {
+            "Type": "Gauge",
+            "Name": "INCLINACAO_VOL_gauge",
+            "X": 267,
+            "Y": 3,
+            "Width": 118,
+            "Height": 112,
+            "FileNameBackground": "CONTROL_page\\ANGULAR_gauge\\BACKGROUND\\GAUGE_BASE.png",
+            "RotationCenterX": 57.3,
+            "RotationCenterY": 57.3,
+            "StartAngle": -150.0,
+            "EndAngle": 150.0,
+            "RangeMin": -150.0,
+            "RangeMax": 150.0,
+            "InitialValue": -60.0,
+            "UseAnimation": true,
+            "Easing": "Elastic",
+            "EasingOption": "Out",
+            "FileNameNeedle": "CONTROL_page\\ANGULAR_gauge\\INDICATOR\\GAUGE_DRIVE.png",
+            "NeedleRotationCenterX": 16.8,
+            "NeedleRotationCenterY": 30.4,
+            "NeedleMovingRenderingAlgorithm": "Bilinear Interpolation",
+            "NeedleSteadyRenderingAlgorithm": "Bilinear Interpolation",
+            "ArcColor": {
+              "Red": 20,
+              "Green": 151,
+              "Blue": 197
+            },
+            "ArcCapStyle": "Butt",
+            "Fadeable": true
+          },
+          {
+            "Type": "Gauge",
+            "Name": "INCLINACAO_CAR_gauge",
+            "X": 267,
+            "Y": 119,
+            "Width": 118,
+            "Height": 112,
+            "FileNameBackground": "CONTROL_page\\ANGULAR_gauge\\BACKGROUND\\GAUGE_BASE.png",
+            "RotationCenterX": 57.3,
+            "RotationCenterY": 57.3,
+            "StartAngle": -150.0,
+            "EndAngle": 150.0,
+            "RangeMin": -150.0,
+            "RangeMax": 150.0,
+            "InitialValue": 60.0,
+            "UseAnimation": true,
+            "Easing": "Elastic",
+            "EasingOption": "Out",
+            "FileNameNeedle": "CONTROL_page\\ANGULAR_gauge\\INDICATOR\\GAUGE_CAR.png",
+            "NeedleRotationCenterX": 16.8,
+            "NeedleRotationCenterY": 30.4,
+            "NeedleMovingRenderingAlgorithm": "Bilinear Interpolation",
+            "NeedleSteadyRenderingAlgorithm": "Bilinear Interpolation",
+            "UseArc": true,
+            "ArcColor": {
+              "Red": 20,
+              "Green": 151,
+              "Blue": 197
+            },
+            "ArcCapStyle": "Butt",
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "torque",
+            "X": 429,
+            "Y": 214,
+            "Width": 48,
+            "Height": 15,
+            "TextId": "__SingleUse_1RT6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_1RGB",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "giroscopio_xz",
+            "X": 421,
+            "Y": 174,
+            "Width": 56,
+            "Height": 15,
+            "TextId": "__SingleUse_UYYY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_8M3D",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "acelerometro_xy",
+            "X": 420,
+            "Y": 134,
+            "Width": 57,
+            "Height": 15,
+            "TextId": "__SingleUse_WNF9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_8PEH",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "motor_L_Giros",
+            "X": 179,
+            "Y": 174,
+            "Width": 57,
+            "Height": 19,
+            "TextId": "__SingleUse_B63V",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_E0PP",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "motor_R_Giros",
+            "X": 94,
+            "Y": 175,
+            "Width": 57,
+            "Height": 19,
+            "TextId": "__SingleUse_VEMN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_UHXO",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "motor_L_Potencia",
+            "X": 179,
+            "Y": 132,
+            "Width": 57,
+            "Height": 19,
+            "TextId": "__SingleUse_73T9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_3SYR",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "motor_R_Potencia",
+            "X": 94,
+            "Y": 131,
+            "Width": 57,
+            "Height": 19,
+            "TextId": "__SingleUse_05D5",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_U5Z4",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "motor_L_Torque",
+            "X": 180,
+            "Y": 88,
+            "Width": 57,
+            "Height": 19,
+            "TextId": "__SingleUse_OGBX",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_2EH6",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "motor_R_Torque",
+            "X": 94,
+            "Y": 88,
+            "Width": 57,
+            "Height": 19,
+            "TextId": "__SingleUse_VOXZ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZTD4",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "motor_L_Temperature",
+            "X": 180,
+            "Y": 43,
+            "Width": 57,
+            "Height": 19,
+            "TextId": "__SingleUse_Z5XJ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZZ4Z",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "motor_R_Temperature",
+            "X": 95,
+            "Y": 44,
+            "Width": 57,
+            "Height": 19,
+            "TextId": "__SingleUse_2G9Q",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_OSBO",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_Frenagem",
+            "X": 425,
+            "Y": 96,
+            "Width": 46,
+            "Height": 13,
+            "RelativeFilename": "CONTROL_page\\INFO_widget\\ICONS\\FRENAGEM_OFF.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_Modo",
+            "X": 436,
+            "Y": 55,
+            "Width": 27,
+            "Height": 16,
+            "RelativeFilename": "DRIVE_page\\INFO_widget\\ICONS\\MODO_Enduro.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "BOTTOM_Info_LoRa",
+            "X": 420,
+            "Width": 62,
+            "Height": 37,
+            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\INFO_LORA_SELECT.png",
+            "Released": "DRIVE_page\\INFO_widget\\BACKGROUND\\INFO_LORA.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_LoRa",
+            "X": 441,
+            "Y": 15,
+            "Width": 23,
+            "Height": 17,
+            "RelativeFilename": "DRIVE_page\\INFO_widget\\ICONS\\LORA_OFF.png"
+          },
+          {
+            "Type": "Box",
+            "Name": "FRONTGROUND",
+            "X": 80,
+            "Width": 400,
+            "Height": 272,
+            "LockPosition": true,
+            "Alpha": 0,
+            "Fadeable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_lora",
+            "X": 414,
+            "Y": 1,
+            "Width": 67,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 67,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "LORA_PopUp",
+            "X": 480,
+            "Width": 320,
+            "Height": 236,
+            "Visible": false,
+            "CustomContainerDefinitionName": "LoRA_PopUp",
+            "Moveable": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction_DRIVE_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Drive"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Control"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_DRIVE_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_DRIVE_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction__Screen_DRIVE_page",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_DRIVE_page_press"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "DRIVER"
+            }
+          },
+          {
+            "InteractionName": "Interaction_SAFETY_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Safety"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Control"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_SAFETY_page",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_SAFETY_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Screen_SAFETY_page",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_SAFETY_page"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SAFETY"
+            }
+          },
+          {
+            "InteractionName": "Interaction_DEBUG_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Debug"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Control"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_DEBUG_page",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_DEBUG_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Screen_DEBUG_page",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_DEBUG_page"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "DEBUG"
+            }
+          },
+          {
+            "InteractionName": "Interaction_TransitionBegin",
+            "Trigger": {
+              "Type": "TriggerScreenTransitionBegins"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionBegin_Control"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTOM_Info_LoRa"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_lora"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_End"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "SAFETY",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "BACKGROUND",
+            "Width": 481,
+            "Height": 273,
+            "RelativeFilename": "SAFETY_page\\BACKGROUND\\PAGE_SAFETY.png"
+          },
+          {
+            "Type": "LineProgress",
+            "Name": "CHARGE_Progress",
+            "X": 367,
+            "Y": -1,
+            "Width": 47,
+            "Height": 236,
+            "StartX": 25.4,
+            "EndY": 237.0,
+            "EndX": 25.5,
+            "LineWidth": 50.9,
+            "LineEndingStyle": "Butt",
+            "FileNameBackground": "DRIVE_page\\CHARGE_widget\\CHARGE_progress.png",
+            "ProgressRangeMax": 100,
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "PopUp",
+            "X": 279,
+            "Y": 236,
+            "Width": 201,
+            "Height": 36,
+            "Visible": false,
+            "RelativeFilename": "POP_UP_widget\\POPuP_CAN_OFF_1.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Debug",
+            "Y": 204,
+            "Width": 66,
+            "Height": 68,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_DOWN_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_DOWN_OFF.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Safety",
+            "Y": 137,
+            "Width": 66,
+            "Height": 66,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_DOWN_OFF_SELECT.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_DOWN_ON_SELECT.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Control",
+            "Y": 69,
+            "Width": 66,
+            "Height": 66,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_UP_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_UP_OFF.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Drive",
+            "Width": 66,
+            "Height": 68,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_UP_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_UP_OFF.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "BOTTON_Stack_6",
+            "X": 162,
+            "Y": 183,
+            "Width": 69,
+            "Height": 49,
+            "Pressed": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_6_SELECT.png",
+            "Released": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_6.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "BOTTON_Stack_5",
+            "X": 171,
+            "Y": 111,
+            "Width": 69,
+            "Height": 49,
+            "Pressed": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_5_SELECT.png",
+            "Released": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_5.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "BOTTON_Stack_4",
+            "X": 159,
+            "Y": 37,
+            "Width": 69,
+            "Height": 49,
+            "Pressed": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_4_SELECT.png",
+            "Released": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_4.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "BOTTON_Stack_3",
+            "X": 80,
+            "Y": 183,
+            "Width": 69,
+            "Height": 49,
+            "Pressed": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_3_SELECT.png",
+            "Released": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_3.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "BOTTON_Stack_2",
+            "X": 90,
+            "Y": 111,
+            "Width": 69,
+            "Height": 49,
+            "Pressed": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_2_SELECT.png",
+            "Released": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_2.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "BOTTON_Stack_1",
+            "X": 80,
+            "Y": 38,
+            "Width": 69,
+            "Height": 49,
+            "Pressed": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_1_SELECT.png",
+            "Released": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_1.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "SENSOR_4_icon",
+            "X": 254,
+            "Y": 188,
+            "Width": 98,
+            "Height": 37,
+            "RelativeFilename": "SAFETY_page\\CORRENT_widget\\ICONS\\SENSOR_CURRENT_FOWARD_4.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "SENSOR_3_icon",
+            "X": 254,
+            "Y": 142,
+            "Width": 98,
+            "Height": 37,
+            "RelativeFilename": "SAFETY_page\\CORRENT_widget\\ICONS\\SENSOR_CURRENT_FOWARD_3.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "SENSOR_2_icon",
+            "X": 254,
+            "Y": 93,
+            "Width": 98,
+            "Height": 37,
+            "RelativeFilename": "SAFETY_page\\CORRENT_widget\\ICONS\\SENSOR_CURRENT_FOWARD_2.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "SENSOR_1_icon",
+            "X": 254,
+            "Y": 46,
+            "Width": 98,
+            "Height": 37,
+            "RelativeFilename": "SAFETY_page\\CORRENT_widget\\ICONS\\SENSOR_CURRENT_FOWARD_1.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "temp_max",
+            "X": 429,
+            "Y": 214,
+            "Width": 45,
+            "Height": 14,
+            "TextId": "__SingleUse_EYDG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_OJ2V",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tensao_max",
+            "X": 419,
+            "Y": 133,
+            "Width": 61,
+            "Height": 15,
+            "TextId": "__SingleUse_BLM9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZEKC",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "tensao_min",
+            "X": 424,
+            "Y": 173,
+            "Width": 55,
+            "Height": 15,
+            "TextId": "__SingleUse_MZQS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_BQ00",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "charge_percent",
+            "X": 303,
+            "Y": 6,
+            "Width": 56,
+            "Height": 18,
+            "TextId": "__SingleUse_PCOB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_W5DZ",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "STACK_6_text",
+            "X": 172,
+            "Y": 204,
+            "Width": 48,
+            "Height": 15,
+            "TextId": "__SingleUse_T21J",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_O9H5",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "STACK_5_text",
+            "X": 183,
+            "Y": 133,
+            "Width": 48,
+            "Height": 15,
+            "TextId": "__SingleUse_ZCMW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_5CES",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "STACK_4_text",
+            "X": 171,
+            "Y": 58,
+            "Width": 48,
+            "Height": 15,
+            "TextId": "__SingleUse_BVMV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_RUTU",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "STACK_3_text",
+            "X": 90,
+            "Y": 204,
+            "Width": 48,
+            "Height": 15,
+            "TextId": "__SingleUse_CQUD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_EYPO",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "STACK_2_text",
+            "X": 100,
+            "Y": 132,
+            "Width": 48,
+            "Height": 15,
+            "TextId": "__SingleUse_6AAQ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_RIPS",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "STACK_1_text",
+            "X": 90,
+            "Y": 58,
+            "Width": 48,
+            "Height": 15,
+            "TextId": "__SingleUse_A1MF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_Q65U",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "SENSOR_4_text",
+            "X": 282,
+            "Y": 202,
+            "Width": 42,
+            "Height": 15,
+            "TextId": "__SingleUse_EP5M",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_GW1J",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "SENSOR_3_text",
+            "X": 282,
+            "Y": 157,
+            "Width": 42,
+            "Height": 15,
+            "TextId": "__SingleUse_M8NZ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_AMIJ",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "SENSOR_2_text",
+            "X": 282,
+            "Y": 109,
+            "Width": 42,
+            "Height": 15,
+            "TextId": "__SingleUse_XKB0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_B351",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "SENSOR_1_text",
+            "X": 282,
+            "Y": 61,
+            "Width": 42,
+            "Height": 15,
+            "TextId": "__SingleUse_IWRT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_IRWO",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_Air",
+            "X": 433,
+            "Y": 97,
+            "Width": 31,
+            "Height": 12,
+            "RelativeFilename": "SAFETY_page\\INFO_widget\\ICONS\\AIR_Aberto.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_Modo",
+            "X": 436,
+            "Y": 55,
+            "Width": 27,
+            "Height": 16,
+            "RelativeFilename": "DRIVE_page\\INFO_widget\\ICONS\\MODO_Enduro.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "BOTTOM_Info_LoRa",
+            "X": 420,
+            "Width": 62,
+            "Height": 37,
+            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\INFO_LORA_SELECT.png",
+            "Released": "DRIVE_page\\INFO_widget\\BACKGROUND\\INFO_LORA.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_LoRa",
+            "X": 441,
+            "Y": 15,
+            "Width": 23,
+            "Height": 17,
+            "RelativeFilename": "DRIVE_page\\INFO_widget\\ICONS\\LORA_OFF.png"
+          },
+          {
+            "Type": "Box",
+            "Name": "FRONTGROUND",
+            "X": 80,
+            "Width": 400,
+            "Height": 272,
+            "LockPosition": true,
+            "Alpha": 0,
+            "Fadeable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_stack_6",
+            "X": 72,
+            "Width": 408,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 408,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_6",
+            "X": 400,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_6_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_stack_5",
+            "X": 72,
+            "Width": 408,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 408,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_5",
+            "X": 400,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_5_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_stack_4",
+            "X": 72,
+            "Width": 408,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 408,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_4",
+            "X": 400,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_4_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_stack_3",
+            "X": 72,
+            "Width": 408,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 408,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_3",
+            "X": 400,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_3_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_stack_2",
+            "X": 72,
+            "Width": 408,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 408,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_2",
+            "X": 400,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_2_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_stack_1",
+            "X": 72,
+            "Width": 408,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 408,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_1",
+            "X": 400,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_1_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_lora",
+            "X": 414,
+            "Y": 1,
+            "Width": 67,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 67,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "LORA_PopUp",
+            "X": 480,
+            "Width": 320,
+            "Height": 236,
+            "Visible": false,
+            "CustomContainerDefinitionName": "LoRA_PopUp",
+            "Moveable": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction_DRIVER_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Drive"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Safety"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_DRIVER_page",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_DRIVER_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Screen_DRIVER_page",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_DRIVER_page"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "DRIVER"
+            }
+          },
+          {
+            "InteractionName": "Interaction_CONTROL_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Control"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Safety"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_CONTROL_page",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_CONTROL_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Screen_CONTROL_page",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_CONTROL_page"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "CONTROL"
+            }
+          },
+          {
+            "InteractionName": "Interaction_DEBUG_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Debug"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Safety"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_DEBUG_page",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_DEBUG_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Screen_DEBUG_page",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_DEBUG_page"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "DEBUG"
+            }
+          },
+          {
+            "InteractionName": "Interaction_TransitionBegin",
+            "Trigger": {
+              "Type": "TriggerScreenTransitionBegins"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionBegin_Safety"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_1_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_Stack_1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_1_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_1_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_stack_1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_1_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_2_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_Stack_2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_2_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_2_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_stack_2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_2_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_3_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_Stack_3"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_3_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_3_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_stack_3"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_3_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_4_begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_Stack_4"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_4_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_4_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_stack_4"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_4_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_5_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_Stack_5"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_5_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_5_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_stack_5"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_5_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTOM_Info_LoRa"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_lora"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_6_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_Stack_6"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_6_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_6_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_stack_6"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_6_End"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "DEBUG",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "BACKGROUND",
+            "Width": 480,
+            "Height": 273,
+            "RelativeFilename": "DEBUG_page\\BACKGROUND\\PAGE_DEBUG.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "DEBUG_Telemetria",
+            "X": 317,
+            "Y": 19,
+            "Width": 78,
+            "Height": 39,
+            "Pressed": "DEBUG_page\\DEBUG_widget\\DEBUG_TELEMETRY_INFO_SELECT.png",
+            "Released": "DEBUG_page\\DEBUG_widget\\DEBUG_TELEMETRY_INFO.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "DEBUG_Datalogger",
+            "X": 175,
+            "Y": 24,
+            "Width": 78,
+            "Height": 39,
+            "Pressed": "DEBUG_page\\DEBUG_widget\\DEBUG_DATALOGGER_INFO_SELECT.png",
+            "Released": "DEBUG_page\\DEBUG_widget\\DEBUG_DATALOGGER_INFO.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "DEBUG_BMS",
+            "X": 179,
+            "Y": 198,
+            "Width": 78,
+            "Height": 39,
+            "Pressed": "DEBUG_page\\DEBUG_widget\\DEBUG_BMS_INFO_SELECT.png",
+            "Released": "DEBUG_page\\DEBUG_widget\\DEBUG_BMS_INFO.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "DEBUG_ECU",
+            "X": 71,
+            "Y": 199,
+            "Width": 78,
+            "Height": 39,
+            "Pressed": "DEBUG_page\\DEBUG_widget\\DEBUG_ECU_INFO_SELECT.png",
+            "Released": "DEBUG_page\\DEBUG_widget\\DEBUG_ECU_INFO.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "PopUp",
+            "X": 279,
+            "Y": 236,
+            "Width": 201,
+            "Height": 36,
+            "Visible": false,
+            "RelativeFilename": "POP_UP_widget\\POPuP_CAN_OFF_1.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Drive",
+            "Width": 66,
+            "Height": 68,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_UP_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_UP_OFF.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Control",
+            "Y": 69,
+            "Width": 66,
+            "Height": 66,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_UP_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_UP_OFF.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Safety",
+            "Y": 137,
+            "Width": 66,
+            "Height": 66,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_DOWN_ON.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_DOWN_OFF.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "PAGE_Debug",
+            "Y": 204,
+            "Width": 66,
+            "Height": 68,
+            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_DOWN_OFF_SELECT.png",
+            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_DOWN_ON_SELECT.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DataRate_Telemetria",
+            "X": 319,
+            "Y": 36,
+            "Width": 74,
+            "Height": 19,
+            "TextId": "__SingleUse_T2YW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "LineSpacing": -2,
+            "Wildcard1": {
+              "TextId": "__SingleUse_6DP2",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DataRate_Datalogger",
+            "X": 179,
+            "Y": 41,
+            "Width": 74,
+            "Height": 19,
+            "TextId": "__SingleUse_8ZPX",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "LineSpacing": -2,
+            "Wildcard1": {
+              "TextId": "__SingleUse_LG9N",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DataRate_BMS",
+            "X": 181,
+            "Y": 214,
+            "Width": 74,
+            "Height": 19,
+            "TextId": "__SingleUse_AMAG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "LineSpacing": -2,
+            "Wildcard1": {
+              "TextId": "__SingleUse_UZMT",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DataRate_ECU",
+            "X": 75,
+            "Y": 216,
+            "Width": 74,
+            "Height": 17,
+            "TextId": "__SingleUse_VZZG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "LineSpacing": -2,
+            "Wildcard1": {
+              "TextId": "__SingleUse_AKYW",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Beacon_Leap",
+            "X": 426,
+            "Y": 214,
+            "Width": 54,
+            "Height": 17,
+            "TextId": "__SingleUse_QUF4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "LineSpacing": -2,
+            "Wildcard1": {
+              "TextId": "__SingleUse_T60R",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "BOTTOM_Info_LoRa",
+            "X": 420,
+            "Width": 62,
+            "Height": 37,
+            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\INFO_LORA_SELECT.png",
+            "Released": "DRIVE_page\\INFO_widget\\BACKGROUND\\INFO_LORA.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_ECU",
+            "X": 436,
+            "Y": 174,
+            "Width": 29,
+            "Height": 17,
+            "RelativeFilename": "DEBUG_page\\INFO_widget\\ICONS\\CONEXAO_OFF.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_BMS",
+            "X": 434,
+            "Y": 134,
+            "Width": 29,
+            "Height": 17,
+            "RelativeFilename": "DEBUG_page\\INFO_widget\\ICONS\\CONEXAO_OFF.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_Telemetria",
+            "X": 434,
+            "Y": 94,
+            "Width": 29,
+            "Height": 17,
+            "RelativeFilename": "DEBUG_page\\INFO_widget\\ICONS\\CONEXAO_OFF.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_Datalogger",
+            "X": 434,
+            "Y": 54,
+            "Width": 29,
+            "Height": 17,
+            "RelativeFilename": "DEBUG_page\\INFO_widget\\ICONS\\CONEXAO_OFF.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "ICON_LoRa",
+            "X": 441,
+            "Y": 15,
+            "Width": 23,
+            "Height": 17,
+            "RelativeFilename": "DRIVE_page\\INFO_widget\\ICONS\\LORA_OFF.png"
+          },
+          {
+            "Type": "Box",
+            "Name": "FRONTGROUND",
+            "X": 66,
+            "Width": 414,
+            "Height": 272,
+            "Alpha": 0,
+            "Fadeable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_lora",
+            "X": 413,
+            "Y": 1,
+            "Width": 68,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 68,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "LORA_PopUp",
+            "X": 480,
+            "Width": 320,
+            "Height": 236,
+            "Visible": false,
+            "CustomContainerDefinitionName": "LoRA_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "PopUp_ECU",
+            "X": 71,
+            "Y": 272,
+            "Width": 331,
+            "Height": 103,
+            "CustomContainerDefinitionName": "ECU_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_PopUp_ECU",
+            "X": 66,
+            "Y": 1,
+            "Width": 415,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 415,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "PopUp_BMS",
+            "X": 71,
+            "Y": 272,
+            "Width": 331,
+            "Height": 103,
+            "CustomContainerDefinitionName": "BMS_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_PopUp_BMS",
+            "X": 66,
+            "Y": 1,
+            "Width": 415,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 415,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "PopUp_Datalogger",
+            "X": 71,
+            "Y": -103,
+            "Width": 331,
+            "Height": 103,
+            "CustomContainerDefinitionName": "Datalogger_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_PopUp_Datalogger",
+            "X": 66,
+            "Y": 1,
+            "Width": 415,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 415,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "PopUp_Telemetry",
+            "X": 71,
+            "Y": -103,
+            "Width": 331,
+            "Height": 103,
+            "CustomContainerDefinitionName": "Telemetry_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_PopUp_Telemetry",
+            "X": 66,
+            "Y": 1,
+            "Width": 415,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 415,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction_DRIVER_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Drive"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Debug"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_DRIVER_page",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_DRIVER_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Screen_DRIVER_page",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_DRIVER_page"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "DRIVER"
+            }
+          },
+          {
+            "InteractionName": "Interaction_CONTROL_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Control"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Debug"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_CONTROL_page",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_CONTROL_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Screen_CONTROL_page",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_CONTROL_page"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "CONTROL"
+            }
+          },
+          {
+            "InteractionName": "Interaction_SAFETY_page_press",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PAGE_Safety"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionEnd_Debug"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Delay_SAFETY_page",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_SAFETY_page_press"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "Interaction_Screen_SAFETY_page",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction_Delay_SAFETY_page"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SAFETY"
+            }
+          },
+          {
+            "InteractionName": "Interaction_TransitionBegin",
+            "Trigger": {
+              "Type": "TriggerScreenTransitionBegins"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "TransitionBegin_Debug"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTOM_Info_LoRa"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_lora"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Telemetry_PopUp_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "DEBUG_Telemetria"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Telemetry_PopUp_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Telemetry_PopUp_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_PopUp_Telemetry"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Telemetry_PopUp_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Datalogger_PopUp_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "DEBUG_Datalogger"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Datalogger_PopUp_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Datalogger_PopUp_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_PopUp_Datalogger"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Datalogger_PopUp_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_BMS_PopUp_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "DEBUG_BMS"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BMS_PopUp_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_BMS_PopUp_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_PopUp_BMS"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BMS_PopUp_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_ECU_PopUp_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "DEBUG_ECU"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ECU_PopUp_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_ECU_PopUp_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_PopUp_ECU"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ECU_PopUp_End"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "STACK_1_PopUp",
+        "Width": 480,
+        "Height": 272,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 322,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_1_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_H51W",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_0XLC",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_H6F4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_5UFO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_6QX6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_CIRB",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_YI61",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_LM31",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_2N5T",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_0OV2",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_L1JY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_XF3S",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_TS3C",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_Y5H8",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_T4WC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_7M6H",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_7ERG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_NLH3",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_SGGO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_PFUM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_8XOE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_SB67",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_9K4C",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_RAWD",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_YJIF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_QKR5",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_RXIN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_0NP7",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_UAAA",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_XS11",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_7KCM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_NAW3",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "STACK_2_PopUp",
+        "Width": 480,
+        "Height": 272,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 322,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_2_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_755G",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_YL32",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_SMTD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_4A7U",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_QEFU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_EKO8",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_UG3R",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_8DNM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_MUR4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_FTJ3",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_5USH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_BT6V",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_XYEK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_HIOH",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_EUEM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_NIYK",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_JF0D",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_XGQR",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_GH8L",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_MML7",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_KATC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_WCMI",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_LBIG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_8JYM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_BLA4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_PNHE",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_I63B",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_GU0W",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_DCOT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_GZHX",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_X8SV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_K4Q5",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "STACK_3_PopUp",
+        "Width": 480,
+        "Height": 272,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 322,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_3_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_0UKW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_CXR6",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_IFTH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_E4RD",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_2C4P",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_MA07",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_3GAG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_RX8C",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_DOWB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_WR4M",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_0YMN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_UXZV",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_WR1F",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_JI7V",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_WFUH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_0S0Z",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_2KEO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_WBUA",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_VPPV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_3VC7",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_UPXV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_7HZK",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_HL16",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_MP9H",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_1MAM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_WEO0",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_95QK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_L9CL",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_EY8G",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_K0OV",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_G4QW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_Q2TO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "STACK_4_PopUp",
+        "Width": 480,
+        "Height": 272,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 321,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_4_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_ENYI",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_EHAU",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_58ZP",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_O2I9",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_GNRC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_32CO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_BHRE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_9MIY",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_MP2L",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_9UKW",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_UIM5",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_56HR",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_FIHD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_1CP1",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_BDCM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_LM85",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_G7RU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZENA",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_W5LZ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_T5ZD",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_K027",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_RADX",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_HCEU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_4JBF",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_73RB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_63EK",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_561W",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZSKF",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_3CU6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_VT55",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_5B1A",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_2TV2",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "STACK_5_PopUp",
+        "Width": 480,
+        "Height": 272,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 321,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_5_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_JL2C",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_607H",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_H56P",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_I7A7",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_MEW6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_6QRP",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_27QW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_RJRK",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_GVW0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_4B3V",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_0HTI",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_5TRZ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_K2CF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_0JNP",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_8SER",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_1341",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_33XT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_HVQR",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_3XA7",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_I0IL",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_2NNH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_H5X6",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_A38N",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_7CT5",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_42JY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_YEGV",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_IH3A",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZCD4",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_TFWV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_O2HI",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_QU9Y",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_PTQO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "STACK_6_PopUp",
+        "Width": 480,
+        "Height": 272,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 321,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_6_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_5YTB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_J4N1",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_BDLC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_AZEB",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_M63E",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ADME",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_AB35",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_16KT",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_JN0V",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_CVLB",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_8J5W",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_52QH",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_B1EK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_6B22",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_OL81",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_PTLP",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_4NNJ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_WAQX",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_AAJM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_7BPO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_RFQY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_AZXZ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_IONR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_5888",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_3YTN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ER06",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_AMN9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_KZIH",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_TNLI",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_9SA9",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_9NBE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_GVWM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "LoRA_PopUp",
+        "Width": 320,
+        "Height": 236,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "LoRa_background",
+            "Width": 320,
+            "Height": 236,
+            "RelativeFilename": "DRIVE_page\\LORA_PopUp\\BACKGROUND\\LoRa_PopUp_BACKGROUND.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "FREQUENCIA",
+            "X": 166,
+            "Y": 166,
+            "Width": 28,
+            "Height": 19,
+            "TextId": "__SingleUse_YH8M",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_B2MD",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "CODING_RATE",
+            "X": 252,
+            "Y": 132,
+            "Width": 28,
+            "Height": 19,
+            "TextId": "__SingleUse_JFP0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_3GDV",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "SPREAD_FACTOR",
+            "X": 166,
+            "Y": 101,
+            "Width": 28,
+            "Height": 19,
+            "TextId": "__SingleUse_15SS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_WDH4",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "BANDWIDTH",
+            "X": 247,
+            "Y": 70,
+            "Width": 28,
+            "Height": 19,
+            "TextId": "__SingleUse_9JOW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_K7BY",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "USER_ID",
+            "X": 15,
+            "Y": 200,
+            "Width": 114,
+            "Height": 17,
+            "TextId": "__SingleUse_QL18",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_FP6W",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DATA_Rate",
+            "X": 14,
+            "Y": 158,
+            "Width": 76,
+            "Height": 17,
+            "TextId": "__SingleUse_LXFC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_VP9N",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "VERSION",
+            "X": 16,
+            "Y": 115,
+            "Width": 68,
+            "Height": 16,
+            "TextId": "__SingleUse_HRQE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_1JCY",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "STATE",
+            "X": 39,
+            "Y": 72,
+            "Width": 23,
+            "Height": 17,
+            "RelativeFilename": "DRIVE_page\\INFO_widget\\ICONS\\LORA_OFF.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "RSSI",
+            "X": 23,
+            "Y": 30,
+            "Width": 63,
+            "Height": 17,
+            "TextId": "__SingleUse_LIL6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_14QM",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "Slider",
+            "Name": "SLIDER_FREQ",
+            "X": 480,
+            "Y": 175,
+            "Width": 86,
+            "Height": 16,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_SliderOFF.png",
+            "BackgroundSelected": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_SliderON.png",
+            "Indicator": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_SliderBotton.png",
+            "BackgroundX": 8,
+            "BackgroundY": 5,
+            "IndicatorMax": 70,
+            "ValueMax": 930,
+            "ValueMin": 860,
+            "InitValue": 860,
+            "Moveable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "LoRa_Info",
+            "X": 120,
+            "Y": 27,
+            "Width": 46,
+            "Height": 46,
+            "Pressed": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_InfoCLICK.png",
+            "Released": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_Info.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "LoRa_Config",
+            "X": 120,
+            "Y": 27,
+            "Width": 46,
+            "Height": 46,
+            "Visible": false,
+            "Pressed": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_ConfigCLICK.png",
+            "Released": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_Config.png",
+            "Alpha": 0,
+            "Fadeable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "BT_CR_DOWN",
+            "X": 289,
+            "Y": 143,
+            "Width": 22,
+            "Height": 17,
+            "Pressed": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonDOWN_PRESS.png",
+            "Released": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonDOWN.png",
+            "Alpha": 0,
+            "Fadeable": true,
+            "Moveable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "BT_CR_UP",
+            "X": 288,
+            "Y": 121,
+            "Width": 22,
+            "Height": 17,
+            "Pressed": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonUP_PRESS.png",
+            "Released": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonUP.png",
+            "Alpha": 0,
+            "Fadeable": true,
+            "Moveable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "BT_SF_DOWN",
+            "X": 203,
+            "Y": 112,
+            "Width": 22,
+            "Height": 17,
+            "Pressed": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonDOWN_PRESS.png",
+            "Released": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonDOWN.png",
+            "Alpha": 0,
+            "Fadeable": true,
+            "Moveable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "BT_SF_UP",
+            "X": 202,
+            "Y": 90,
+            "Width": 22,
+            "Height": 17,
+            "Pressed": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonUP_PRESS.png",
+            "Released": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonUP.png",
+            "Alpha": 0,
+            "Fadeable": true,
+            "Moveable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "BT_BAND_DOWN",
+            "X": 286,
+            "Y": 81,
+            "Width": 22,
+            "Height": 17,
+            "Pressed": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonDOWN_PRESS.png",
+            "Released": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonDOWN.png",
+            "Alpha": 0,
+            "Fadeable": true,
+            "Moveable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "BT_BAND_UP",
+            "X": 285,
+            "Y": 59,
+            "Width": 22,
+            "Height": 17,
+            "Pressed": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonUP_PRESS.png",
+            "Released": "DRIVE_page\\LORA_PopUp\\ICONS\\LoRa_PopUP_BottonUP.png",
+            "Alpha": 0,
+            "Fadeable": true,
+            "Moveable": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "LoRa_Config_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "LoRa_Info"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LoRa_Config_Begin"
+            }
+          },
+          {
+            "InteractionName": "LoRa_Config_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "LoRa_Config"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LoRa_Config_End"
+            }
+          },
+          {
+            "InteractionName": "LoRa_Config_End_Delay",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "LoRa_Config"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 251
+            }
+          },
+          {
+            "InteractionName": "LoRa_Config_Set_Position",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "LoRa_Config_End_Delay"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LoRa_Config_Set_Position"
+            }
+          },
+          {
+            "InteractionName": "BT_BAND_UP_Callback",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BT_BAND_UP"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BT_BAND_UP_Callback"
+            }
+          },
+          {
+            "InteractionName": "BT_BAND_DOWN_Callback",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BT_BAND_DOWN"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BT_BAND_DOWN_Callback"
+            }
+          },
+          {
+            "InteractionName": "BT_SF_UP_Callback",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BT_SF_UP"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BT_SF_UP_Callback"
+            }
+          },
+          {
+            "InteractionName": "BT_SF_DOWN_Callback",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BT_SF_DOWN"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BT_SF_DOWN_Callback"
+            }
+          },
+          {
+            "InteractionName": "BT_CR_UP_Callback",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BT_CR_UP"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BT_CR_UP_Callback"
+            }
+          },
+          {
+            "InteractionName": "BT_CR_DOWN_Callback",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BT_CR_DOWN"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BT_CR_DOWN_Callback"
+            }
+          },
+          {
+            "InteractionName": "FREQUENCIA_Callback",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "SLIDER_FREQ"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "FREQUENCIA_Callback"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "ECU_PopUp",
+        "Width": 331,
+        "Height": 103,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "DEBUG_BACKGROUND",
+            "Width": 331,
+            "Height": 103,
+            "RelativeFilename": "DEBUG_page\\DEBUG_PopUp\\DEBUG_ECU_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_2",
+            "X": 225,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_V6O7",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_WWMN",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_1",
+            "X": 126,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_TJHD",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_OOJN",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_0",
+            "X": 30,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_9GQ9",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_MVVT",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "BMS_PopUp",
+        "Width": 331,
+        "Height": 103,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "DEBUG_BACKGROUND",
+            "Width": 331,
+            "Height": 104,
+            "RelativeFilename": "DEBUG_page\\DEBUG_PopUp\\DEBUG_BMS_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_2",
+            "X": 225,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_A2HW",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_JH1I",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_1",
+            "X": 126,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_86NG",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_GJWN",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_0",
+            "X": 30,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_BDY4",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_8WWK",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Datalogger_PopUp",
+        "Width": 331,
+        "Height": 103,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "DEBUG_BACKGROUND",
+            "Width": 331,
+            "Height": 103,
+            "RelativeFilename": "DEBUG_page\\DEBUG_PopUp\\DEBUG_Datalogger_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_2",
+            "X": 225,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_RG39",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_N7IM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_1",
+            "X": 126,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_8XA9",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_75DQ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_0",
+            "X": 30,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_9EPY",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_Y87T",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Telemetry_PopUp",
+        "Width": 331,
+        "Height": 103,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "DEBUG_BACKGROUND",
+            "Width": 331,
+            "Height": 103,
+            "RelativeFilename": "DEBUG_page\\DEBUG_PopUp\\DEBUG_Telemetria_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_2",
+            "X": 225,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_F6Q8",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_40QN",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_1",
+            "X": 126,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_L9AR",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_BRLB",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_0",
+            "X": 30,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_PZNR",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_KY1C",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "Name": "Display_NK624",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "ANIMATION",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32H7",
+    "SubFamily": "STM32H745/755",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../../STM32H745I_DISCO.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "Vector",
+      "Video"
+    ]
+  },
+  "Version": "4.22.1",
+  "CreatedBy": "4.22.1"
+}

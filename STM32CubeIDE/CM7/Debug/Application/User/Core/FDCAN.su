@@ -1,0 +1,16 @@
+../Application/User/Core/FDCAN.c:87:6:HAL_FDCAN_RxFifo0Callback	16	static
+../Application/User/Core/FDCAN.c:132:21:CAN_Stream_ReceiveCallback	32	static
+../Application/User/Core/FDCAN.c:187:21:CAN_Configure_Init	8	static
+../Application/User/Core/FDCAN.c:241:6:CAN_Clean_Buffers	16	static
+../Application/User/Core/FDCAN.c:262:21:CAN_Init	8	static
+../Application/User/Core/FDCAN.c:308:6:CAN_Storage_INT	24	static
+../Application/User/Core/FDCAN.c:332:6:CAN_Storage_NEGATIVE	16	static
+../Application/User/Core/FDCAN.c:348:6:CAN_Storage_FLOAT	24	static
+../Application/User/Core/FDCAN.c:372:6:CAN_Storage_DOUBLE	24	static
+../Application/User/Core/FDCAN.c:390:9:CAN_Get_value	24	static
+../Application/User/Core/FDCAN.c:414:7:CAN_Get_value_FLOAT	24	static
+../Application/User/Core/FDCAN.c:437:8:CAN_Get_value_DOUBLE	24	static
+../Application/User/Core/FDCAN.c:462:21:CAN_TxData	64	static
+../Application/User/Core/FDCAN.c:506:21:CAN_Send	32	static
+../Application/User/Core/FDCAN.c:530:21:CAN_Send_Float	32	static
+../Application/User/Core/FDCAN.c:555:21:CAN_Send_Double	40	static

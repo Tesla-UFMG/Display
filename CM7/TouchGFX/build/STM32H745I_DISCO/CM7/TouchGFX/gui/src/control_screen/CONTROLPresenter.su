@@ -1,0 +1,6 @@
+CONTROLPresenter.hpp:28:13:CONTROLPresenter::~CONTROLPresenter()	0	static
+CONTROLPresenter.cpp:10:6:virtual void CONTROLPresenter::activate()	0	static
+CONTROLPresenter.cpp:20:6:virtual void CONTROLPresenter::updateTick()	0	static
+CONTROLPresenter.hpp:28:13:virtual CONTROLPresenter::~CONTROLPresenter()	8	static
+CONTROLPresenter.hpp:28:13:virtual void* CONTROLPresenter::_ZThn4_N16CONTROLPresenterD1Ev()	0	static
+CONTROLPresenter.cpp:4:1:CONTROLPresenter::CONTROLPresenter(CONTROLView&)	8	static

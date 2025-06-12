@@ -1,0 +1,9 @@
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/main.c:858:6:osTimer_BoardDataRATE	12	static
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/main.c:935:6:Error_Handler	0	static,ignoring_inline_asm
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/main.c:844:6:osTimer_CanBusOFF	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/main.c:768:6:StartDefaultTask	8	static
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/main.c:788:13:TouchGFX_Task	8	static
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/main.c:806:6:osTask_sendCAN	8	static
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/main.c:318:6:SystemClock_Config	136	static,ignoring_inline_asm
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/main.c:168:5:main	144	static,ignoring_inline_asm
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/main.c:918:6:HAL_TIM_PeriodElapsedCallback	0	static

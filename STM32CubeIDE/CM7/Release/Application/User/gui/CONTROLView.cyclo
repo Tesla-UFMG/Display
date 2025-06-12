@@ -1,0 +1,14 @@
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:16:6:virtual void CONTROLView::tearDownScreen()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLView.hpp:11:13:CONTROLView::~CONTROLView()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLView.hpp:11:13:virtual CONTROLView::~CONTROLView()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:7:1:CONTROLView::CONTROLView()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:122:10:void touchgfx::FadeAnimator<T>::startFadeAnimation(uint8_t, uint16_t, touchgfx::EasingEquation) [with T = touchgfx::Box]	11
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:21:6:virtual void CONTROLView::TransitionEnd_Control()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:11:6:virtual void CONTROLView::setupScreen()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:39:6:virtual void CONTROLView::LORA_Begin()	2
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:53:6:virtual void CONTROLView::LORA_End()	2
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:27:6:virtual void CONTROLView::TransitionBegin_Control()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:64:6:virtual void CONTROLView::updateTick()	5

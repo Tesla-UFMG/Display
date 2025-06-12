@@ -1,0 +1,6 @@
+../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLPresenter.hpp:28:13:CONTROLPresenter::~CONTROLPresenter()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLPresenter.cpp:10:6:virtual void CONTROLPresenter::activate()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLPresenter.cpp:20:6:virtual void CONTROLPresenter::updateTick()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLPresenter.hpp:28:13:virtual CONTROLPresenter::~CONTROLPresenter()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLPresenter.hpp:28:13:virtual void* CONTROLPresenter::_ZThn4_N16CONTROLPresenterD1Ev()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLPresenter.cpp:4:1:CONTROLPresenter::CONTROLPresenter(CONTROLView&)	1

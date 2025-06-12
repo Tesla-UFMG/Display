@@ -1,0 +1,14 @@
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp:9:5:ModelListener::ModelListener()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:ModelListener::~ModelListener()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp:11:13:virtual ModelListener::~ModelListener()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp:17:18:virtual void ModelListener::updateTick()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/animation_screen/ANIMATIONPresenter.hpp:28:13:ANIMATIONPresenter::~ANIMATIONPresenter()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/animation_screen/ANIMATIONPresenter.hpp:28:13:virtual ANIMATIONPresenter::~ANIMATIONPresenter()	1
+C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONPresenter.cpp:4:1:ANIMATIONPresenter::ANIMATIONPresenter(ANIMATIONView&)	1
+C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONPresenter.cpp:10:6:virtual void ANIMATIONPresenter::activate()	1
+C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONPresenter.cpp:15:6:virtual void ANIMATIONPresenter::deactivate()	1

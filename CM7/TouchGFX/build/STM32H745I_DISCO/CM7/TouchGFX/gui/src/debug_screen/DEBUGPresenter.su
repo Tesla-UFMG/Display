@@ -1,0 +1,6 @@
+DEBUGPresenter.hpp:28:13:DEBUGPresenter::~DEBUGPresenter()	0	static
+DEBUGPresenter.cpp:10:6:virtual void DEBUGPresenter::activate()	0	static
+DEBUGPresenter.cpp:20:6:virtual void DEBUGPresenter::updateTick()	0	static
+DEBUGPresenter.hpp:28:13:virtual DEBUGPresenter::~DEBUGPresenter()	8	static
+DEBUGPresenter.hpp:28:13:virtual void* DEBUGPresenter::_ZThn4_N14DEBUGPresenterD1Ev()	0	static
+DEBUGPresenter.cpp:4:1:DEBUGPresenter::DEBUGPresenter(DEBUGView&)	8	static

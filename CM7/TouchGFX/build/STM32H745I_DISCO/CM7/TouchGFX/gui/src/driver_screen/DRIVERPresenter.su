@@ -1,0 +1,6 @@
+DRIVERPresenter.hpp:28:13:DRIVERPresenter::~DRIVERPresenter()	0	static
+DRIVERPresenter.cpp:10:6:virtual void DRIVERPresenter::activate()	0	static
+DRIVERPresenter.cpp:20:6:virtual void DRIVERPresenter::updateTick()	0	static
+DRIVERPresenter.hpp:28:13:virtual DRIVERPresenter::~DRIVERPresenter()	8	static
+DRIVERPresenter.hpp:28:13:virtual void* DRIVERPresenter::_ZThn4_N15DRIVERPresenterD1Ev()	0	static
+DRIVERPresenter.cpp:4:1:DRIVERPresenter::DRIVERPresenter(DRIVERView&)	8	static

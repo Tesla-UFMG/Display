@@ -1,0 +1,2 @@
+Table_swissb_14_4bpp.cpp:48:164:void __tcf_0()	0	static
+Table_swissb_14_4bpp.cpp:46:26:touchgfx::GeneratedFont& getFont_swissb_14_4bpp()	72	static

@@ -1,0 +1,14 @@
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:16:6:virtual void DEBUGView::tearDownScreen()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/debug_screen/DEBUGView.hpp:11:13:DEBUGView::~DEBUGView()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/debug_screen/DEBUGView.hpp:11:13:virtual DEBUGView::~DEBUGView()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:61:6:virtual void DEBUGView::updateTick()	3
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:97:18:virtual void touchgfx::Box::invalidateContent() const	3
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:7:1:DEBUGView::DEBUGView()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:122:10:void touchgfx::FadeAnimator<T>::startFadeAnimation(uint8_t, uint16_t, touchgfx::EasingEquation) [with T = touchgfx::Box]	9
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:21:6:virtual void DEBUGView::TransitionBegin_Debug()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:30:6:virtual void DEBUGView::TransitionEnd_Debug()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:11:6:virtual void DEBUGView::setupScreen()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:36:6:virtual void DEBUGView::LORA_Begin()	2
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:50:6:virtual void DEBUGView::LORA_End()	2

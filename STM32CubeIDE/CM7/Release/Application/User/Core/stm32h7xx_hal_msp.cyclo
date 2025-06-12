@@ -1,0 +1,15 @@
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:68:6:HAL_MspInit	1
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:91:6:HAL_CRC_MspInit	2
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:113:6:HAL_CRC_MspDeInit	2
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:135:6:HAL_DMA2D_MspInit	2
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:160:6:HAL_DMA2D_MspDeInit	2
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:185:6:HAL_FDCAN_MspInit	3
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:237:6:HAL_FDCAN_MspDeInit	2
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:269:6:HAL_JPEG_MspInit	6
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:352:6:HAL_JPEG_MspDeInit	2
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:381:6:HAL_LTDC_MspInit	3
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:493:6:HAL_LTDC_MspDeInit	2
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:561:6:HAL_QSPI_MspInit	3
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:657:6:HAL_QSPI_MspDeInit	2
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:807:6:HAL_SDRAM_MspInit	3
+C:/TouchGFXProjects/Display_NK624/CM7/Core/Src/stm32h7xx_hal_msp.c:891:6:HAL_SDRAM_MspDeInit	2

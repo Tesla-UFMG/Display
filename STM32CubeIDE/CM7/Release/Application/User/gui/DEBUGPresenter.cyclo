@@ -1,0 +1,6 @@
+../../CM7/../../CM7/TouchGFX/gui/include/gui/debug_screen/DEBUGPresenter.hpp:28:13:DEBUGPresenter::~DEBUGPresenter()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGPresenter.cpp:10:6:virtual void DEBUGPresenter::activate()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGPresenter.cpp:20:6:virtual void DEBUGPresenter::updateTick()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/debug_screen/DEBUGPresenter.hpp:28:13:virtual DEBUGPresenter::~DEBUGPresenter()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/debug_screen/DEBUGPresenter.hpp:28:13:virtual void* DEBUGPresenter::_ZThn4_N14DEBUGPresenterD1Ev()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGPresenter.cpp:4:1:DEBUGPresenter::DEBUGPresenter(DEBUGView&)	1

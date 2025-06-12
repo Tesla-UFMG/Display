@@ -1,0 +1,37 @@
+Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+SAFETYView.cpp:18:6:virtual void SAFETYView::tearDownScreen()	0	static
+SAFETYView.hpp:27:10:SAFETYView::~SAFETYView()	8	static
+SAFETYView.hpp:27:10:virtual SAFETYView::~SAFETYView()	8	static
+Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+Box.hpp:97:18:virtual void touchgfx::Box::invalidateContent() const	0	static
+SAFETYView.cpp:11:1:SAFETYView::SAFETYView()	8	static
+FadeAnimator.hpp:122:10:void touchgfx::FadeAnimator<T>::startFadeAnimation(uint8_t, uint16_t, touchgfx::EasingEquation) [with T = touchgfx::Box]	24	static
+SAFETYView.cpp:33:6:virtual void SAFETYView::TransitionEnd_Safety()	8	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_1_PopUp]	24	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_2_PopUp]	24	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_3_PopUp]	24	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_4_PopUp]	24	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_5_PopUp]	24	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_6_PopUp]	24	static
+SAFETYView.cpp:14:6:virtual void SAFETYView::setupScreen()	0	static
+SAFETYView.cpp:22:6:virtual void SAFETYView::TransitionBegin_Safety()	8	static
+SAFETYView.cpp:39:6:virtual void SAFETYView::STACK_1_Begin()	16	static
+SAFETYView.cpp:56:6:virtual void SAFETYView::STACK_1_End()	16	static
+SAFETYView.cpp:69:6:virtual void SAFETYView::STACK_2_Begin()	16	static
+SAFETYView.cpp:85:6:virtual void SAFETYView::STACK_2_End()	16	static
+SAFETYView.cpp:98:6:virtual void SAFETYView::STACK_3_Begin()	16	static
+SAFETYView.cpp:114:6:virtual void SAFETYView::STACK_3_End()	16	static
+SAFETYView.cpp:127:6:virtual void SAFETYView::STACK_4_Begin()	16	static
+SAFETYView.cpp:143:6:virtual void SAFETYView::STACK_4_End()	16	static
+SAFETYView.cpp:156:6:virtual void SAFETYView::STACK_5_Begin()	16	static
+SAFETYView.cpp:172:6:virtual void SAFETYView::STACK_5_End()	16	static
+SAFETYView.cpp:185:6:virtual void SAFETYView::STACK_6_Begin()	16	static
+SAFETYView.cpp:201:6:virtual void SAFETYView::STACK_6_End()	16	static
+SAFETYView.cpp:214:6:virtual void SAFETYView::LORA_Begin()	16	static
+SAFETYView.cpp:230:6:virtual void SAFETYView::LORA_End()	16	static
+SAFETYView.cpp:385:6:void SAFETYView::setIcon_LoRa(LoRa_Status_t)	16	static
+SAFETYView.cpp:402:6:void SAFETYView::setIcon_Modo(Modo_t)	16	static
+SAFETYView.cpp:434:6:void SAFETYView::setIcon_PopUp(uint8_t)	24	static
+SAFETYView.cpp:243:6:virtual void SAFETYView::updateTick()	40	static

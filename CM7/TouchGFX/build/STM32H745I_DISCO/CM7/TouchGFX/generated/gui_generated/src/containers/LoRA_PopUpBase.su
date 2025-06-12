@@ -1,0 +1,89 @@
+Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
+Drawable.hpp:147:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	0	static
+Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+Drawable.hpp:389:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	0	static
+Drawable.hpp:401:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
+Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	0	static
+Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
+Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
+TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
+TextArea.hpp:48:18:virtual void touchgfx::TextArea::setWidth(int16_t)	32	static
+TextArea.hpp:54:18:virtual void touchgfx::TextArea::setHeight(int16_t)	32	static
+TextArea.hpp:60:18:virtual touchgfx::Rect touchgfx::TextArea::getSolidRect() const	0	static
+TextArea.hpp:89:18:virtual void touchgfx::TextArea::setAlpha(uint8_t)	0	static
+TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	16	static
+TextArea.hpp:403:41:virtual const UnicodeChar* touchgfx::TextArea::getWildcard2() const	0	static
+TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
+TextAreaWithWildcard.hpp:84:41:virtual const UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	0	static
+Slider.hpp:180:21:virtual int16_t touchgfx::Slider::getIndicatorMin() const	0	static
+Slider.hpp:193:21:virtual int16_t touchgfx::Slider::getIndicatorMax() const	0	static
+Slider.hpp:220:21:virtual int16_t touchgfx::Slider::getMinValue() const	0	static
+Slider.hpp:232:21:virtual int16_t touchgfx::Slider::getMaxValue() const	0	static
+AbstractButton.hpp:86:18:virtual bool touchgfx::AbstractButton::getPressedState() const	0	static
+Button.hpp:84:18:virtual void touchgfx::Button::invalidateContent() const	8	static
+LoRA_PopUpBase.hpp:28:18:virtual void LoRA_PopUpBase::LoRa_Config_Begin()	0	static
+LoRA_PopUpBase.hpp:32:18:virtual void LoRA_PopUpBase::LoRa_Config_End()	0	static
+LoRA_PopUpBase.hpp:36:18:virtual void LoRA_PopUpBase::LoRa_Config_Set_Position()	0	static
+LoRA_PopUpBase.hpp:40:18:virtual void LoRA_PopUpBase::BT_BAND_UP_Callback()	0	static
+LoRA_PopUpBase.hpp:44:18:virtual void LoRA_PopUpBase::BT_BAND_DOWN_Callback()	0	static
+LoRA_PopUpBase.hpp:48:18:virtual void LoRA_PopUpBase::BT_SF_UP_Callback()	0	static
+LoRA_PopUpBase.hpp:52:18:virtual void LoRA_PopUpBase::BT_SF_DOWN_Callback()	0	static
+LoRA_PopUpBase.hpp:56:18:virtual void LoRA_PopUpBase::BT_CR_UP_Callback()	0	static
+LoRA_PopUpBase.hpp:60:18:virtual void LoRA_PopUpBase::BT_CR_DOWN_Callback()	0	static
+LoRA_PopUpBase.hpp:64:18:virtual void LoRA_PopUpBase::FREQUENCIA_Callback(int)	0	static
+LoRA_PopUpBase.cpp:145:1:LoRA_PopUpBase::~LoRA_PopUpBase()	0	static
+LoRA_PopUpBase.cpp:150:6:virtual void LoRA_PopUpBase::initialize()	0	static
+MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<touchgfx::Button>::~MoveAnimator()	0	static
+Callback.hpp:290:8:touchgfx::Callback<LoRA_PopUpBase, const touchgfx::Slider&, int>::~Callback()	0	static
+Callback.hpp:357:8:touchgfx::Callback<LoRA_PopUpBase, const touchgfx::AbstractButton&>::~Callback()	0	static
+FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::MoveAnimator<touchgfx::Button> >::~FadeAnimator()	0	static
+FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::Button>::~FadeAnimator()	0	static
+MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<touchgfx::Slider>::~MoveAnimator()	0	static
+TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
+Callback.hpp:318:18:void touchgfx::Callback<dest_type, T1, T2, void>::execute(T1, T2) [with dest_type = LoRA_PopUpBase; T1 = const touchgfx::Slider&; T2 = int]	12	static
+Callback.hpp:328:18:bool touchgfx::Callback<dest_type, T1, T2, void>::isValid() const [with dest_type = LoRA_PopUpBase; T1 = const touchgfx::Slider&; T2 = int]	0	static
+Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = LoRA_PopUpBase; T1 = const touchgfx::AbstractButton&]	8	static
+Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = LoRA_PopUpBase; T1 = const touchgfx::AbstractButton&]	0	static
+MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = touchgfx::Button]	0	static
+MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = touchgfx::Button]	0	static
+FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::MoveAnimator<touchgfx::Button>]	0	static
+FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::MoveAnimator<touchgfx::Button>]	0	static
+FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::Button]	0	static
+FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::Button]	0	static
+MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = touchgfx::Slider]	0	static
+MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = touchgfx::Slider]	0	static
+TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
+MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<touchgfx::Slider>::~MoveAnimator()	8	static
+TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
+FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::Button>::~FadeAnimator()	8	static
+MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<touchgfx::Button>::~MoveAnimator()	8	static
+FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::MoveAnimator<touchgfx::Button> >::~FadeAnimator()	8	static
+Callback.hpp:357:8:virtual touchgfx::Callback<LoRA_PopUpBase, const touchgfx::AbstractButton&>::~Callback()	8	static
+Callback.hpp:290:8:virtual touchgfx::Callback<LoRA_PopUpBase, const touchgfx::Slider&, int>::~Callback()	8	static
+LoRA_PopUpBase.cpp:145:1:virtual LoRA_PopUpBase::~LoRA_PopUpBase()	8	static
+TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	16	static
+LoRA_PopUpBase.cpp:155:6:void LoRA_PopUpBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+AbstractButton.hpp:73:18:virtual void touchgfx::AbstractButton::executeAction()	8	static
+LoRA_PopUpBase.cpp:221:6:void LoRA_PopUpBase::sliderValueChangedCallbackHandler(const touchgfx::Slider&, int)	4	static
+LoRA_PopUpBase.cpp:232:6:virtual void LoRA_PopUpBase::handleTickEvent()	8	static
+FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::Button]	16	static
+MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = touchgfx::Slider]	24	static
+TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	0	static
+Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
+Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
+Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	16	static
+TextAreaWithWildcard.hpp:65:5:touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()	8	static
+AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	8	static
+FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::MoveAnimator<touchgfx::Button>]	8	static
+LoRA_PopUpBase.cpp:9:1:LoRA_PopUpBase::LoRA_PopUpBase()	144	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = touchgfx::Button]	24	static
+MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = touchgfx::Button]	8	static
+FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::MoveAnimator<touchgfx::Button>]	16	static

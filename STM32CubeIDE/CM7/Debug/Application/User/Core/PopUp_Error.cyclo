@@ -1,0 +1,6 @@
+../Application/User/Core/PopUp_Error.c:16:9:ECU_Flag	3
+../Application/User/Core/PopUp_Error.c:25:9:BMS_Flag	3
+../Application/User/Core/PopUp_Error.c:33:10:INVERSOR_Flag	5
+../Application/User/Core/PopUp_Error.c:56:9:timer_wait_ms	2
+../Application/User/Core/PopUp_Error.c:63:6:timer_restart	1
+../Application/User/Core/PopUp_Error.c:67:9:osTask_PopUpError	70

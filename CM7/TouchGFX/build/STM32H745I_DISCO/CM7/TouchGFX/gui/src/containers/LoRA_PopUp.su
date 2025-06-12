@@ -1,0 +1,32 @@
+Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
+Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+Drawable.hpp:389:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	0	static
+Drawable.hpp:401:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
+LoRA_PopUp.cpp:32:6:virtual void LoRA_PopUp::BT_BAND_UP_Callback()	0	static
+LoRA_PopUp.cpp:48:6:virtual void LoRA_PopUp::BT_BAND_DOWN_Callback()	0	static
+LoRA_PopUp.cpp:64:6:virtual void LoRA_PopUp::BT_SF_UP_Callback()	0	static
+LoRA_PopUp.cpp:92:6:virtual void LoRA_PopUp::BT_SF_DOWN_Callback()	0	static
+LoRA_PopUp.cpp:120:6:virtual void LoRA_PopUp::BT_CR_UP_Callback()	0	static
+LoRA_PopUp.cpp:139:6:virtual void LoRA_PopUp::BT_CR_DOWN_Callback()	0	static
+LoRA_PopUp.cpp:222:6:virtual void LoRA_PopUp::FREQUENCIA_Callback(int)	0	static
+LoRA_PopUp.hpp:20:13:LoRA_PopUp::~LoRA_PopUp()	8	static
+LoRA_PopUp.hpp:20:13:virtual LoRA_PopUp::~LoRA_PopUp()	8	static
+Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
+LoRA_PopUp.cpp:345:6:virtual void LoRA_PopUp::LoRa_Config_Set_Position()	16	static
+LoRA_PopUp.cpp:8:1:LoRA_PopUp::LoRA_PopUp()	8	static
+FadeAnimator.hpp:122:10:void touchgfx::FadeAnimator<T>::startFadeAnimation(uint8_t, uint16_t, touchgfx::EasingEquation) [with T = touchgfx::MoveAnimator<touchgfx::Button>]	24	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = touchgfx::Slider]	24	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = touchgfx::Button]	24	static
+MoveAnimator.hpp:131:10:void touchgfx::MoveAnimator<T>::startMoveAnimation(int16_t, int16_t, uint16_t, touchgfx::EasingEquation, touchgfx::EasingEquation) [with T = touchgfx::Button]	24	static
+LoRA_PopUp.cpp:280:6:virtual void LoRA_PopUp::LoRa_Config_End()	32	static
+LoRA_PopUp.cpp:207:6:void LoRA_PopUp::setIcon_LoRa(LoRa_Status_t)	16	static
+LoRA_PopUp.cpp:159:6:virtual void LoRA_PopUp::updateTick()	56	static
+LoRA_PopUp.cpp:226:6:virtual void LoRA_PopUp::initialize()	0	static
+LoRA_PopUp.cpp:230:6:virtual void LoRA_PopUp::LoRa_Config_Begin()	24	static

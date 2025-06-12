@@ -1,0 +1,2 @@
+C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/images/src/BitmapDatabase.cpp:319:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	1
+C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/images/src/BitmapDatabase.cpp:324:10:uint16_t BitmapDatabase::getInstanceSize()	1
