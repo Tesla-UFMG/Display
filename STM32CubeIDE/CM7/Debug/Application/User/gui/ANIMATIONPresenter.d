@@ -1,5 +1,5 @@
 Application/User/gui/ANIMATIONPresenter.o: \
- C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONPresenter.cpp \
+ C:/dev/tesla/Display/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONPresenter.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/animation_screen/ANIMATIONView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/animation_screen/ANIMATIONViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

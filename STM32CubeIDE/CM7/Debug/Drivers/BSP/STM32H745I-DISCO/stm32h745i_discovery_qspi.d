@@ -1,7 +1,7 @@
 Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_qspi.o: \
- C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_qspi.c \
- C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_qspi.h \
- C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_conf.h \
+ C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_qspi.c \
+ C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_qspi.h \
+ C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
@@ -42,11 +42,11 @@ Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_qspi.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_errno.h \
- C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/../Components/mt25tl01g/mt25tl01g.h \
- C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/../Components/mt25tl01g/mt25tl01g_conf.h
-C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_qspi.h:
-C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_conf.h:
+ C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_errno.h \
+ C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/../Components/mt25tl01g/mt25tl01g.h \
+ C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/../Components/mt25tl01g/mt25tl01g_conf.h
+C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_qspi.h:
+C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_conf.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
@@ -87,6 +87,6 @@ C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_con
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
-C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_errno.h:
-C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/../Components/mt25tl01g/mt25tl01g.h:
-C:/dev/tesla/Display_NK624/Drivers/BSP/STM32H745I-DISCO/../Components/mt25tl01g/mt25tl01g_conf.h:
+C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_errno.h:
+C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/../Components/mt25tl01g/mt25tl01g.h:
+C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/../Components/mt25tl01g/mt25tl01g_conf.h:

@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/TouchGFXGPIO.o: \
- C:/dev/tesla/Display_NK624/CM7/TouchGFX/target/TouchGFXGPIO.cpp \
+ C:/dev/tesla/Display/CM7/TouchGFX/target/TouchGFXGPIO.cpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
  ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h745xx.h \
@@ -41,7 +41,7 @@ Application/User/TouchGFX/target/TouchGFXGPIO.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- C:/dev/tesla/Display_NK624/CM7/TouchGFX/target/../../Core/Inc/main.h
+ C:/dev/tesla/Display/CM7/TouchGFX/target/../../Core/Inc/main.h
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:
 ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h745xx.h:
@@ -83,4 +83,4 @@ Application/User/TouchGFX/target/TouchGFXGPIO.o: \
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/target/../../Core/Inc/main.h:
+C:/dev/tesla/Display/CM7/TouchGFX/target/../../Core/Inc/main.h:

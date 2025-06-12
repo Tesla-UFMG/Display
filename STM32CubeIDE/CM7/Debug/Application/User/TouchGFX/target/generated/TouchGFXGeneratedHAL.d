@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
- C:/dev/tesla/Display_NK624/CM7/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
+ C:/dev/tesla/Display/CM7/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
  ../../../CM7/TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \

@@ -1,7 +1,7 @@
 Drivers/BSP/Components/mt25tl01g.o: \
- C:/dev/tesla/Display_NK624/Drivers/BSP/Components/mt25tl01g/mt25tl01g.c \
- C:/dev/tesla/Display_NK624/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h \
- C:/dev/tesla/Display_NK624/Drivers/BSP/Components/mt25tl01g/mt25tl01g_conf.h \
+ C:/dev/tesla/Display/Drivers/BSP/Components/mt25tl01g/mt25tl01g.c \
+ C:/dev/tesla/Display/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h \
+ C:/dev/tesla/Display/Drivers/BSP/Components/mt25tl01g/mt25tl01g_conf.h \
  ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h745xx.h \
  ../../../Drivers/CMSIS/Include/core_cm7.h \
@@ -42,8 +42,8 @@ Drivers/BSP/Components/mt25tl01g.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
-C:/dev/tesla/Display_NK624/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h:
-C:/dev/tesla/Display_NK624/Drivers/BSP/Components/mt25tl01g/mt25tl01g_conf.h:
+C:/dev/tesla/Display/Drivers/BSP/Components/mt25tl01g/mt25tl01g.h:
+C:/dev/tesla/Display/Drivers/BSP/Components/mt25tl01g/mt25tl01g_conf.h:
 ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h745xx.h:
 ../../../Drivers/CMSIS/Include/core_cm7.h:

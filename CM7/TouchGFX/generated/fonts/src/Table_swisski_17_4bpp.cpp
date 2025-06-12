@@ -6,20 +6,20 @@ FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_swisski_17_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
     {     0, 0x0020,   0,   0,   0,   0,   6,   0,   0, 0x00 }, // space
     {     0, 0x0025,  17,  12,  12,   0,  17,   0,   0, 0x00 }, // percent
-    {   102, 0x002E,   5,   4,   4,   0,   6,   0,   0, 0x00 }, // period
-    {   112, 0x0030,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // zero
-    {   178, 0x0031,   7,  12,  12,   2,  11,   0,   0, 0x00 }, // one
-    {   220, 0x0032,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // two
-    {   286, 0x0033,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // three
-    {   352, 0x0034,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // four
-    {   418, 0x0035,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // five
-    {   484, 0x0036,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // six
-    {   550, 0x0037,  10,  12,  12,   1,  11,   0,   0, 0x00 }, // seven
-    {   610, 0x0038,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // eight
-    {   676, 0x0039,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // nine
-    {   742, 0x003F,  10,  13,  13,   1,  11,   0,   0, 0x00 }, // question
-    {   807, 0x004B,  14,  12,  12,   0,  13,   0,   0, 0x00 }, // K
-    {   891, 0x006D,  16,   9,   9,   0,  17,   0,   0, 0x00 }  // m
+    {   108, 0x002E,   5,   4,   4,   0,   6,   0,   0, 0x00 }, // period
+    {   120, 0x0030,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // zero
+    {   192, 0x0031,   7,  12,  12,   2,  11,   0,   0, 0x00 }, // one
+    {   240, 0x0032,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // two
+    {   312, 0x0033,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // three
+    {   384, 0x0034,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // four
+    {   456, 0x0035,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // five
+    {   528, 0x0036,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // six
+    {   600, 0x0037,  10,  12,  12,   1,  11,   0,   0, 0x00 }, // seven
+    {   660, 0x0038,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // eight
+    {   732, 0x0039,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // nine
+    {   804, 0x003F,  10,  13,  13,   1,  11,   0,   0, 0x00 }, // question
+    {   869, 0x004B,  14,  12,  12,   0,  13,   0,   0, 0x00 }, // K
+    {   953, 0x006D,  16,   9,   9,   0,  17,   0,   0, 0x00 }  // m
 };
 
 // swisski_17_4bpp
@@ -37,6 +37,6 @@ touchgfx::GeneratedFont& getFont_swisski_17_4bpp();
 
 touchgfx::GeneratedFont& getFont_swisski_17_4bpp()
 {
-    static touchgfx::GeneratedFont swisski_17_4bpp(glyphs_swisski_17_4bpp, 16, 17, 17, 0, 0, 4, 0, 0, 1, unicodes_swisski_17_4bpp, kerning_swisski_17_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont swisski_17_4bpp(glyphs_swisski_17_4bpp, 16, 17, 17, 0, 0, 4, 1, 0, 1, unicodes_swisski_17_4bpp, kerning_swisski_17_4bpp, 63, 0, 0, 0);
     return swisski_17_4bpp;
 }

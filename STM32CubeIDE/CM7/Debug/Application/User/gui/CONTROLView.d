@@ -1,5 +1,5 @@
 Application/User/gui/CONTROLView.o: \
- C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp \
+ C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/control_screen/CONTROLViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

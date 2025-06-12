@@ -1,5 +1,5 @@
 Application/User/Core/stm32h7xx_hal_msp.o: \
- C:/dev/tesla/Display_NK624/CM4/Core/Src/stm32h7xx_hal_msp.c \
+ C:/dev/tesla/Display/CM4/Core/Src/stm32h7xx_hal_msp.c \
  ../../../CM4/Core/Inc/main.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM4/Core/Inc/stm32h7xx_hal_conf.h \

@@ -1,5 +1,5 @@
 Application/User/gui/SAFETYView.o: \
- C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp \
+ C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/safety_screen/SAFETYView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

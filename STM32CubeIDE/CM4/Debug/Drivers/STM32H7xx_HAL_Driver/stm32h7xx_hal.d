@@ -1,5 +1,5 @@
 Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal.o: \
- C:/dev/tesla/Display_NK624/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c \
+ C:/dev/tesla/Display/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM4/Core/Inc/stm32h7xx_hal_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \

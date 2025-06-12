@@ -123,14 +123,14 @@
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:86:26:FrontendApplication& DEBUGViewBase::application()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<DEBUGPresenter>::~View()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<DEBUGPresenter>::~View()	1
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:9:1:DEBUGViewBase::DEBUGViewBase()	1
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:200:1:DEBUGViewBase::~DEBUGViewBase()	1
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:200:1:virtual DEBUGViewBase::~DEBUGViewBase()	1
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:205:6:virtual void DEBUGViewBase::setupScreen()	1
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:215:6:void DEBUGViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	9
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:290:6:void DEBUGViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	6
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:329:6:virtual void DEBUGViewBase::handleTickEvent()	7
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:368:6:virtual void DEBUGViewBase::transitionBegins()	1
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:9:1:DEBUGViewBase::DEBUGViewBase()	1
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:200:1:DEBUGViewBase::~DEBUGViewBase()	1
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:200:1:virtual DEBUGViewBase::~DEBUGViewBase()	1
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:205:6:virtual void DEBUGViewBase::setupScreen()	1
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:215:6:void DEBUGViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	9
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:290:6:void DEBUGViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	6
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:329:6:virtual void DEBUGViewBase::handleTickEvent()	7
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:368:6:virtual void DEBUGViewBase::transitionBegins()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = DEBUGPresenter]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::Box]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::ClickButtonTrigger()	1

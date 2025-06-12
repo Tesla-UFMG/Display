@@ -1,5 +1,5 @@
 Application/User/gui/DRIVERPresenter.o: \
- C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/driver_screen/DRIVERPresenter.cpp \
+ C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERPresenter.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/driver_screen/DRIVERView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

@@ -1,5 +1,5 @@
 Application/User/gui/DEBUGView.o: \
- C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp \
+ C:/dev/tesla/Display/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/debug_screen/DEBUGView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

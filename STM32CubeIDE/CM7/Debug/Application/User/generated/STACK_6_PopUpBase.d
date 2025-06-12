@@ -1,5 +1,5 @@
 Application/User/generated/STACK_6_PopUpBase.o: \
- C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/containers/STACK_6_PopUpBase.cpp \
+ C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/containers/STACK_6_PopUpBase.cpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/STACK_6_PopUpBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

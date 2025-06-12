@@ -1,5 +1,5 @@
 Application/User/Core/main_user.o: \
- C:/dev/tesla/Display_NK624/CM7/Core/Src/main_user.c \
+ C:/dev/tesla/Display/CM7/Core/Src/main_user.c \
  ../../../CM7/Core/Inc/main_user.h \
  ../../../Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_qspi.h \
  ../../../Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_conf.h \

@@ -1,5 +1,5 @@
 Application/User/gui/Datalogger_PopUp.o: \
- C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/containers/Datalogger_PopUp.cpp \
+ C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/Datalogger_PopUp.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/Datalogger_PopUp.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/Datalogger_PopUpBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

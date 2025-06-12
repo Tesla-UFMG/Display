@@ -1,5 +1,5 @@
 Application/User/Core/freertos.o: \
- C:/dev/tesla/Display_NK624/CM7/Core/Src/freertos.c \
+ C:/dev/tesla/Display/CM7/Core/Src/freertos.c \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM7/Core/Inc/FreeRTOSConfig.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

@@ -85,8 +85,8 @@ all: main-build
 main-build: STM32H745I_DISCO_CM4.elf secondary-outputs
 
 # Tool invocations
-STM32H745I_DISCO_CM4.elf STM32H745I_DISCO_CM4.map: $(OBJS) $(USER_OBJS) C:\dev\tesla\Display_NK624\STM32CubeIDE\CM4\STM32H745XIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "STM32H745I_DISCO_CM4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\dev\tesla\Display_NK624\STM32CubeIDE\CM4\STM32H745XIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32H745I_DISCO_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+STM32H745I_DISCO_CM4.elf STM32H745I_DISCO_CM4.map: $(OBJS) $(USER_OBJS) C:\dev\tesla\Display\STM32CubeIDE\CM4\STM32H745XIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "STM32H745I_DISCO_CM4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\dev\tesla\Display\STM32CubeIDE\CM4\STM32H745XIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32H745I_DISCO_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,5 +1,5 @@
 Application/User/generated/Table_swisski_24_4bpp.o: \
- C:/dev/tesla/Display_NK624/CM7/TouchGFX/generated/fonts/src/Table_swisski_24_4bpp.cpp \
+ C:/dev/tesla/Display/CM7/TouchGFX/generated/fonts/src/Table_swisski_24_4bpp.cpp \
  ../../CM7/../../CM7/TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \

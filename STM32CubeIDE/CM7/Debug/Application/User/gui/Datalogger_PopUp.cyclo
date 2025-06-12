@@ -12,6 +12,6 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/Datalogger_PopUp.hpp:10:13:Datalogger_PopUp::~Datalogger_PopUp()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/Datalogger_PopUp.hpp:10:13:virtual Datalogger_PopUp::~Datalogger_PopUp()	1
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/containers/Datalogger_PopUp.cpp:6:1:Datalogger_PopUp::Datalogger_PopUp()	1
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/containers/Datalogger_PopUp.cpp:11:6:virtual void Datalogger_PopUp::initialize()	1
-C:/dev/tesla/Display_NK624/CM7/TouchGFX/gui/src/containers/Datalogger_PopUp.cpp:16:6:virtual void Datalogger_PopUp::updateTick()	1
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/Datalogger_PopUp.cpp:6:1:Datalogger_PopUp::Datalogger_PopUp()	1
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/Datalogger_PopUp.cpp:11:6:virtual void Datalogger_PopUp::initialize()	1
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/Datalogger_PopUp.cpp:16:6:virtual void Datalogger_PopUp::updateTick()	1
