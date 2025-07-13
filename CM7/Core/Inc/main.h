@@ -66,6 +66,8 @@ void Error_Handler(void);
 #define botao_GPIO_Port GPIOC
 #define FRAME_RATE_Pin GPIO_PIN_3
 #define FRAME_RATE_GPIO_Port GPIOG
+#define CHANGE_SCREEN_PIN_Pin GPIO_PIN_8
+#define CHANGE_SCREEN_PIN_GPIO_Port GPIOF
 #define MCU_ACTIVE_Pin GPIO_PIN_6
 #define MCU_ACTIVE_GPIO_Port GPIOA
 
