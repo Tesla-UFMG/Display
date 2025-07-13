@@ -8,6 +8,8 @@ extern bool bottom_state;
 #define TIME_TRANSITION 15U
 bool CONTROL_page_Interlock = false;
 
+#define ACCEL_SENSITIVITY_FACTOR 0.488 / 1000
+
 CONTROLView::CONTROLView() {
 }
 
@@ -89,9 +91,15 @@ void CONTROLView::updateTick(void) {
 			(uint8_t) PAGE_CONTROL_Giroscopio);
 	giroscopio_xz.invalidate();
 
-	Unicode::snprintf(acelerometro_xyBuffer, ACELEROMETRO_XY_SIZE, "%u.%02u",
-			(uint8_t) PAGE_CONTROL_Acelerometro / 100,
-			(uint8_t) PAGE_CONTROL_Acelerometro % 100);
+//	Unicode::snprintf(acelerometro_xyBuffer, ACELEROMETRO_XY_SIZE, "%i.%02i",
+//			(int16_t) PAGE_CONTROL_Acelerometro / 100,
+//			(int16_t) abs(PAGE_CONTROL_Acelerometro) % 100);
+
+	float accel = ((int16_t) PAGE_CONTROL_Acelerometro) * ACCEL_SENSITIVITY_FACTOR;
+	int16_t accel_int = (int16_t) (accel * 100); // * 100 para duas casas decimais
+	Unicode::snprintf(acelerometro_xyBuffer, ACELEROMETRO_XY_SIZE, "%i.%02i",
+			(int16_t) accel_int / 100,
+			(int16_t) abs(accel_int) % 100);
 	acelerometro_xy.invalidate();
 
 	Unicode::snprintf(motor_L_GirosBuffer, MOTOR_L_GIROS_SIZE, "%u",

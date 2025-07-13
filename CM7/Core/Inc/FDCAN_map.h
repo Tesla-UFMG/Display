@@ -62,7 +62,7 @@ extern uint8_t Flag_PopUP;
 #define PAGE_CONTROL_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
 #define PAGE_CONTROL_Modo *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
 #define PAGE_CONTROL_Frenagem *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_FRENAGEM_STATUS])
-#define PAGE_CONTROL_Acelerometro ((uint16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[0]
+#define PAGE_CONTROL_Acelerometro ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[1] << 8 | ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[0]
 #define PAGE_CONTROL_Giroscopio *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])
 #define PAGE_CONTROL_Torque (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
 #define PAGE_CONTROL_PopUp Flag_PopUP

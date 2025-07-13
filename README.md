@@ -95,6 +95,7 @@ Explicação do external loader
 https://youtu.be/Q-mfuzW6S-0?si=zi-KmDOvToVxbrex  
 
 
+Esquemático com pinos da PCB do Display, datasheets e manuais estão disponíveis no drive da equipe, na pasta do Display na Aquisição [aqui](https://drive.google.com/drive/folders/1mjfWx0EJ4PAkmU1ZlljeK3ceVUx_cv2H).
 
 ## STM32H745I_DISCO TBS
 

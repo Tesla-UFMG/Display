@@ -69,6 +69,10 @@ uint8_t CONT_DEBUG = 0;
 
 uint32_t CONT;
 FDCAN_StatusTypedef FDCAN_Status = FDCAN_RESET;
+
+uint32_t RxIdentifierList[500];
+uint8_t RxDataList[500][8];
+uint32_t counterCAN = 0;
 /* USER CODE END PV */
 
 /* Private functions ------------------------------------------------------------*/
@@ -97,6 +101,16 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 	/* USER CODE BEGIN: CAN MSG */
 	FDCAN_Status = FDCAN_OK;
 
+	if (counterCAN == 200) {
+		counterCAN = counterCAN;
+	}
+
+	// armazena para DEBUG depois
+	RxIdentifierList[counterCAN] = RxHeader.Identifier;
+	for (int i = 0; i < 8; ++i) {
+		RxDataList[counterCAN][i] = RxData[i];
+	}
+
 	if (RxHeader.Identifier <= 14)
 		CONT_Telemetry++;
 	else if ((RxHeader.Identifier >= 15) && (RxHeader.Identifier <= 99))
@@ -115,6 +129,10 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 			!= HAL_OK) {
 		/* Caso de errado, chama a função de erro */
 		Error_Handler();
+	}
+
+	if (counterCAN < 499) {
+		counterCAN++;
 	}
 }
 
@@ -192,14 +210,14 @@ FDCAN_StatusTypedef CAN_Configure_Init() {
 	hFDCAN->Init.AutoRetransmission = DISABLE;
 	hFDCAN->Init.TransmitPause = DISABLE;
 	hFDCAN->Init.ProtocolException = DISABLE;
-	hFDCAN->Init.NominalPrescaler = 4;
-	hFDCAN->Init.NominalSyncJumpWidth = 4;
+	hFDCAN->Init.NominalPrescaler = 8;
+	hFDCAN->Init.NominalSyncJumpWidth = 13;
 	hFDCAN->Init.NominalTimeSeg1 = 22;
 	hFDCAN->Init.NominalTimeSeg2 = 2;
-	hFDCAN->Init.DataPrescaler = 4;
-	hFDCAN->Init.DataSyncJumpWidth = 4;
-	hFDCAN->Init.DataTimeSeg1 = 22;
-	hFDCAN->Init.DataTimeSeg2 = 2;
+	hFDCAN->Init.DataPrescaler = 1;
+	hFDCAN->Init.DataSyncJumpWidth = 1;
+	hFDCAN->Init.DataTimeSeg1 = 1;
+	hFDCAN->Init.DataTimeSeg2 = 1;
 	hFDCAN->Init.StdFiltersNbr = 0;
 	hFDCAN->Init.ExtFiltersNbr = 0;
 	hFDCAN->Init.TxFifoQueueMode = FDCAN_TX_FIFO_OPERATION;
