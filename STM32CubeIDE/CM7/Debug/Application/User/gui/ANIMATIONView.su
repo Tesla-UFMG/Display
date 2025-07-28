@@ -6,12 +6,14 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:82:10:void touchgfx::Box::setAlpha(uint8_t)	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:97:18:virtual void touchgfx::Box::invalidateContent() const	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/animation_screen/ANIMATIONViewBase.hpp:33:26:FrontendApplication& ANIMATIONViewBase::application()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/animation_screen/ANIMATIONView.hpp:11:13:ANIMATIONView::~ANIMATIONView()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/animation_screen/ANIMATIONView.hpp:11:13:virtual ANIMATIONView::~ANIMATIONView()	16	static
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONView.cpp:5:1:ANIMATIONView::ANIMATIONView()	16	static
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONView.cpp:10:6:virtual void ANIMATIONView::setupScreen()	16	static
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONView.cpp:15:6:virtual void ANIMATIONView::tearDownScreen()	16	static
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONView.cpp:20:6:virtual void ANIMATIONView::TransitionEnd_Animation()	16	static
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONView.cpp:7:1:ANIMATIONView::ANIMATIONView()	16	static
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONView.cpp:12:6:virtual void ANIMATIONView::setupScreen()	16	static
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONView.cpp:17:6:virtual void ANIMATIONView::tearDownScreen()	16	static
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONView.cpp:22:6:virtual void ANIMATIONView::TransitionEnd_Animation()	16	static
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/animation_screen/ANIMATIONView.cpp:30:6:virtual void ANIMATIONView::updateTick()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:71:10:void touchgfx::FadeAnimator<T>::clearFadeAnimationEndedAction() [with T = touchgfx::Box]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:122:10:void touchgfx::FadeAnimator<T>::startFadeAnimation(uint8_t, uint16_t, touchgfx::EasingEquation) [with T = touchgfx::Box]	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Box]	40	static

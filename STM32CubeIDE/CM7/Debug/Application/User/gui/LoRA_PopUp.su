@@ -29,7 +29,7 @@ C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/LoRA_PopUp.cpp:64:6:virtual
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/LoRA_PopUp.cpp:92:6:virtual void LoRA_PopUp::BT_SF_DOWN_Callback()	16	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/LoRA_PopUp.cpp:120:6:virtual void LoRA_PopUp::BT_CR_UP_Callback()	16	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/LoRA_PopUp.cpp:139:6:virtual void LoRA_PopUp::BT_CR_DOWN_Callback()	16	static
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/LoRA_PopUp.cpp:159:6:virtual void LoRA_PopUp::updateTick()	40	static
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/LoRA_PopUp.cpp:159:6:virtual void LoRA_PopUp::updateTick()	32	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/LoRA_PopUp.cpp:207:6:void LoRA_PopUp::setIcon_LoRa(LoRa_Status_t)	32	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/LoRA_PopUp.cpp:222:6:virtual void LoRA_PopUp::FREQUENCIA_Callback(int)	16	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/containers/LoRA_PopUp.cpp:226:6:virtual void LoRA_PopUp::initialize()	16	static

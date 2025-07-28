@@ -25,10 +25,10 @@ extern uint8_t Flag_PopUP;
 #define PAGE_ANIMATION_RTD_FLAG *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_FLAGS_STATUS])
 
 /************************ LORA PAGE ***********************/
-#define PAGE_LORA_User_ID *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_USER_ID])
-#define PAGE_LORA_Data_Rate *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_DATA_RATE])
-#define PAGE_LORA_Version *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_VERSION])
-#define PAGE_LORA_RSSI *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_RSSI])
+#define PAGE_LORA_User_ID *((uint16_t *) CAN_stream.Data_buf[CanID_AQS_LORA_USER_ID])
+#define PAGE_LORA_Data_Rate *((uint8_t *) CAN_stream.Data_buf[CanID_AQS_LORA_DATA_RATE])
+#define PAGE_LORA_Version *((uint16_t *) CAN_stream.Data_buf[CanID_AQS_LORA_VERSION])
+#define PAGE_LORA_RSSI *((uint8_t *) CAN_stream.Data_buf[CanID_AQS_LORA_RSSI])
 #define PAGE_LORA_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
 #define PAGE_LORA_Frequencia *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_FREQUENCIA])
 #define PAGE_LORA_Spread_Factor *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_SPREAD_FACT])
@@ -36,48 +36,48 @@ extern uint8_t Flag_PopUP;
 #define PAGE_LORA_Coding_Rate *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_CODING_RATE])
 
 /*********************** DRIVER PAGE **********************/
-#define PAGE_DRIVER_Velocidade *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_MED])
-#define PAGE_DRIVER_Potencia (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_MD]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_POTENCIA_ME]))/2
-#define PAGE_DRIVER_Hodometro *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_HODOM_PARCIAL])
-#define PAGE_DRIVER_Charge *((uint64_t *) CAN_stream.Data_buf[CanID_SS_CARGA_ATUAL])
+#define PAGE_DRIVER_Velocidade *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_MED])
+#define PAGE_DRIVER_Potencia (*((uint8_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_MD]) + *((uint8_t *)CAN_stream.Data_buf[CanID_ECU_POTENCIA_ME]))/2
+#define PAGE_DRIVER_Hodometro *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_HODOM_PARCIAL])
+#define PAGE_DRIVER_Charge *((uint8_t *) CAN_stream.Data_buf[CanID_SS_CARGA_ATUAL])
 #define PAGE_DRIVER_LoRa_State (LoRa_Status_t)*((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
-#define PAGE_DRIVER_Modo *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
-#define PAGE_DRIVER_Torque (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
+#define PAGE_DRIVER_Modo *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
+#define PAGE_DRIVER_Torque (*((uint8_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint8_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
 #define PAGE_DRIVER_Brake_Bias 0
-#define PAGE_DRIVER_Tensao_Min *((uint64_t *) CAN_stream.Data_buf[CanID_SS_TENSAO_MIN])
-#define PAGE_DRIVER_Temp_Max *((uint64_t *) CAN_stream.Data_buf[CanID_SS_TEMP_MAX])
+#define PAGE_DRIVER_Tensao_Min *((uint16_t *) CAN_stream.Data_buf[CanID_SS_TENSAO_MIN])
+#define PAGE_DRIVER_Temp_Max *((uint16_t *) CAN_stream.Data_buf[CanID_SS_TEMP_MAX])
 #define PAGE_DRIVER_PopUp Flag_PopUP
 
 /********************** CONTROL PAGE **********************/
-#define PAGE_CONTROL_Temperatura_ME (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_TEMP_1_MOS_ME]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_TEMP_2_MOS_ME]))/2
-#define PAGE_CONTROL_Torque_Inst_ME *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_TORQUE_ME])
-#define PAGE_CONTROL_Poten_Inst_ME *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_ME])
-#define PAGE_CONTROL_Giros_ME *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_ME])
-#define PAGE_CONTROL_Temperatura_MD (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_TEMP_1_MOS_MD]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_TEMP_2_MOS_MD]))/2
-#define PAGE_CONTROL_Torque_Inst_MD *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_TORQUE_MD])
-#define PAGE_CONTROL_Poten_Inst_MD *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_MD])
-#define PAGE_CONTROL_Giros_MD *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_MD])
-#define PAGE_CONTROL_Angulo_Vol *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_VOLANTE_ANG])
-#define PAGE_CONTROL_Angulo_Car ((uint16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[0]
+#define PAGE_CONTROL_Temperatura_ME (*((uint16_t *) CAN_stream.Data_buf[CanID_ECU_TEMP_1_MOS_ME]) + *((uint16_t *)CAN_stream.Data_buf[CanID_ECU_TEMP_2_MOS_ME]))/2
+#define PAGE_CONTROL_Torque_Inst_ME *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_TORQUE_ME])
+#define PAGE_CONTROL_Poten_Inst_ME *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_ME])
+#define PAGE_CONTROL_Giros_ME *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_ME])
+#define PAGE_CONTROL_Temperatura_MD (*((uint16_t *) CAN_stream.Data_buf[CanID_ECU_TEMP_1_MOS_MD]) + *((uint16_t *)CAN_stream.Data_buf[CanID_ECU_TEMP_2_MOS_MD]))/2
+#define PAGE_CONTROL_Torque_Inst_MD *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_TORQUE_MD])
+#define PAGE_CONTROL_Poten_Inst_MD *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_MD])
+#define PAGE_CONTROL_Giros_MD *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_MD])
+#define PAGE_CONTROL_Angulo_Vol *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VOLANTE_ANG])
+#define PAGE_CONTROL_Angulo_Car *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VOLANTE_ANG]) // melhorar depois, pegar da IMU
 #define PAGE_CONTROL_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
 #define PAGE_CONTROL_Modo *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
 #define PAGE_CONTROL_Frenagem *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_FRENAGEM_STATUS])
 #define PAGE_CONTROL_Acelerometro ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[1] << 8 | ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[0]
-#define PAGE_CONTROL_Giroscopio *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])
+#define PAGE_CONTROL_Giroscopio ((int16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[1] << 8 | ((int16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[0]
 #define PAGE_CONTROL_Torque (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
 #define PAGE_CONTROL_PopUp Flag_PopUP
 
 /*********************** SAFETY PAGE **********************/
-#define PAGE_SAFETY_Stack_1 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENSAO_TOTAL])
-#define PAGE_SAFETY_Stack_2 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENSAO_TOTAL])
-#define PAGE_SAFETY_Stack_3 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENSAO_TOTAL])
-#define PAGE_SAFETY_Stack_4 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENSAO_TOTAL])
-#define PAGE_SAFETY_Stack_5 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENSAO_TOTAL])
-#define PAGE_SAFETY_Stack_6 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENSAO_TOTAL])
-#define PAGE_SAFETY_Corrente_1 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_0])
-#define PAGE_SAFETY_Corrente_2 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_1])
-#define PAGE_SAFETY_Corrente_3 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_2])
-#define PAGE_SAFETY_Corrente_4 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_3])
+#define PAGE_SAFETY_Stack_1 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENSAO_TOTAL])
+#define PAGE_SAFETY_Stack_2 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENSAO_TOTAL])
+#define PAGE_SAFETY_Stack_3 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENSAO_TOTAL])
+#define PAGE_SAFETY_Stack_4 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENSAO_TOTAL])
+#define PAGE_SAFETY_Stack_5 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENSAO_TOTAL])
+#define PAGE_SAFETY_Stack_6 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENSAO_TOTAL])
+#define PAGE_SAFETY_Corrente_1 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_0])
+#define PAGE_SAFETY_Corrente_2 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_1])
+#define PAGE_SAFETY_Corrente_3 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_2])
+#define PAGE_SAFETY_Corrente_4 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_3])
 #define PAGE_SAFETY_Charge *((uint64_t *) CAN_stream.Data_buf[CanID_SS_CARGA_ATUAL])
 #define PAGE_SAFETY_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
 #define PAGE_SAFETY_Modo *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_MODO])

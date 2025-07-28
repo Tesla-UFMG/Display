@@ -89,8 +89,8 @@ void DRIVERView::updateTick(void) {
 	charge_percent.invalidate();
 
 	Unicode::snprintf(hodometroBuffer, HODOMETRO_SIZE, "%u.%02u",
-			(uint8_t) PAGE_DRIVER_Hodometro / 100,
-			(uint8_t) PAGE_DRIVER_Hodometro % 100);
+			(uint16_t) PAGE_DRIVER_Hodometro / 100,
+			(uint16_t) PAGE_DRIVER_Hodometro % 100);
 	hodometro.invalidate();
 
 	Unicode::snprintf(torqueBuffer, TORQUE_SIZE, "%u",
@@ -102,13 +102,13 @@ void DRIVERView::updateTick(void) {
 	brake_bias.invalidate();
 
 	Unicode::snprintf(tensao_minBuffer, TENSAO_MIN_SIZE, "%u.%02u",
-			(uint8_t) PAGE_DRIVER_Tensao_Min / 100,
-			(uint8_t) PAGE_DRIVER_Tensao_Min % 100);
+			(uint16_t) PAGE_DRIVER_Tensao_Min / 100,
+			(uint16_t) PAGE_DRIVER_Tensao_Min % 100);
 	tensao_min.invalidate();
 
 	Unicode::snprintf(temp_maxBuffer, TEMP_MAX_SIZE, "%u.%01u",
-			(uint8_t) PAGE_DRIVER_Temp_Max / 10,
-			(uint8_t) PAGE_DRIVER_Temp_Max % 10);
+			(uint16_t) PAGE_DRIVER_Temp_Max / 10,
+			(uint16_t) PAGE_DRIVER_Temp_Max % 10);
 	temp_max.invalidate();
 
 	setIcon_LoRa((LoRa_Status_t) PAGE_DRIVER_LoRa_State);

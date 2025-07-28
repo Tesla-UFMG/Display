@@ -22,7 +22,7 @@ C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:23:6:virt
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:29:6:virtual void DRIVERView::TransitionBegin_Driver()	16	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:42:6:virtual void DRIVERView::LORA_Begin()	24	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:58:6:virtual void DRIVERView::LORA_End()	24	static
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:71:6:virtual void DRIVERView::updateTick()	40	static
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:71:6:virtual void DRIVERView::updateTick()	32	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:124:6:void DRIVERView::setIcon_LoRa(LoRa_Status_t)	32	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:141:6:void DRIVERView::setIcon_Modo(Modo_t)	48	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:173:6:void DRIVERView::setIcon_PopUp(uint8_t)	232	static

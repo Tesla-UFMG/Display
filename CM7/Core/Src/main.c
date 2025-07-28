@@ -772,7 +772,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : CHANGE_SCREEN_PIN_Pin */
   GPIO_InitStruct.Pin = CHANGE_SCREEN_PIN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(CHANGE_SCREEN_PIN_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : MCU_ACTIVE_Pin */

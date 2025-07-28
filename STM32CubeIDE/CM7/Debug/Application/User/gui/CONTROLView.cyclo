@@ -15,17 +15,17 @@
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/control_screen/CONTROLViewBase.hpp:52:26:FrontendApplication& CONTROLViewBase::application()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLView.hpp:27:10:CONTROLView::~CONTROLView()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLView.hpp:27:10:virtual CONTROLView::~CONTROLView()	1
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:13:1:CONTROLView::CONTROLView()	1
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:16:6:virtual void CONTROLView::setupScreen()	1
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:20:6:virtual void CONTROLView::tearDownScreen()	1
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:25:6:virtual void CONTROLView::TransitionEnd_Control()	1
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:31:6:virtual void CONTROLView::TransitionBegin_Control()	1
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:43:6:virtual void CONTROLView::LORA_Begin()	1
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:59:6:virtual void CONTROLView::LORA_End()	1
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:72:6:virtual void CONTROLView::updateTick()	5
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:153:6:void CONTROLView::setIcon_LoRa(LoRa_Status_t)	3
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:170:6:void CONTROLView::setIcon_Modo(Modo_t)	6
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:202:6:void CONTROLView::setIcon_PopUp(uint8_t)	54
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:14:1:CONTROLView::CONTROLView()	1
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:17:6:virtual void CONTROLView::setupScreen()	1
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:21:6:virtual void CONTROLView::tearDownScreen()	1
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:26:6:virtual void CONTROLView::TransitionEnd_Control()	1
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:32:6:virtual void CONTROLView::TransitionBegin_Control()	1
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:44:6:virtual void CONTROLView::LORA_Begin()	1
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:60:6:virtual void CONTROLView::LORA_End()	1
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:73:6:virtual void CONTROLView::updateTick()	5
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:160:6:void CONTROLView::setIcon_LoRa(LoRa_Status_t)	3
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:177:6:void CONTROLView::setIcon_Modo(Modo_t)	6
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/control_screen/CONTROLView.cpp:209:6:void CONTROLView::setIcon_PopUp(uint8_t)	54
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:71:10:void touchgfx::FadeAnimator<T>::clearFadeAnimationEndedAction() [with T = touchgfx::Box]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:122:10:void touchgfx::FadeAnimator<T>::startFadeAnimation(uint8_t, uint16_t, touchgfx::EasingEquation) [with T = touchgfx::Box]	4
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:76:10:void touchgfx::MoveAnimator<T>::clearMoveAnimationEndedAction() [with T = LoRA_PopUp]	1

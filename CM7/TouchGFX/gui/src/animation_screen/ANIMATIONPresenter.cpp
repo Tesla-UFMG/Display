@@ -16,3 +16,7 @@ void ANIMATIONPresenter::deactivate()
 {
 
 }
+
+void ANIMATIONPresenter::updateTick(void) {
+	view.updateTick();
+}

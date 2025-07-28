@@ -25,6 +25,8 @@ public:
      */
     virtual void deactivate();
 
+    virtual void updateTick(void);
+
     virtual ~ANIMATIONPresenter() {}
 
 private:
