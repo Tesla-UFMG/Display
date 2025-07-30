@@ -81,7 +81,7 @@ void DRIVERView::updateTick(void) {
 	CHARGE_Progress.setValue(100 - PAGE_DRIVER_Charge);
 
 	Unicode::snprintf(VELOCIMETRO_digitalBuffer, VELOCIMETRO_DIGITAL_SIZE,
-			"%02u", (uint8_t) PAGE_DRIVER_Velocidade % 100);
+			"%02u", (uint16_t) PAGE_DRIVER_Velocidade % 100);
 	VELOCIMETRO_digital.invalidate();
 
 	Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u",

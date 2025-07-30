@@ -36,36 +36,74 @@ extern uint8_t Flag_PopUP;
 #define PAGE_LORA_Coding_Rate *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_CODING_RATE])
 
 /*********************** DRIVER PAGE **********************/
-#define PAGE_DRIVER_Velocidade *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_MED])
-#define PAGE_DRIVER_Potencia (*((uint8_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_MD]) + *((uint8_t *)CAN_stream.Data_buf[CanID_ECU_POTENCIA_ME]))/2
-#define PAGE_DRIVER_Hodometro *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_HODOM_PARCIAL])
-#define PAGE_DRIVER_Charge *((uint8_t *) CAN_stream.Data_buf[CanID_SS_CARGA_ATUAL])
-#define PAGE_DRIVER_LoRa_State (LoRa_Status_t)*((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
-#define PAGE_DRIVER_Modo *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
-#define PAGE_DRIVER_Torque (*((uint8_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint8_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
-#define PAGE_DRIVER_Brake_Bias 0
-#define PAGE_DRIVER_Tensao_Min *((uint16_t *) CAN_stream.Data_buf[CanID_SS_TENSAO_MIN])
-#define PAGE_DRIVER_Temp_Max *((uint16_t *) CAN_stream.Data_buf[CanID_SS_TEMP_MAX])
-#define PAGE_DRIVER_PopUp Flag_PopUP
+#ifdef UPDATED_PROTOCOL
+    #define PAGE_DRIVER_Velocidade *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_MED])
+    #define PAGE_DRIVER_Potencia (*((uint8_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_MD]) + *((uint8_t *)CAN_stream.Data_buf[CanID_ECU_POTENCIA_ME]))/2
+    #define PAGE_DRIVER_Hodometro *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_HODOM_PARCIAL])
+    #define PAGE_DRIVER_Charge *((uint8_t *) CAN_stream.Data_buf[CanID_SS_CARGA_ATUAL])
+    #define PAGE_DRIVER_LoRa_State (LoRa_Status_t)*((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
+    #define PAGE_DRIVER_Modo *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
+    #define PAGE_DRIVER_Torque (*((uint8_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint8_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
+    #define PAGE_DRIVER_Brake_Bias 0
+    #define PAGE_DRIVER_Tensao_Min *((uint16_t *) CAN_stream.Data_buf[CanID_SS_TENSAO_MIN])
+    #define PAGE_DRIVER_Temp_Max *((uint16_t *) CAN_stream.Data_buf[CanID_SS_TEMP_MAX])
+    #define PAGE_DRIVER_PopUp Flag_PopUP
+#else
+    #define PAGE_DRIVER_Velocidade (uint16_t) (CAN_stream.Data_buf[76][1] << 8 | CAN_stream.Data_buf[76][0])
+
+    // uint16_t potencia_me = (uint16_t) (CAN_stream.Data_buf[85][2] << 8 | CAN_stream.Data_buf[85][3]);
+    // uint16_t potencia_md = (uint16_t) (CAN_stream.Data_buf[95][2] << 8 | CAN_stream.Data_buf[95][3]);
+    #define PAGE_DRIVER_Potencia (uint16_t) ((uint16_t) (CAN_stream.Data_buf[85][3] << 8 | CAN_stream.Data_buf[85][2]) + (uint16_t) (CAN_stream.Data_buf[95][3] << 8 | CAN_stream.Data_buf[95][2])) / 2
+
+    #define PAGE_DRIVER_Hodometro (uint16_t) (CAN_stream.Data_buf[77][5] << 8 | CAN_stream.Data_buf[77][4])
+    #define PAGE_DRIVER_Charge *((uint8_t *) CAN_stream.Data_buf[CanID_SS_CARGA_ATUAL])
+    #define PAGE_DRIVER_LoRa_State (LoRa_Status_t)*((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
+    #define PAGE_DRIVER_Modo *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
+    #define PAGE_DRIVER_Torque (*((uint8_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint8_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
+    #define PAGE_DRIVER_Brake_Bias 0
+    #define PAGE_DRIVER_Tensao_Min *((uint16_t *) CAN_stream.Data_buf[CanID_SS_TENSAO_MIN])
+    #define PAGE_DRIVER_Temp_Max *((uint16_t *) CAN_stream.Data_buf[CanID_SS_TEMP_MAX])
+    #define PAGE_DRIVER_PopUp Flag_PopUP
+#endif
 
 /********************** CONTROL PAGE **********************/
-#define PAGE_CONTROL_Temperatura_ME (*((uint16_t *) CAN_stream.Data_buf[CanID_ECU_TEMP_1_MOS_ME]) + *((uint16_t *)CAN_stream.Data_buf[CanID_ECU_TEMP_2_MOS_ME]))/2
-#define PAGE_CONTROL_Torque_Inst_ME *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_TORQUE_ME])
-#define PAGE_CONTROL_Poten_Inst_ME *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_ME])
-#define PAGE_CONTROL_Giros_ME *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_ME])
-#define PAGE_CONTROL_Temperatura_MD (*((uint16_t *) CAN_stream.Data_buf[CanID_ECU_TEMP_1_MOS_MD]) + *((uint16_t *)CAN_stream.Data_buf[CanID_ECU_TEMP_2_MOS_MD]))/2
-#define PAGE_CONTROL_Torque_Inst_MD *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_TORQUE_MD])
-#define PAGE_CONTROL_Poten_Inst_MD *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_MD])
-#define PAGE_CONTROL_Giros_MD *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_MD])
-#define PAGE_CONTROL_Angulo_Vol *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VOLANTE_ANG])
-#define PAGE_CONTROL_Angulo_Car *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VOLANTE_ANG]) // melhorar depois, pegar da IMU
-#define PAGE_CONTROL_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
-#define PAGE_CONTROL_Modo *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
-#define PAGE_CONTROL_Frenagem *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_FRENAGEM_STATUS])
-#define PAGE_CONTROL_Acelerometro ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[1] << 8 | ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[0]
-#define PAGE_CONTROL_Giroscopio ((int16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[1] << 8 | ((int16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[0]
-#define PAGE_CONTROL_Torque (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
-#define PAGE_CONTROL_PopUp Flag_PopUP
+#ifdef UPDATED_PROTOCOL
+    #define PAGE_CONTROL_Temperatura_ME (*((uint16_t *) CAN_stream.Data_buf[CanID_ECU_TEMP_1_MOS_ME]) + *((uint16_t *)CAN_stream.Data_buf[CanID_ECU_TEMP_2_MOS_ME]))/2
+    #define PAGE_CONTROL_Torque_Inst_ME *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_TORQUE_ME])
+    #define PAGE_CONTROL_Poten_Inst_ME *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_ME])
+    #define PAGE_CONTROL_Giros_ME *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_ME])
+    #define PAGE_CONTROL_Temperatura_MD (*((uint16_t *) CAN_stream.Data_buf[CanID_ECU_TEMP_1_MOS_MD]) + *((uint16_t *)CAN_stream.Data_buf[CanID_ECU_TEMP_2_MOS_MD]))/2
+    #define PAGE_CONTROL_Torque_Inst_MD *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_TORQUE_MD])
+    #define PAGE_CONTROL_Poten_Inst_MD *((uint8_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_MD])
+    #define PAGE_CONTROL_Giros_MD *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_MD])
+    #define PAGE_CONTROL_Angulo_Vol *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VOLANTE_ANG])
+    #define PAGE_CONTROL_Angulo_Car *((uint16_t *) CAN_stream.Data_buf[CanID_ECU_VOLANTE_ANG]) // melhorar depois, pegar da IMU
+    #define PAGE_CONTROL_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
+    #define PAGE_CONTROL_Modo *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
+    #define PAGE_CONTROL_Frenagem *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_FRENAGEM_STATUS])
+    #define PAGE_CONTROL_Acelerometro ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[1] << 8 | ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[0]
+    #define PAGE_CONTROL_Giroscopio ((int16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[1] << 8 | ((int16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[0]
+    #define PAGE_CONTROL_Torque (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
+    #define PAGE_CONTROL_PopUp Flag_PopUP
+#else
+    #define PAGE_CONTROL_Temperatura_MD (uint16_t) ((uint16_t) (CAN_stream.Data_buf[86][5] << 8 | CAN_stream.Data_buf[86][4]) + (uint16_t) (CAN_stream.Data_buf[86][7] << 8 | CAN_stream.Data_buf[86][6])) / 2
+    #define PAGE_CONTROL_Torque_Inst_MD (uint16_t) (CAN_stream.Data_buf[85][3] << 8 | CAN_stream.Data_buf[85][2])
+    #define PAGE_CONTROL_Poten_Inst_MD (uint16_t) (CAN_stream.Data_buf[85][5] << 8 | CAN_stream.Data_buf[85][4])
+    #define PAGE_CONTROL_Giros_MD (uint16_t) (CAN_stream.Data_buf[85][1] << 8 | CAN_stream.Data_buf[85][0])
+    #define PAGE_CONTROL_Temperatura_ME (uint16_t) ((uint16_t) (CAN_stream.Data_buf[96][5] << 8 | CAN_stream.Data_buf[96][4]) + (uint16_t) (CAN_stream.Data_buf[96][7] << 8 | CAN_stream.Data_buf[96][6])) / 2
+    #define PAGE_CONTROL_Torque_Inst_ME (uint16_t) (CAN_stream.Data_buf[95][3] << 8 | CAN_stream.Data_buf[95][2])
+    #define PAGE_CONTROL_Poten_Inst_ME (uint16_t) (CAN_stream.Data_buf[95][5] << 8 | CAN_stream.Data_buf[95][4])
+    #define PAGE_CONTROL_Giros_ME (uint16_t) (CAN_stream.Data_buf[95][1] << 8 | CAN_stream.Data_buf[95][0])
+    #define PAGE_CONTROL_Angulo_Vol (uint16_t) (CAN_stream.Data_buf[76][3] << 8 | CAN_stream.Data_buf[76][2])
+    #define PAGE_CONTROL_Angulo_Car (uint16_t) (CAN_stream.Data_buf[76][3] << 8 | CAN_stream.Data_buf[76][2]) // melhorar depois, pegar da IMU
+    #define PAGE_CONTROL_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
+    #define PAGE_CONTROL_Modo (uint16_t) (CAN_stream.Data_buf[77][1] << 8 | CAN_stream.Data_buf[77][0])
+    #define PAGE_CONTROL_Frenagem *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_FRENAGEM_STATUS])
+    #define PAGE_CONTROL_Acelerometro ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[1] << 8 | ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[0]
+    #define PAGE_CONTROL_Giroscopio ((int16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[1] << 8 | ((int16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[0]
+    #define PAGE_CONTROL_Torque (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
+    #define PAGE_CONTROL_PopUp Flag_PopUP
+#endif
 
 /*********************** SAFETY PAGE **********************/
 #define PAGE_SAFETY_Stack_1 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENSAO_TOTAL])
