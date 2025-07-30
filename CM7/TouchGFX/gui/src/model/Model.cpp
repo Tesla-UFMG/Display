@@ -9,6 +9,7 @@
 
 bool bottom_state = false;
 uint32_t VALUE = 90;
+extern uint8_t changeScreenAction;
 
 #endif
 
@@ -19,10 +20,13 @@ Model::Model() :
 void Model::tick() {
 #ifndef SIMULATOR
 	if (HAL_GPIO_ReadPin(botao_GPIO_Port, botao_Pin) || 
-		!HAL_GPIO_ReadPin(CHANGE_SCREEN_PIN_GPIO_Port, CHANGE_SCREEN_PIN_Pin))
+		changeScreenAction) {
 		bottom_state = true;
-	else
+		changeScreenAction = 0;
+	} else {
 		bottom_state = false;
+	}
+		
 #endif
 	modelListener->updateTick();
 }

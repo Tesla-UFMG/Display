@@ -1,5 +1,5 @@
 Application/User/gui/DEBUGPresenter.o: \
- C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGPresenter.cpp \
+ C:/dev/tesla/Display/CM7/TouchGFX/gui/src/debug_screen/DEBUGPresenter.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/debug_screen/DEBUGView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
@@ -72,7 +72,15 @@ Application/User/gui/DEBUGPresenter.o: \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/ECU_PopUp.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/ECU_PopUpBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/BMS_PopUp.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/BMS_PopUpBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/Datalogger_PopUp.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/Datalogger_PopUpBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/Telemetry_PopUp.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/Telemetry_PopUpBase.hpp
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/debug_screen/DEBUGView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -146,3 +154,11 @@ Application/User/gui/DEBUGPresenter.o: \
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/ECU_PopUp.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/ECU_PopUpBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/BMS_PopUp.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/BMS_PopUpBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/Datalogger_PopUp.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/Datalogger_PopUpBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/Telemetry_PopUp.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/Telemetry_PopUpBase.hpp:

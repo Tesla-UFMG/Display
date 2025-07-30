@@ -117,6 +117,13 @@ const osThreadAttr_t DisplayTx_Task_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for changeScreenTas */
+osThreadId_t changeScreenTasHandle;
+const osThreadAttr_t changeScreenTas_attributes = {
+  .name = "changeScreenTas",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* Definitions for FDCAN_Queue */
 osMessageQueueId_t FDCAN_QueueHandle;
 const osMessageQueueAttr_t FDCAN_Queue_attributes = {
@@ -152,6 +159,8 @@ extern LoRa_Bandwich_t Bandwich_Value;
 extern LoRa_SpreadFactor_t SpreadFactor_Value;
 extern LoRa_CodingRate_t CodingRate_Value;
 extern uint16_t Frequencia_Value;
+
+uint8_t changeScreenAction = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -172,6 +181,7 @@ extern void videoTaskFunc(void *argument);
 void osTask_sendCAN(void *argument);
 extern void osTask_PopUpError(void *argument);
 void osTask_DisplayTx(void *argument);
+void changeScreenTaskFunc(void *argument);
 void osTimer_CanBusOFF(void *argument);
 void osTimer_BoardDataRATE(void *argument);
 
@@ -314,6 +324,9 @@ int main(void)
 
   /* creation of DisplayTx_Task */
   DisplayTx_TaskHandle = osThreadNew(osTask_DisplayTx, NULL, &DisplayTx_Task_attributes);
+
+  /* creation of changeScreenTas */
+  changeScreenTasHandle = osThreadNew(changeScreenTaskFunc, NULL, &changeScreenTas_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
 	/* add threads, ... */
@@ -873,6 +886,28 @@ void osTask_DisplayTx(void *argument)
     osDelay(20);
   }
   /* USER CODE END osTask_DisplayTx */
+}
+
+/* USER CODE BEGIN Header_changeScreenTaskFunc */
+/**
+* @brief Function implementing the changeScreenTas thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_changeScreenTaskFunc */
+void changeScreenTaskFunc(void *argument)
+{
+  /* USER CODE BEGIN changeScreenTaskFunc */
+  /* Infinite loop */
+  for(;;)
+  {
+    if (!HAL_GPIO_ReadPin(CHANGE_SCREEN_PIN_GPIO_Port, CHANGE_SCREEN_PIN_Pin)) {
+      changeScreenAction = 1;
+    }
+    
+    osDelay(1);
+  }
+  /* USER CODE END changeScreenTaskFunc */
 }
 
 /* osTimer_CanBusOFF function */

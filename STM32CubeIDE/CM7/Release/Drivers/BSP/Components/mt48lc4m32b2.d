@@ -1,7 +1,7 @@
 Drivers/BSP/Components/mt48lc4m32b2.o: \
- C:/TouchGFXProjects/Display_NK624/Drivers/BSP/Components/mt48lc4m32b2/mt48lc4m32b2.c \
- C:/TouchGFXProjects/Display_NK624/Drivers/BSP/Components/mt48lc4m32b2/mt48lc4m32b2.h \
- C:/TouchGFXProjects/Display_NK624/Drivers/BSP/Components/mt48lc4m32b2/mt48lc4m32b2_conf.h \
+ C:/dev/tesla/Display/Drivers/BSP/Components/mt48lc4m32b2/mt48lc4m32b2.c \
+ C:/dev/tesla/Display/Drivers/BSP/Components/mt48lc4m32b2/mt48lc4m32b2.h \
+ C:/dev/tesla/Display/Drivers/BSP/Components/mt48lc4m32b2/mt48lc4m32b2_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
@@ -42,8 +42,8 @@ Drivers/BSP/Components/mt48lc4m32b2.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
-C:/TouchGFXProjects/Display_NK624/Drivers/BSP/Components/mt48lc4m32b2/mt48lc4m32b2.h:
-C:/TouchGFXProjects/Display_NK624/Drivers/BSP/Components/mt48lc4m32b2/mt48lc4m32b2_conf.h:
+C:/dev/tesla/Display/Drivers/BSP/Components/mt48lc4m32b2/mt48lc4m32b2.h:
+C:/dev/tesla/Display/Drivers/BSP/Components/mt48lc4m32b2/mt48lc4m32b2_conf.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:

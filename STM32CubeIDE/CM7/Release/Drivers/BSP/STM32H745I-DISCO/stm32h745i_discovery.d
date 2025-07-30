@@ -1,7 +1,7 @@
 Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery.o: \
- C:/TouchGFXProjects/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery.c \
- C:/TouchGFXProjects/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery.h \
- C:/TouchGFXProjects/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_conf.h \
+ C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery.c \
+ C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery.h \
+ C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
@@ -42,9 +42,9 @@ Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- C:/TouchGFXProjects/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_errno.h
-C:/TouchGFXProjects/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery.h:
-C:/TouchGFXProjects/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_conf.h:
+ C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_errno.h
+C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery.h:
+C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_conf.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
@@ -85,4 +85,4 @@ C:/TouchGFXProjects/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discov
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
-C:/TouchGFXProjects/Display_NK624/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_errno.h:
+C:/dev/tesla/Display/Drivers/BSP/STM32H745I-DISCO/stm32h745i_discovery_errno.h:

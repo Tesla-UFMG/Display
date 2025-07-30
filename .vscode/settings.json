@@ -1,6 +1,8 @@
 {
     "cmake.configureOnOpen": false,
     "files.associations": {
-        "fdcan.h": "c"
+        "*.rmd": "markdown",
+        "fdcan.h": "c",
+        "main.h": "c"
     }
 }

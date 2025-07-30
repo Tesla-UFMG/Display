@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/croutine.o: \
- C:/TouchGFXProjects/Display_NK624/Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
+ C:/dev/tesla/Display/Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM7/Core/Inc/FreeRTOSConfig.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
