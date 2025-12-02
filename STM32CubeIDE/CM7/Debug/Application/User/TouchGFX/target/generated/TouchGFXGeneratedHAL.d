@@ -97,10 +97,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/LineProgress.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp \
@@ -110,6 +106,10 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/control_screen/CONTROLViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLPresenter.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/safety_screen/SAFETYView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/safety_screen/SAFETYPresenter.hpp \
@@ -299,10 +299,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/LineProgress.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp:
@@ -312,6 +308,10 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/control_screen/CONTROLViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/control_screen/CONTROLPresenter.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/safety_screen/SAFETYView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/safety_screen/SAFETYPresenter.hpp:

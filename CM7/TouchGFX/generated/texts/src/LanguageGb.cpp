@@ -309,7 +309,7 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     17, // T___SINGLEUSE_05D5: "<> kW"
     24, // T___SINGLEUSE_MUJP: "<>"
     42, // T___SINGLEUSE_Y52B: "<> V"
-    7,  // T___SINGLEUSE_P6H6: "<> C?"
+    42, // T___SINGLEUSE_P6H6: "<> V"
     62, // T___SINGLEUSE_1RT6: "<>%"
     46, // T___SINGLEUSE_UYYY: "<> ?"
     38, // T___SINGLEUSE_WNF9: "<> G"

@@ -224,6 +224,7 @@
 "./Application/User/generated/image_VELOCIMETRO_BASE.o"
 "./Application/User/generated/image_VELOCIMETRO_INDICATOR.o"
 "./Application/User/generated/image_VELOCIMETRO_PROGRESS.o"
+"./Application/User/generated/image_charge_progess_02.o"
 "./Application/User/gui/ANIMATIONPresenter.o"
 "./Application/User/gui/ANIMATIONView.o"
 "./Application/User/gui/BMS_PopUp.o"

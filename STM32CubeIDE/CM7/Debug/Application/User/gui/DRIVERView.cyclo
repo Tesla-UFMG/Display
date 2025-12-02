@@ -12,7 +12,7 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:82:10:void touchgfx::Box::setAlpha(uint8_t)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:97:18:virtual void touchgfx::Box::invalidateContent() const	2
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:54:26:FrontendApplication& DRIVERViewBase::application()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:53:26:FrontendApplication& DRIVERViewBase::application()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/driver_screen/DRIVERView.hpp:27:10:DRIVERView::~DRIVERView()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/driver_screen/DRIVERView.hpp:27:10:virtual DRIVERView::~DRIVERView()	1
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:12:1:DRIVERView::DRIVERView()	1
@@ -23,9 +23,9 @@ C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:29:6:virt
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:42:6:virtual void DRIVERView::LORA_Begin()	1
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:58:6:virtual void DRIVERView::LORA_End()	1
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:71:6:virtual void DRIVERView::updateTick()	4
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:124:6:void DRIVERView::setIcon_LoRa(LoRa_Status_t)	3
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:141:6:void DRIVERView::setIcon_Modo(Modo_t)	6
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:173:6:void DRIVERView::setIcon_PopUp(uint8_t)	54
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:131:6:void DRIVERView::setIcon_LoRa(LoRa_Status_t)	3
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:148:6:void DRIVERView::setIcon_Modo(Modo_t)	6
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:180:6:void DRIVERView::setIcon_PopUp(uint8_t)	54
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:71:10:void touchgfx::FadeAnimator<T>::clearFadeAnimationEndedAction() [with T = touchgfx::Box]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:122:10:void touchgfx::FadeAnimator<T>::startFadeAnimation(uint8_t, uint16_t, touchgfx::EasingEquation) [with T = touchgfx::Box]	4
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:76:10:void touchgfx::MoveAnimator<T>::clearMoveAnimationEndedAction() [with T = LoRA_PopUp]	1

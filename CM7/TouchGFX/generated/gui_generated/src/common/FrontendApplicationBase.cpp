@@ -38,19 +38,6 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
  * Screen Transition Declarations
  */
 
-// ANIMATION
-
-void FrontendApplicationBase::gotoANIMATIONScreenNoTransition()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoANIMATIONScreenNoTransitionImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotoANIMATIONScreenNoTransitionImpl()
-{
-    touchgfx::makeTransition<ANIMATIONView, ANIMATIONPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
 // DRIVER
 
 void FrontendApplicationBase::gotoDRIVERScreenNoTransition()

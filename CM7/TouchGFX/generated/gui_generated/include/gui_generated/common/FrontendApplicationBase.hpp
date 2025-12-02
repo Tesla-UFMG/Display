@@ -17,11 +17,8 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoANIMATIONScreenNoTransition();
+        gotoDRIVERScreenNoTransition();
     }
-
-    // ANIMATION
-    void gotoANIMATIONScreenNoTransition();
 
     // DRIVER
     void gotoDRIVERScreenNoTransition();
@@ -39,9 +36,6 @@ protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
-
-    // ANIMATION
-    void gotoANIMATIONScreenNoTransitionImpl();
 
     // DRIVER
     void gotoDRIVERScreenNoTransitionImpl();

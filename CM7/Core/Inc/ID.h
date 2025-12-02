@@ -78,12 +78,12 @@
 #define CanID_ECU_ALARM_ATUAL_MD 252
 
 /* ECU DEBUG */
-#define CanID_ECU_DEBUG_0 260
-#define CanID_ECU_DEBUG_1 261
-#define CanID_ECU_DEBUG_2 262
+#define CanID_ECU_DEBUG_0 460
+#define CanID_ECU_DEBUG_1 461
+#define CanID_ECU_DEBUG_2 462
 /* IMU */
-#define CanID_ECU_ACEL_IMU_Temp 291
-#define CanID_ECU_GIR_IMU_Erro 292
+#define CanID_ECU_ACEL_IMU_Temp 259
+#define CanID_ECU_GIR_IMU_Erro 260
 /* --------------- */
 
 /* --- Data Acquisition --- */

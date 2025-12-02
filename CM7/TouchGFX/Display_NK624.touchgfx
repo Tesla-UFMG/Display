@@ -149,14 +149,20 @@
             "Name": "CHARGE_Progress",
             "X": 367,
             "Y": -1,
-            "Width": 47,
-            "Height": 236,
+            "Width": 51,
+            "Height": 233,
+            "FileNameProgress": "DRIVE_page\\CHARGE_widget\\charge_progess_02.png",
+            "Color": {
+              "Red": 245,
+              "Green": 5,
+              "Blue": 5
+            },
             "StartX": 25.0,
             "EndY": 237.0,
             "EndX": 25.0,
             "LineWidth": 50.0,
             "LineEndingStyle": "Butt",
-            "FileNameBackground": "DRIVE_page\\CHARGE_widget\\CHARGE_progress.png",
+            "FileNameBackground": "DRIVE_page\\CHARGE_widget\\CHARGE_background.png",
             "ProgressRangeMax": 100,
             "Fadeable": true
           },
@@ -5736,7 +5742,7 @@
       "Height": 272
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "ANIMATION",
+    "StartupScreenName": "DRIVER",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

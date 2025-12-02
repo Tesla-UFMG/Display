@@ -12,7 +12,6 @@
 #include <touchgfx/widgets/Gauge.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp>
 #include <touchgfx/containers/progress_indicators/LineProgress.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/FadeAnimator.hpp>
 #include <touchgfx/widgets/Button.hpp>
@@ -63,7 +62,7 @@ protected:
     touchgfx::Gauge POTENCIMETRO_gauge;
     touchgfx::PainterRGB565Bitmap POTENCIMETRO_gaugePainter;
     touchgfx::FadeAnimator< touchgfx::LineProgress > CHARGE_Progress;
-    touchgfx::PainterRGB565 CHARGE_ProgressPainter;
+    touchgfx::PainterRGB565Bitmap CHARGE_ProgressPainter;
     touchgfx::Image PopUp;
     touchgfx::Button PAGE_Debug;
     touchgfx::Button PAGE_Safety;

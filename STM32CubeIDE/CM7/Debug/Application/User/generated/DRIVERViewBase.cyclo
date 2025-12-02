@@ -1,6 +1,5 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:78:5:touchgfx::colortype::colortype()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:91:5:touchgfx::colortype::colortype(uint32_t)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:114:5:touchgfx::colortype::operator uint32_t() const	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:127:5:touchgfx::Rect::Rect()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:140:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:132:5:touchgfx::Bitmap::Bitmap(touchgfx::BitmapId)	1
@@ -73,12 +72,6 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:34:7:touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:34:7:virtual touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp:45:5:touchgfx::PainterRGB565Bitmap::PainterRGB565Bitmap(const touchgfx::Bitmap&)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:43:5:touchgfx::AbstractPainterColor::AbstractPainterColor(touchgfx::colortype)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:49:13:touchgfx::AbstractPainterColor::~AbstractPainterColor()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:49:13:virtual touchgfx::AbstractPainterColor::~AbstractPainterColor()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:58:18:virtual void touchgfx::AbstractPainterColor::setColor(touchgfx::colortype)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:42:5:touchgfx::PainterRGB565::PainterRGB565(touchgfx::colortype)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:47:18:virtual void touchgfx::PainterRGB565::setColor(touchgfx::colortype)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:63:10:void touchgfx::AbstractButton::setAction(touchgfx::GenericCallback<const touchgfx::AbstractButton&>&)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:touchgfx::AbstractButton::~AbstractButton()	1
@@ -132,11 +125,11 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:virtual touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp:20:13:LoRA_PopUp::~LoRA_PopUp()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp:20:13:virtual LoRA_PopUp::~LoRA_PopUp()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:36:18:virtual void DRIVERViewBase::TransitionBegin_Driver()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:40:18:virtual void DRIVERViewBase::TransitionEnd_Driver()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:44:18:virtual void DRIVERViewBase::LORA_Begin()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:48:18:virtual void DRIVERViewBase::LORA_End()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:54:26:FrontendApplication& DRIVERViewBase::application()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:35:18:virtual void DRIVERViewBase::TransitionBegin_Driver()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:39:18:virtual void DRIVERViewBase::TransitionEnd_Driver()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:43:18:virtual void DRIVERViewBase::LORA_Begin()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:47:18:virtual void DRIVERViewBase::LORA_End()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:53:26:FrontendApplication& DRIVERViewBase::application()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<DRIVERPresenter>::~View()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<DRIVERPresenter>::~View()	1
 C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:10:1:DRIVERViewBase::DRIVERViewBase()	1
@@ -204,8 +197,6 @@ C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIV
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Gauge.hpp:35:7:virtual touchgfx::Gauge::~Gauge()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp:37:7:touchgfx::PainterRGB565Bitmap::~PainterRGB565Bitmap()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp:37:7:virtual touchgfx::PainterRGB565Bitmap::~PainterRGB565Bitmap()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:34:7:touchgfx::PainterRGB565::~PainterRGB565()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:34:7:virtual touchgfx::PainterRGB565::~PainterRGB565()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = DRIVERViewBase; T1 = const touchgfx::AbstractButtonContainer&]	2

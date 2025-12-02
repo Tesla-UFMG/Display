@@ -78,14 +78,16 @@ void DRIVERView::updateTick(void) {
 
 	POTENCIMETRO_gauge.setValue(PAGE_DRIVER_Potencia);
 
-	CHARGE_Progress.setValue(100 - PAGE_DRIVER_Charge);
+	// CHARGE_Progress.setValue(100 - PAGE_DRIVER_Charge);
+	CHARGE_Progress.setValue(PAGE_DRIVER_Charge);
 
 	Unicode::snprintf(VELOCIMETRO_digitalBuffer, VELOCIMETRO_DIGITAL_SIZE,
 			"%02u", (uint16_t) PAGE_DRIVER_Velocidade % 100);
+			// "%02u", (uint16_t) PAGE_DRIVER_Velocidade);
 	VELOCIMETRO_digital.invalidate();
 
 	Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u",
-			(uint8_t) PAGE_DRIVER_Charge);
+			(uint16_t) PAGE_DRIVER_Charge);
 	charge_percent.invalidate();
 
 	Unicode::snprintf(hodometroBuffer, HODOMETRO_SIZE, "%u.%02u",
@@ -106,10 +108,15 @@ void DRIVERView::updateTick(void) {
 			(uint16_t) PAGE_DRIVER_Tensao_Min % 100);
 	tensao_min.invalidate();
 
-	Unicode::snprintf(temp_maxBuffer, TEMP_MAX_SIZE, "%u.%01u",
-			(uint16_t) PAGE_DRIVER_Temp_Max / 10,
-			(uint16_t) PAGE_DRIVER_Temp_Max % 10);
+	Unicode::snprintf(temp_maxBuffer, TEMP_MAX_SIZE, "%u.%02u",
+			(uint16_t) PAGE_DRIVER_Temp_Max / 100,
+			(uint16_t) PAGE_DRIVER_Temp_Max % 100);
 	temp_max.invalidate();
+
+	// Unicode::snprintf(temp_maxBuffer, TEMP_MAX_SIZE, "%u.%01u",
+	// 		(uint16_t) PAGE_DRIVER_Temp_Max / 10,
+	// 		(uint16_t) PAGE_DRIVER_Temp_Max % 10);
+	// temp_max.invalidate();
 
 	setIcon_LoRa((LoRa_Status_t) PAGE_DRIVER_LoRa_State);
 
