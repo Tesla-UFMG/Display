@@ -54,19 +54,22 @@ extern uint8_t Flag_PopUP;
     #define PAGE_DRIVER_Temp_Max *((uint16_t *) CAN_stream.Data_buf[CanID_SS_TEMP_MAX])
     #define PAGE_DRIVER_PopUp Flag_PopUP
 #else
-    #define PAGE_DRIVER_Velocidade (int16_t) (CAN_stream.Data_buf[79][1] << 8 | CAN_stream.Data_buf[79][0]) / 10
+    // #define PAGE_DRIVER_Velocidade (int16_t) (CAN_stream.Data_buf[79][1] << 8 | CAN_stream.Data_buf[79][0]) / 10
+    // #define PAGE_DRIVER_Velocidade (int16_t) (CAN_stream.Data_buf[80][1] << 8 | CAN_stream.Data_buf[80][0])
     // #define PAGE_DRIVER_Velocidade (uint16_t) (CAN_stream.Data_buf[76][1] << 8 | CAN_stream.Data_buf[76][0])
-    // #define PAGE_DRIVER_Velocidade (uint16_t) ((CAN_stream.Data_buf[85][1] << 8 | CAN_stream.Data_buf[85][0]) / (float) TRANSMISSION_RATIO * WHEEL_RADIUS * 2 * PI / (float) 60 * MS_TO_KPH)
+    #define PAGE_DRIVER_Velocidade (uint16_t) ((CAN_stream.Data_buf[95][1] << 8 | CAN_stream.Data_buf[95][0]) / (float) TRANSMISSION_RATIO * WHEEL_RADIUS * 2 * PI / (float) 60 * MS_TO_KPH)
     // #define PAGE_DRIVER_Velocidade (uint16_t) ((2 << 8 | 129) / (float) TRANSMISSION_RATIO * WHEEL_RADIUS * 2 * PI / (float) 60 * MS_TO_KPH)
     
     // #define PAGE_DRIVER_Velocidade (uint16_t) ((uint16_t) (CAN_stream.Data_buf[80][1] << 8 | CAN_stream.Data_buf[80][0]) + (uint16_t) (CAN_stream.Data_buf[80][3] << 8 | CAN_stream.Data_buf[80][2])) / 2
 
     // uint16_t potencia_me = (uint16_t) (CAN_stream.Data_buf[85][2] << 8 | CAN_stream.Data_buf[85][3]);
     // uint16_t potencia_md = (uint16_t) (CAN_stream.Data_buf[95][2] << 8 | CAN_stream.Data_buf[95][3]);
-    #define PAGE_DRIVER_Potencia (int16_t) (CAN_stream.Data_buf[76][5] << 8 | CAN_stream.Data_buf[76][4]) / 6
+    #define PAGE_DRIVER_Potencia (int16_t) (CAN_stream.Data_buf[78][5] << 8 | CAN_stream.Data_buf[78][4]) / 6
+    // #define PAGE_DRIVER_Potencia (int16_t) (CAN_stream.Data_buf[75][1] << 8 | CAN_stream.Data_buf[75][0]) / 6
 
     #define PAGE_DRIVER_Hodometro (uint16_t) (CAN_stream.Data_buf[77][5] << 8 | CAN_stream.Data_buf[77][4])
-    #define PAGE_DRIVER_Charge (int16_t) (CAN_stream.Data_buf[76][7] << 8 | CAN_stream.Data_buf[76][6]) * 100 // BRAKE BAR GRAPH
+    #define PAGE_DRIVER_Brake_Graph (int16_t) (CAN_stream.Data_buf[76][7] << 8 | CAN_stream.Data_buf[76][6]) * 100 // BRAKE BAR GRAPH
+    #define PAGE_DRIVER_Charge (int16_t) (CAN_stream.Data_buf[306][5] << 8 | CAN_stream.Data_buf[306][4])
     #define PAGE_DRIVER_LoRa_State (LoRa_Status_t)*((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
     #define PAGE_DRIVER_Modo (uint16_t) (CAN_stream.Data_buf[77][1] << 8 | CAN_stream.Data_buf[77][0])
     #define PAGE_DRIVER_Torque (*((uint8_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint8_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
@@ -117,6 +120,18 @@ extern uint8_t Flag_PopUP;
 
 /*********************** SAFETY PAGE **********************/
 #ifdef UPDATED_PROTOCOL
+    #define PAGE_SAFETY_Corrente_1 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_0])
+    #define PAGE_SAFETY_Corrente_2 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_1])
+    #define PAGE_SAFETY_Corrente_3 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_2])
+    #define PAGE_SAFETY_Corrente_4 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_3])
+    #define PAGE_SAFETY_Charge (uint16_t) (CAN_stream.Data_buf[306][5] << 8 | CAN_stream.Data_buf[306][4]) / 10
+    #define PAGE_SAFETY_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
+    #define PAGE_SAFETY_Modo *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
+    #define PAGE_SAFETY_Air *((uint64_t *) CAN_stream.Data_buf[CanID_SS_STATUS_CONTATOR])
+    #define PAGE_SAFETY_Tensao_Max *((uint64_t *) CAN_stream.Data_buf[CanID_SS_TENSAO_MAX])
+    #define PAGE_SAFETY_Tensao_Min *((uint64_t *) CAN_stream.Data_buf[CanID_SS_TENSAO_MIN])
+    #define PAGE_SAFETY_Temp_Max *((uint64_t *) CAN_stream.Data_buf[CanID_SS_TEMP_MAX])
+    #define PAGE_SAFETY_PopUp Flag_PopUP
     #define PAGE_SAFETY_Stack_1 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENSAO_TOTAL])
     #define PAGE_SAFETY_Stack_2 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENSAO_TOTAL])
     #define PAGE_SAFETY_Stack_3 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENSAO_TOTAL])
@@ -124,6 +139,18 @@ extern uint8_t Flag_PopUP;
     #define PAGE_SAFETY_Stack_5 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENSAO_TOTAL])
     #define PAGE_SAFETY_Stack_6 *((uint8_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENSAO_TOTAL])
 #else
+    #define PAGE_SAFETY_Corrente_1 (int16_t) (CAN_stream.Data_buf[306][7] << 8 | CAN_stream.Data_buf[306][6])
+    #define PAGE_SAFETY_Corrente_2 (int16_t) (CAN_stream.Data_buf[306][7] << 8 | CAN_stream.Data_buf[306][6])
+    #define PAGE_SAFETY_Corrente_3 (int16_t) (CAN_stream.Data_buf[306][7] << 8 | CAN_stream.Data_buf[306][6])
+    #define PAGE_SAFETY_Corrente_4 (int16_t) (CAN_stream.Data_buf[306][7] << 8 | CAN_stream.Data_buf[306][6])
+    #define PAGE_SAFETY_Charge (uint16_t) (CAN_stream.Data_buf[306][5] << 8 | CAN_stream.Data_buf[306][4]) / 10
+    #define PAGE_SAFETY_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
+    #define PAGE_SAFETY_Modo *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
+    #define PAGE_SAFETY_Air (uint16_t) (CAN_stream.Data_buf[307][5] << 8 | CAN_stream.Data_buf[307][4])
+    #define PAGE_SAFETY_Tensao_Max (uint16_t) (CAN_stream.Data_buf[306][3] << 8 | CAN_stream.Data_buf[306][2]) / 100
+    #define PAGE_SAFETY_Tensao_Min (uint16_t) (CAN_stream.Data_buf[306][1] << 8 | CAN_stream.Data_buf[306][0]) / 100
+    #define PAGE_SAFETY_Temp_Max *((uint64_t *) CAN_stream.Data_buf[CanID_SS_TEMP_MAX])
+    #define PAGE_SAFETY_PopUp Flag_PopUP
     #define PAGE_SAFETY_Stack_1 (uint16_t) (CAN_stream.Data_buf[300][1] << 8 | CAN_stream.Data_buf[300][0]) / 1000
     #define PAGE_SAFETY_Stack_2 (uint16_t) (CAN_stream.Data_buf[301][1] << 8 | CAN_stream.Data_buf[301][0]) / 1000
     #define PAGE_SAFETY_Stack_3 (uint16_t) (CAN_stream.Data_buf[302][1] << 8 | CAN_stream.Data_buf[302][0]) / 1000
@@ -131,19 +158,6 @@ extern uint8_t Flag_PopUP;
     #define PAGE_SAFETY_Stack_5 (uint16_t) (CAN_stream.Data_buf[304][1] << 8 | CAN_stream.Data_buf[304][0]) / 1000
     #define PAGE_SAFETY_Stack_6 (uint16_t) (CAN_stream.Data_buf[305][1] << 8 | CAN_stream.Data_buf[305][0]) / 1000
 #endif
-
-#define PAGE_SAFETY_Corrente_1 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_0])
-#define PAGE_SAFETY_Corrente_2 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_1])
-#define PAGE_SAFETY_Corrente_3 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_2])
-#define PAGE_SAFETY_Corrente_4 *((uint16_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_3])
-#define PAGE_SAFETY_Charge (uint16_t) (CAN_stream.Data_buf[306][5] << 8 | CAN_stream.Data_buf[306][4]) / 10
-#define PAGE_SAFETY_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
-#define PAGE_SAFETY_Modo *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
-#define PAGE_SAFETY_Air *((uint64_t *) CAN_stream.Data_buf[CanID_SS_STATUS_CONTATOR])
-#define PAGE_SAFETY_Tensao_Max *((uint64_t *) CAN_stream.Data_buf[CanID_SS_TENSAO_MAX])
-#define PAGE_SAFETY_Tensao_Min *((uint64_t *) CAN_stream.Data_buf[CanID_SS_TENSAO_MIN])
-#define PAGE_SAFETY_Temp_Max *((uint64_t *) CAN_stream.Data_buf[CanID_SS_TEMP_MAX])
-#define PAGE_SAFETY_PopUp Flag_PopUP
 
 /************************ STACK PAGE ***********************/
 #define PAGE_STACK_1_CELL_1 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENS_CELL_1])

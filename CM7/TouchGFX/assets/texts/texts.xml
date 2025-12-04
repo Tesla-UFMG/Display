@@ -815,7 +815,7 @@
         <Translation Language="GB">&lt;value&gt;%</Translation>
       </Text>
       <Text Id="__SingleUse_W9BV" Alignment="Center" TypographyId="Charge_percent">
-        <Translation Language="GB">&lt;value&gt;%</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_LIL6" Alignment="Center" TypographyId="MOTOR_font">
         <Translation Language="GB">&lt;value&gt; %</Translation>

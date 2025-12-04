@@ -71,7 +71,7 @@ uint32_t CONT;
 FDCAN_StatusTypedef FDCAN_Status = FDCAN_RESET;
 
 uint32_t RxIdentifierList[500];
-uint8_t RxDataList[500][8];
+uint8_t RxDataList[500][9];
 uint32_t counterCAN = 0;
 /* USER CODE END PV */
 
@@ -103,11 +103,13 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 
 	if (counterCAN == 200) {
 		counterCAN = counterCAN;
+		counterCAN = 0;
 	}
 
 	// armazena para DEBUG depois
 	RxIdentifierList[counterCAN] = RxHeader.Identifier;
-	for (int i = 0; i < 8; ++i) {
+	RxDataList[counterCAN][0] = RxHeader.Identifier;
+	for (int i = 1; i < 9; ++i) {
 		RxDataList[counterCAN][i] = RxData[i];
 	}
 

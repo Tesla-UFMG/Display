@@ -34,10 +34,10 @@ C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:185:6:vir
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:201:6:virtual void SAFETYView::STACK_6_End()	24	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:214:6:virtual void SAFETYView::LORA_Begin()	24	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:230:6:virtual void SAFETYView::LORA_End()	24	static
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:243:6:virtual void SAFETYView::updateTick()	88	static
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:385:6:void SAFETYView::setIcon_LoRa(LoRa_Status_t)	32	static
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:402:6:void SAFETYView::setIcon_Modo(Modo_t)	48	static
-C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:434:6:void SAFETYView::setIcon_PopUp(uint8_t)	232	static
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:243:6:virtual void SAFETYView::updateTick()	72	static
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:397:6:void SAFETYView::setIcon_LoRa(LoRa_Status_t)	32	static
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:414:6:void SAFETYView::setIcon_Modo(Modo_t)	48	static
+C:/dev/tesla/Display/CM7/TouchGFX/gui/src/safety_screen/SAFETYView.cpp:446:6:void SAFETYView::setIcon_PopUp(uint8_t)	232	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:71:10:void touchgfx::FadeAnimator<T>::clearFadeAnimationEndedAction() [with T = touchgfx::Box]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:122:10:void touchgfx::FadeAnimator<T>::startFadeAnimation(uint8_t, uint16_t, touchgfx::EasingEquation) [with T = touchgfx::Box]	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:76:10:void touchgfx::MoveAnimator<T>::clearMoveAnimationEndedAction() [with T = STACK_1_PopUp]	16	static

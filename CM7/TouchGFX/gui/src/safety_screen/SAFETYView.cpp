@@ -256,13 +256,13 @@ void SAFETYView::updateTick(void) {
 	temp_max.invalidate();
 
 	Unicode::snprintf(tensao_maxBuffer, TENSAO_MAX_SIZE, "%u.%02u",
-			(uint8_t) PAGE_SAFETY_Tensao_Max / 100,
-			(uint8_t) PAGE_SAFETY_Tensao_Max % 100);
+			(uint16_t) PAGE_SAFETY_Tensao_Max / 100,
+			(uint16_t) PAGE_SAFETY_Tensao_Max % 100);
 	tensao_max.invalidate();
 
 	Unicode::snprintf(tensao_minBuffer, TENSAO_MIN_SIZE, "%u.%02u",
-			(uint8_t) PAGE_SAFETY_Tensao_Min / 100,
-			(uint8_t) PAGE_SAFETY_Tensao_Min % 100);
+			(uint16_t) PAGE_SAFETY_Tensao_Min / 100,
+			(uint16_t) PAGE_SAFETY_Tensao_Min % 100);
 	tensao_min.invalidate();
 
 	Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u",
@@ -270,87 +270,99 @@ void SAFETYView::updateTick(void) {
 	charge_percent.invalidate();
 
 	Unicode::snprintf(STACK_6_textBuffer, STACK_6_TEXT_SIZE, "%u.%01u",
-			(uint8_t) PAGE_SAFETY_Stack_6 / 10,
-			(uint8_t) PAGE_SAFETY_Stack_6 % 10);
+			(uint16_t) PAGE_SAFETY_Stack_6 / 10,
+			(uint16_t) PAGE_SAFETY_Stack_6 % 10);
 	STACK_6_text.invalidate();
 
 	Unicode::snprintf(STACK_5_textBuffer, STACK_5_TEXT_SIZE, "%u.%01u",
-			(uint8_t) PAGE_SAFETY_Stack_5 / 10,
-			(uint8_t) PAGE_SAFETY_Stack_5 % 10);
+			(uint16_t) PAGE_SAFETY_Stack_5 / 10,
+			(uint16_t) PAGE_SAFETY_Stack_5 % 10);
 	STACK_5_text.invalidate();
 
 	Unicode::snprintf(STACK_4_textBuffer, STACK_4_TEXT_SIZE, "%u.%01u",
-			(uint8_t) PAGE_SAFETY_Stack_4 / 10,
-			(uint8_t) PAGE_SAFETY_Stack_4 % 10);
+			(uint16_t) PAGE_SAFETY_Stack_4 / 10,
+			(uint16_t) PAGE_SAFETY_Stack_4 % 10);
 	STACK_4_text.invalidate();
 
 	Unicode::snprintf(STACK_3_textBuffer, STACK_3_TEXT_SIZE, "%u.%01u",
-			(uint8_t) PAGE_SAFETY_Stack_3 / 10,
-			(uint8_t) PAGE_SAFETY_Stack_3 % 10);
+			(uint16_t) PAGE_SAFETY_Stack_3 / 10,
+			(uint16_t) PAGE_SAFETY_Stack_3 % 10);
 	STACK_3_text.invalidate();
 
 	Unicode::snprintf(STACK_2_textBuffer, STACK_2_TEXT_SIZE, "%u.%01u",
-			(uint8_t) PAGE_SAFETY_Stack_2 / 10,
-			(uint8_t) PAGE_SAFETY_Stack_2 % 10);
+			(uint16_t) PAGE_SAFETY_Stack_2 / 10,
+			(uint16_t) PAGE_SAFETY_Stack_2 % 10);
 	STACK_2_text.invalidate();
 
 	Unicode::snprintf(STACK_1_textBuffer, STACK_1_TEXT_SIZE, "%u.%01u",
-			(uint8_t) PAGE_SAFETY_Stack_1 / 10,
-			(uint8_t) PAGE_SAFETY_Stack_1 % 10);
+			(uint16_t) PAGE_SAFETY_Stack_1 / 10,
+			(uint16_t) PAGE_SAFETY_Stack_1 % 10);
 	STACK_1_text.invalidate();
 
 	Unicode::snprintf(SENSOR_4_textBuffer, SENSOR_4_TEXT_SIZE, "%i",
-			(int16_t) PAGE_SAFETY_Corrente_4 - 130);
+			(int16_t) PAGE_SAFETY_Corrente_4);
 	SENSOR_4_text.invalidate();
 
 	Unicode::snprintf(SENSOR_3_textBuffer, SENSOR_3_TEXT_SIZE, "%i",
-			(int16_t) PAGE_SAFETY_Corrente_3 - 130);
+			(int16_t) PAGE_SAFETY_Corrente_3);
 	SENSOR_3_text.invalidate();
 
 	Unicode::snprintf(SENSOR_2_textBuffer, SENSOR_2_TEXT_SIZE, "%i",
-			(int16_t) PAGE_SAFETY_Corrente_2 - 130);
+			(int16_t) PAGE_SAFETY_Corrente_2);
 	SENSOR_2_text.invalidate();
 
 	Unicode::snprintf(SENSOR_1_textBuffer, SENSOR_1_TEXT_SIZE, "%i",
-			(int16_t) PAGE_SAFETY_Corrente_1 - 130);
+			(int16_t) PAGE_SAFETY_Corrente_1);
 	SENSOR_1_text.invalidate();
 
-	if (((int16_t) PAGE_SAFETY_Corrente_4 - 130) == 0)
-		SENSOR_4_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_4_ID));
-	else if (((int16_t) PAGE_SAFETY_Corrente_4 - 130) > 0)
-		SENSOR_4_icon.setBitmap(
-				touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_4_ID));
-	else
-		SENSOR_4_icon.setBitmap(
-				touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_BACK_4_ID));
+	// if (((int16_t) PAGE_SAFETY_Corrente_4 - 130) == 0)
+	// 	SENSOR_4_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_4_ID));
+	// else if (((int16_t) PAGE_SAFETY_Corrente_4 - 130) > 0)
+	// 	SENSOR_4_icon.setBitmap(
+	// 			touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_4_ID));
+	// else
+	// 	SENSOR_4_icon.setBitmap(
+	// 			touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_BACK_4_ID));
 
-	if (((int16_t) PAGE_SAFETY_Corrente_3 - 130) == 0)
-		SENSOR_3_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_3_ID));
-	else if (((int16_t) PAGE_SAFETY_Corrente_3 - 130) > 0)
-		SENSOR_3_icon.setBitmap(
-				touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_3_ID));
-	else
-		SENSOR_3_icon.setBitmap(
-				touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_BACK_3_ID));
+	// if (((int16_t) PAGE_SAFETY_Corrente_3 - 130) == 0)
+	// 	SENSOR_3_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_3_ID));
+	// else if (((int16_t) PAGE_SAFETY_Corrente_3 - 130) > 0)
+	// 	SENSOR_3_icon.setBitmap(
+	// 			touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_3_ID));
+	// else
+	// 	SENSOR_3_icon.setBitmap(
+	// 			touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_BACK_3_ID));
 
-	if (((int16_t) PAGE_SAFETY_Corrente_2 - 130) == 0)
-		SENSOR_2_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_2_ID));
-	else if (((int16_t) PAGE_SAFETY_Corrente_2 - 130) > 0)
-		SENSOR_2_icon.setBitmap(
-				touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_2_ID));
-	else
-		SENSOR_2_icon.setBitmap(
-				touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_BACK_2_ID));
+	// if (((int16_t) PAGE_SAFETY_Corrente_2 - 130) == 0)
+	// 	SENSOR_2_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_2_ID));
+	// else if (((int16_t) PAGE_SAFETY_Corrente_2 - 130) > 0)
+	// 	SENSOR_2_icon.setBitmap(
+	// 			touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_2_ID));
+	// else
+	// 	SENSOR_2_icon.setBitmap(
+	// 			touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_BACK_2_ID));
 
-	if (((int16_t) PAGE_SAFETY_Corrente_1 - 130) == 0)
+	// if (((int16_t) PAGE_SAFETY_Corrente_1 - 130) == 0)
+	// 	SENSOR_1_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_1_ID));
+	// else if (((int16_t) PAGE_SAFETY_Corrente_1 - 130) > 0)
+	// 	SENSOR_1_icon.setBitmap(
+	// 			touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_1_ID));
+	// else
+	// 	SENSOR_1_icon.setBitmap(
+	// 			touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_BACK_1_ID));
+
+	if (((int16_t) PAGE_SAFETY_Corrente_1) == 0) {
 		SENSOR_1_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_1_ID));
-	else if (((int16_t) PAGE_SAFETY_Corrente_1 - 130) > 0)
-		SENSOR_1_icon.setBitmap(
-				touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_1_ID));
-	else
-		SENSOR_1_icon.setBitmap(
-				touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_BACK_1_ID));
-
+		SENSOR_2_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_2_ID));
+		SENSOR_3_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_3_ID));
+		SENSOR_4_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_4_ID));
+	} else {
+		SENSOR_1_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_1_ID));
+		SENSOR_2_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_2_ID));
+		SENSOR_3_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_3_ID));
+		SENSOR_4_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_4_ID));
+	}
+		
 	setIcon_LoRa((LoRa_Status_t) PAGE_SAFETY_LoRa_State);
 
 	setIcon_Modo((Modo_t)PAGE_SAFETY_Modo);
@@ -359,7 +371,7 @@ void SAFETYView::updateTick(void) {
 
 	LORA_PopUp.updateTick();
 
-	if (PAGE_SAFETY_Air) {
+	if (PAGE_SAFETY_Air == 0) {
 		ICON_Air.setXY(433, 97);
 		ICON_Air.setBitmap(touchgfx::Bitmap(BITMAP_AIR_ABERTO_ID));
 	} else {

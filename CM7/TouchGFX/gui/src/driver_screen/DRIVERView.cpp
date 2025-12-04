@@ -79,15 +79,20 @@ void DRIVERView::updateTick(void) {
 	POTENCIMETRO_gauge.setValue(PAGE_DRIVER_Potencia);
 
 	// CHARGE_Progress.setValue(100 - PAGE_DRIVER_Charge);
-	CHARGE_Progress.setValue(PAGE_DRIVER_Charge);
+	CHARGE_Progress.setValue(PAGE_DRIVER_Brake_Graph);
 
 	Unicode::snprintf(VELOCIMETRO_digitalBuffer, VELOCIMETRO_DIGITAL_SIZE,
 			"%02u", (uint16_t) PAGE_DRIVER_Velocidade % 100);
 			// "%02u", (uint16_t) PAGE_DRIVER_Velocidade);
 	VELOCIMETRO_digital.invalidate();
 
-	Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u",
-			(uint16_t) PAGE_DRIVER_Charge);
+	// Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u",
+	// 		(uint16_t) PAGE_DRIVER_Charge);
+	// charge_percent.invalidate();
+
+	Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u.%02u",
+			(uint16_t) PAGE_DRIVER_Charge / 10,
+			(uint16_t) PAGE_DRIVER_Charge % 10);
 	charge_percent.invalidate();
 
 	Unicode::snprintf(hodometroBuffer, HODOMETRO_SIZE, "%u.%02u",
