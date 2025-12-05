@@ -278,7 +278,7 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     57, // T___SINGLEUSE_PEFS: "0"
     24, // T___SINGLEUSE_QUF4: "<>"
     0,  // T___SINGLEUSE_VZZG: "<> Kbps"
-    62, // T___SINGLEUSE_PCOB: "<>%"
+    42, // T___SINGLEUSE_PCOB: "<> V"
     42, // T___SINGLEUSE_W9BV: "<> V"
     30, // T___SINGLEUSE_LIL6: "<> %"
     24, // T___SINGLEUSE_HRQE: "<>"

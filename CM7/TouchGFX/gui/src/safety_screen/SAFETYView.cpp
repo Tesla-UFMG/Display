@@ -248,7 +248,7 @@ void SAFETYView::updateTick(void) {
 	else if (!bottom_state)
 		SAFETY_page_Interlock = false;
 
-	CHARGE_Progress.setValue(100 - PAGE_SAFETY_Charge);
+	CHARGE_Progress.setValue(PAGE_SAFETY_Brake_Graph);
 
 	Unicode::snprintf(temp_maxBuffer, TEMP_MAX_SIZE, "%u.%01u",
 			(uint8_t) PAGE_SAFETY_Temp_Max / 10,
@@ -265,8 +265,13 @@ void SAFETYView::updateTick(void) {
 			(uint16_t) PAGE_SAFETY_Tensao_Min % 100);
 	tensao_min.invalidate();
 
-	Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u",
-			(uint8_t) PAGE_SAFETY_Charge);
+	// Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u",
+	// 		(uint16_t) PAGE_SAFETY_Charge);
+	// charge_percent.invalidate();
+
+	Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u.%u",
+			(uint16_t) PAGE_SAFETY_Charge / 10,
+			(uint16_t) PAGE_SAFETY_Charge % 10);
 	charge_percent.invalidate();
 
 	Unicode::snprintf(STACK_6_textBuffer, STACK_6_TEXT_SIZE, "%u.%01u",

@@ -8,6 +8,7 @@ extern bool bottom_state;
 #define TIME_TRANSITION 15U
 
 bool DRIVE_page_Interlock = false;
+int counter = 0;
 
 DRIVERView::DRIVERView() {
 }
@@ -69,6 +70,7 @@ void DRIVERView::LORA_End() {
 }
 
 void DRIVERView::updateTick(void) {
+	counter++;
 #ifndef SIMULATOR
 	BACKGROUND.invalidate();
 	if (bottom_state && !DRIVE_page_Interlock)
@@ -81,16 +83,18 @@ void DRIVERView::updateTick(void) {
 	// CHARGE_Progress.setValue(100 - PAGE_DRIVER_Charge);
 	CHARGE_Progress.setValue(PAGE_DRIVER_Brake_Graph);
 
-	Unicode::snprintf(VELOCIMETRO_digitalBuffer, VELOCIMETRO_DIGITAL_SIZE,
-			"%02u", (uint16_t) PAGE_DRIVER_Velocidade % 100);
-			// "%02u", (uint16_t) PAGE_DRIVER_Velocidade);
-	VELOCIMETRO_digital.invalidate();
+	if (counter % 10 == 0) {
+		Unicode::snprintf(VELOCIMETRO_digitalBuffer, VELOCIMETRO_DIGITAL_SIZE,
+				"%02u", (uint16_t) PAGE_DRIVER_Velocidade % 100);
+				// "%02u", (uint16_t) PAGE_DRIVER_Velocidade);
+		VELOCIMETRO_digital.invalidate();
+	}
 
 	// Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u",
 	// 		(uint16_t) PAGE_DRIVER_Charge);
 	// charge_percent.invalidate();
 
-	Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u.%02u",
+	Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u.%u",
 			(uint16_t) PAGE_DRIVER_Charge / 10,
 			(uint16_t) PAGE_DRIVER_Charge % 10);
 	charge_percent.invalidate();

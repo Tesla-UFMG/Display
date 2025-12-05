@@ -812,7 +812,7 @@
         <Translation Language="GB">&lt;value&gt; Kbps</Translation>
       </Text>
       <Text Id="__SingleUse_PCOB" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">&lt;value&gt;%</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_W9BV" Alignment="Center" TypographyId="Charge_percent">
         <Translation Language="GB">&lt;value&gt; V</Translation>

@@ -69,10 +69,10 @@ extern uint8_t Flag_PopUP;
 
     #define PAGE_DRIVER_Hodometro (uint16_t) (CAN_stream.Data_buf[77][5] << 8 | CAN_stream.Data_buf[77][4])
     #define PAGE_DRIVER_Brake_Graph (int16_t) (CAN_stream.Data_buf[76][7] << 8 | CAN_stream.Data_buf[76][6]) * 100 // BRAKE BAR GRAPH
-    #define PAGE_DRIVER_Charge (int16_t) (CAN_stream.Data_buf[306][5] << 8 | CAN_stream.Data_buf[306][4])
+    #define PAGE_DRIVER_Charge (uint16_t) (CAN_stream.Data_buf[306][5] << 8 | CAN_stream.Data_buf[306][4])
     #define PAGE_DRIVER_LoRa_State (LoRa_Status_t)*((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
     #define PAGE_DRIVER_Modo (uint16_t) (CAN_stream.Data_buf[77][1] << 8 | CAN_stream.Data_buf[77][0])
-    #define PAGE_DRIVER_Torque (*((uint8_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint8_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
+    #define PAGE_DRIVER_Torque (uint16_t) (CAN_stream.Data_buf[95][3] << 8 | CAN_stream.Data_buf[95][2])
     #define PAGE_DRIVER_Brake_Bias 0
     #define PAGE_DRIVER_Tensao_Min (uint16_t) (CAN_stream.Data_buf[306][1] << 8 | CAN_stream.Data_buf[306][0]) / 100
     #define PAGE_DRIVER_Temp_Max (uint16_t) (CAN_stream.Data_buf[306][3] << 8 | CAN_stream.Data_buf[306][2]) / 100
@@ -99,14 +99,14 @@ extern uint8_t Flag_PopUP;
     #define PAGE_CONTROL_Torque (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
     #define PAGE_CONTROL_PopUp Flag_PopUP
 #else
-    #define PAGE_CONTROL_Temperatura_MD (uint16_t) ((uint16_t) (CAN_stream.Data_buf[86][5] << 8 | CAN_stream.Data_buf[86][4]) + (uint16_t) (CAN_stream.Data_buf[86][7] << 8 | CAN_stream.Data_buf[86][6])) / 2
-    #define PAGE_CONTROL_Torque_Inst_MD (uint16_t) (CAN_stream.Data_buf[85][3] << 8 | CAN_stream.Data_buf[85][2])
-    #define PAGE_CONTROL_Poten_Inst_MD (uint16_t) (CAN_stream.Data_buf[85][5] << 8 | CAN_stream.Data_buf[85][4])
-    #define PAGE_CONTROL_Giros_MD (uint16_t) (CAN_stream.Data_buf[85][1] << 8 | CAN_stream.Data_buf[85][0])
-    #define PAGE_CONTROL_Temperatura_ME (uint16_t) ((uint16_t) (CAN_stream.Data_buf[96][5] << 8 | CAN_stream.Data_buf[96][4]) + (uint16_t) (CAN_stream.Data_buf[96][7] << 8 | CAN_stream.Data_buf[96][6])) / 2
-    #define PAGE_CONTROL_Torque_Inst_ME (uint16_t) (CAN_stream.Data_buf[95][3] << 8 | CAN_stream.Data_buf[95][2])
-    #define PAGE_CONTROL_Poten_Inst_ME (uint16_t) (CAN_stream.Data_buf[95][5] << 8 | CAN_stream.Data_buf[95][4])
-    #define PAGE_CONTROL_Giros_ME (uint16_t) (CAN_stream.Data_buf[95][1] << 8 | CAN_stream.Data_buf[95][0])
+    #define PAGE_CONTROL_Temperatura_MD (uint16_t) ((uint16_t) (CAN_stream.Data_buf[96][5] << 8 | CAN_stream.Data_buf[96][4]) + (uint16_t) (CAN_stream.Data_buf[86][7] << 8 | CAN_stream.Data_buf[86][6])) / 2
+    #define PAGE_CONTROL_Torque_Inst_MD (uint16_t) (CAN_stream.Data_buf[95][3] << 8 | CAN_stream.Data_buf[95][2])
+    #define PAGE_CONTROL_Poten_Inst_MD (uint16_t) (CAN_stream.Data_buf[95][5] << 8 | CAN_stream.Data_buf[95][4])
+    #define PAGE_CONTROL_Giros_MD (uint16_t) (CAN_stream.Data_buf[95][1] << 8 | CAN_stream.Data_buf[95][0])
+    #define PAGE_CONTROL_Temperatura_ME (uint16_t) ((uint16_t) (CAN_stream.Data_buf[86][5] << 8 | CAN_stream.Data_buf[86][4]) + (uint16_t) (CAN_stream.Data_buf[96][7] << 8 | CAN_stream.Data_buf[96][6])) / 2
+    #define PAGE_CONTROL_Torque_Inst_ME (uint16_t) (CAN_stream.Data_buf[85][3] << 8 | CAN_stream.Data_buf[85][2])
+    #define PAGE_CONTROL_Poten_Inst_ME (uint16_t) (CAN_stream.Data_buf[85][5] << 8 | CAN_stream.Data_buf[85][4])
+    #define PAGE_CONTROL_Giros_ME (uint16_t) (CAN_stream.Data_buf[85][1] << 8 | CAN_stream.Data_buf[85][0])
     #define PAGE_CONTROL_Angulo_Vol (uint16_t) (CAN_stream.Data_buf[76][3] << 8 | CAN_stream.Data_buf[76][2])
     #define PAGE_CONTROL_Angulo_Car (uint16_t) (CAN_stream.Data_buf[76][3] << 8 | CAN_stream.Data_buf[76][2]) // melhorar depois, pegar da IMU
     #define PAGE_CONTROL_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
@@ -114,7 +114,7 @@ extern uint8_t Flag_PopUP;
     #define PAGE_CONTROL_Frenagem *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_FRENAGEM_STATUS])
     #define PAGE_CONTROL_Acelerometro ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[1] << 8 | ((int16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[0]
     #define PAGE_CONTROL_Giroscopio ((int16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[1] << 8 | ((int16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[0]
-    #define PAGE_CONTROL_Torque (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
+    #define PAGE_CONTROL_Torque (uint16_t) (CAN_stream.Data_buf[95][3] << 8 | CAN_stream.Data_buf[95][2])
     #define PAGE_CONTROL_PopUp Flag_PopUP
 #endif
 
@@ -143,9 +143,10 @@ extern uint8_t Flag_PopUP;
     #define PAGE_SAFETY_Corrente_2 (int16_t) (CAN_stream.Data_buf[306][7] << 8 | CAN_stream.Data_buf[306][6])
     #define PAGE_SAFETY_Corrente_3 (int16_t) (CAN_stream.Data_buf[306][7] << 8 | CAN_stream.Data_buf[306][6])
     #define PAGE_SAFETY_Corrente_4 (int16_t) (CAN_stream.Data_buf[306][7] << 8 | CAN_stream.Data_buf[306][6])
-    #define PAGE_SAFETY_Charge (uint16_t) (CAN_stream.Data_buf[306][5] << 8 | CAN_stream.Data_buf[306][4]) / 10
+    #define PAGE_SAFETY_Charge (int16_t) (CAN_stream.Data_buf[306][5] << 8 | CAN_stream.Data_buf[306][4])
+    #define PAGE_SAFETY_Brake_Graph (int16_t) (CAN_stream.Data_buf[76][7] << 8 | CAN_stream.Data_buf[76][6]) * 100 // BRAKE BAR GRAPH
     #define PAGE_SAFETY_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
-    #define PAGE_SAFETY_Modo *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
+    #define PAGE_SAFETY_Modo (uint16_t) (CAN_stream.Data_buf[77][1] << 8 | CAN_stream.Data_buf[77][0])
     #define PAGE_SAFETY_Air (uint16_t) (CAN_stream.Data_buf[307][5] << 8 | CAN_stream.Data_buf[307][4])
     #define PAGE_SAFETY_Tensao_Max (uint16_t) (CAN_stream.Data_buf[306][3] << 8 | CAN_stream.Data_buf[306][2]) / 100
     #define PAGE_SAFETY_Tensao_Min (uint16_t) (CAN_stream.Data_buf[306][1] << 8 | CAN_stream.Data_buf[306][0]) / 100
