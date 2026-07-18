@@ -10,6 +10,19 @@ extern bool bottom_state;
 bool DRIVE_page_Interlock = false;
 int counter = 0;
 
+uint16_t calculate_max(uint16_t temp_array_arg[4])
+{
+	uint16_t max_temp = 0;
+	for (int i = 0; i < 4; i++)
+	{
+		if (temp_array_arg[i] > max_temp)
+		{
+			max_temp = temp_array_arg[i];
+		}
+	}
+	return max_temp;
+}
+
 DRIVERView::DRIVERView() {
 }
 
@@ -83,9 +96,12 @@ void DRIVERView::updateTick(void) {
 	// CHARGE_Progress.setValue(100 - PAGE_DRIVER_Charge);
 	CHARGE_Progress.setValue(PAGE_DRIVER_Brake_Graph);
 
+	uint16_t temp_array[4] = {PAGE_DRIVER_Velocidade_FL, PAGE_DRIVER_Velocidade_FR, PAGE_DRIVER_Velocidade_RL, PAGE_DRIVER_Velocidade_RR};
+	uint16_t max_velocidade = calculate_max(temp_array);
+
 	if (counter % 10 == 0) {
 		Unicode::snprintf(VELOCIMETRO_digitalBuffer, VELOCIMETRO_DIGITAL_SIZE,
-				"%02u", (uint16_t) PAGE_DRIVER_Velocidade % 100);
+				"%02u", (uint16_t) max_velocidade % 100);
 				// "%02u", (uint16_t) PAGE_DRIVER_Velocidade);
 		VELOCIMETRO_digital.invalidate();
 	}
