@@ -10,6 +10,12 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_LLL4" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_JCHU" Alignment="Center" TypographyId="Typography_01">
+        <Translation Language="GB">&lt;value&gt; Km</Translation>
+      </Text>
       <Text Id="__SingleUse_MVVT" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">0</Translation>
       </Text>
@@ -700,9 +706,6 @@
       <Text Id="__SingleUse_FP6W" Alignment="Left" TypographyId="Charge_percent">
         <Translation Language="GB">00000000</Translation>
       </Text>
-      <Text Id="__SingleUse_LLL4" Alignment="Left" TypographyId="Charge_percent">
-        <Translation Language="GB">0.00</Translation>
-      </Text>
       <Text Id="__SingleUse_T60R" Alignment="Left" TypographyId="Charge_percent">
         <Translation Language="GB">0</Translation>
       </Text>
@@ -905,7 +908,7 @@
         <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_P6H6" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt; V</Translation>
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
       </Text>
       <Text Id="__SingleUse_1RT6" Alignment="Center" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;%</Translation>
@@ -918,9 +921,6 @@
       </Text>
       <Text Id="__SingleUse_CFOO" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">00</Translation>
-      </Text>
-      <Text Id="__SingleUse_JCHU" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">&lt;value&gt; Km</Translation>
       </Text>
       <Text Id="__SingleUse_82UY" Alignment="Center" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;%</Translation>

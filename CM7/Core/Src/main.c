@@ -814,7 +814,7 @@ void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
 	CAN_Init();
-	osTimerStart(CanBusOFF_TimerHandle, 1000);
+	// osTimerStart(CanBusOFF_TimerHandle, 10000);
 	osTimerStart(BoardDataRATE_TimerHandle, 1000);
 	/* Infinite loop */
 	for (;;) {

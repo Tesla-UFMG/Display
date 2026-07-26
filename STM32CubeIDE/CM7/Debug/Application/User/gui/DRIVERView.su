@@ -12,7 +12,7 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:82:10:void touchgfx::Box::setAlpha(uint8_t)	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:97:18:virtual void touchgfx::Box::invalidateContent() const	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:53:26:FrontendApplication& DRIVERViewBase::application()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:50:26:FrontendApplication& DRIVERViewBase::application()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/driver_screen/DRIVERView.hpp:27:10:DRIVERView::~DRIVERView()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/driver_screen/DRIVERView.hpp:27:10:virtual DRIVERView::~DRIVERView()	16	static
 C:/dev/tesla/Display/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:13:10:uint16_t calculate_max(uint16_t*)	24	static
