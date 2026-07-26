@@ -106,6 +106,7 @@
             "Type": "Image",
             "Name": "BACKGROUND",
             "X": 1,
+            "Y": -1,
             "Width": 481,
             "Height": 273,
             "RelativeFilename": "DRIVE_page\\BACKGROUND\\PAGE_DRIVE.png"
@@ -113,15 +114,15 @@
           {
             "Type": "Gauge",
             "Name": "POTENCIMETRO_gauge",
-            "X": 73,
-            "Y": 6,
+            "X": 133,
+            "Y": 1,
             "Width": 285,
             "Height": 263,
             "FileNameBackground": "DRIVE_page\\VELOCIMETRO_gauge\\VELOCIMETRO_BASE.png",
+            "BackgroundOffsetX": -25.0,
             "RotationCenterX": 128.8,
             "RotationCenterY": 131.5,
-            "StartAngle": -180.0,
-            "EndAngle": 80.0,
+            "EndAngle": 260.0,
             "RangeMax": 130.0,
             "InitialValue": 130.0,
             "UseAnimation": true,
@@ -147,73 +148,43 @@
           {
             "Type": "LineProgress",
             "Name": "CHARGE_Progress",
-            "X": 367,
-            "Y": -1,
-            "Width": 47,
-            "Height": 236,
+            "X": 369,
+            "Width": 51,
+            "Height": 233,
+            "Visible": false,
+            "FileNameProgress": "DRIVE_page\\CHARGE_widget\\charge_progess_02.png",
+            "Color": {
+              "Red": 245,
+              "Green": 5,
+              "Blue": 5
+            },
             "StartX": 25.0,
             "EndY": 237.0,
             "EndX": 25.0,
             "LineWidth": 50.0,
             "LineEndingStyle": "Butt",
-            "FileNameBackground": "DRIVE_page\\CHARGE_widget\\CHARGE_progress.png",
+            "FileNameBackground": "DRIVE_page\\CHARGE_widget\\CHARGE_background.png",
             "ProgressRangeMax": 100,
             "Fadeable": true
           },
           {
             "Type": "Image",
             "Name": "PopUp",
-            "X": 279,
-            "Y": 236,
+            "Y": -1,
             "Width": 201,
             "Height": 36,
             "Visible": false,
             "RelativeFilename": "POP_UP_widget\\POPuP_CAN_OFF_1.png"
           },
           {
-            "Type": "Button",
-            "Name": "PAGE_Debug",
-            "Y": 204,
-            "Width": 66,
-            "Height": 68,
-            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_DOWN_ON.png",
-            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_DOWN_OFF.png"
-          },
-          {
-            "Type": "Button",
-            "Name": "PAGE_Safety",
-            "Y": 137,
-            "Width": 66,
-            "Height": 66,
-            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_DOWN_ON.png",
-            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_DOWN_OFF.png"
-          },
-          {
-            "Type": "Button",
-            "Name": "PAGE_Control",
-            "Y": 69,
-            "Width": 66,
-            "Height": 66,
-            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_UP_ON.png",
-            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_MID_UP_OFF.png"
-          },
-          {
-            "Type": "Button",
-            "Name": "PAGE_Drive",
-            "Width": 66,
-            "Height": 68,
-            "Pressed": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_UP_OFF.png",
-            "Released": "DRIVE_page\\PAGE_widget\\BACKGROUND\\BOTTOM_UP_ON_SELECT.png"
-          },
-          {
             "Type": "TextArea",
             "Name": "brake_bias",
-            "X": 429,
-            "Y": 134,
+            "X": 13,
+            "Y": 120,
             "Width": 39,
             "Height": 15,
             "TextId": "__SingleUse_MUJP",
-            "TextRotation": "0",
+            "TextRotation": "180",
             "Color": {
               "Red": 255,
               "Blue": 21
@@ -228,12 +199,12 @@
           {
             "Type": "TextArea",
             "Name": "tensao_min",
-            "X": 423,
-            "Y": 174,
+            "X": 5,
+            "Y": 84,
             "Width": 54,
             "Height": 15,
             "TextId": "__SingleUse_Y52B",
-            "TextRotation": "0",
+            "TextRotation": "180",
             "Color": {
               "Red": 255,
               "Green": 255,
@@ -249,12 +220,12 @@
           {
             "Type": "TextArea",
             "Name": "temp_max",
-            "X": 429,
-            "Y": 213,
+            "X": 9,
+            "Y": 43,
             "Width": 47,
             "Height": 15,
             "TextId": "__SingleUse_P6H6",
-            "TextRotation": "0",
+            "TextRotation": "180",
             "Color": {
               "Red": 255,
               "Green": 255,
@@ -270,12 +241,12 @@
           {
             "Type": "TextArea",
             "Name": "VELOCIMETRO_digital",
-            "X": 161,
-            "Y": 95,
+            "X": 223,
+            "Y": 99,
             "Width": 84,
             "Height": 76,
             "TextId": "__SingleUse_G2QD",
-            "TextRotation": "0",
+            "TextRotation": "180",
             "Color": {
               "Red": 255,
               "Green": 255,
@@ -286,17 +257,18 @@
               "UseBuffer": true,
               "BufferSize": 5
             },
+            "Draggable": true,
             "Fadeable": true
           },
           {
             "Type": "TextArea",
             "Name": "torque",
-            "X": 419,
-            "Y": 95,
-            "Width": 60,
+            "X": 3,
+            "Y": 160,
+            "Width": 59,
             "Height": 15,
             "TextId": "__SingleUse_82UY",
-            "TextRotation": "0",
+            "TextRotation": "180",
             "Color": {
               "Red": 255,
               "Green": 255,
@@ -312,12 +284,12 @@
           {
             "Type": "TextArea",
             "Name": "charge_percent",
-            "X": 300,
-            "Y": 6,
+            "X": 125,
+            "Y": 246,
             "Width": 58,
             "Height": 18,
             "TextId": "__SingleUse_W9BV",
-            "TextRotation": "0",
+            "TextRotation": "180",
             "Color": {
               "Red": 255,
               "Green": 255,
@@ -337,6 +309,7 @@
             "Y": 165,
             "Width": 78,
             "Height": 19,
+            "Visible": false,
             "TextId": "__SingleUse_JCHU",
             "TextRotation": "0",
             "Color": {
@@ -354,10 +327,11 @@
           {
             "Type": "Image",
             "Name": "ICON_Modo",
-            "X": 443,
-            "Y": 55,
+            "X": 24,
+            "Y": 202,
             "Width": 16,
             "Height": 16,
+            "Visible": false,
             "RelativeFilename": "DRIVE_page\\INFO_widget\\ICONS\\MODO_Erro.png"
           },
           {
@@ -366,6 +340,7 @@
             "X": 420,
             "Width": 62,
             "Height": 37,
+            "Visible": false,
             "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\INFO_LORA_SELECT.png",
             "Released": "DRIVE_page\\INFO_widget\\BACKGROUND\\INFO_LORA.png"
           },
@@ -376,6 +351,7 @@
             "Y": 15,
             "Width": 23,
             "Height": 17,
+            "Visible": false,
             "RelativeFilename": "DRIVE_page\\INFO_widget\\ICONS\\LORA_OFF.png"
           },
           {
@@ -454,8 +430,7 @@
             "InteractionName": "Interaction_CONTROL_page_press",
             "HasCompletedTrigger": true,
             "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PAGE_Control"
+              "Type": "TriggerClicked"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -490,8 +465,7 @@
             "InteractionName": "Interaction_SAFETY_page_press",
             "HasCompletedTrigger": true,
             "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PAGE_Safety"
+              "Type": "TriggerClicked"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -526,8 +500,7 @@
             "InteractionName": "Interaction_DEBUG_page_press",
             "HasCompletedTrigger": true,
             "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PAGE_Debug"
+              "Type": "TriggerClicked"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -1187,14 +1160,15 @@
             "Name": "CHARGE_Progress",
             "X": 367,
             "Y": -1,
-            "Width": 47,
-            "Height": 236,
+            "Width": 51,
+            "Height": 233,
+            "FileNameProgress": "DRIVE_page\\CHARGE_widget\\charge_progess_02.png",
             "StartX": 25.4,
             "EndY": 237.0,
             "EndX": 25.5,
             "LineWidth": 50.9,
             "LineEndingStyle": "Butt",
-            "FileNameBackground": "DRIVE_page\\CHARGE_widget\\CHARGE_progress.png",
+            "FileNameBackground": "DRIVE_page\\CHARGE_widget\\CHARGE_background.png",
             "ProgressRangeMax": 100,
             "Fadeable": true
           },
@@ -5736,7 +5710,7 @@
       "Height": 272
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "ANIMATION",
+    "StartupScreenName": "DRIVER",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

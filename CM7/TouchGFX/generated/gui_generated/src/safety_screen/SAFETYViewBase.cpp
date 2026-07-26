@@ -25,10 +25,10 @@ SAFETYViewBase::SAFETYViewBase() :
     add(BACKGROUND);
 
     CHARGE_Progress.setXY(367, -1);
-    CHARGE_Progress.setProgressIndicatorPosition(0, 0, 47, 236);
+    CHARGE_Progress.setProgressIndicatorPosition(0, 0, 51, 233);
     CHARGE_Progress.setRange(0, 100);
-    CHARGE_Progress.setBackground(touchgfx::Bitmap(BITMAP_CHARGE_PROGRESS_ID));
-    CHARGE_ProgressPainter.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    CHARGE_Progress.setBackground(touchgfx::Bitmap(BITMAP_CHARGE_BACKGROUND_ID));
+    CHARGE_ProgressPainter.setBitmap(touchgfx::Bitmap(BITMAP_CHARGE_PROGESS_02_ID));
     CHARGE_Progress.setPainter(CHARGE_ProgressPainter);
     CHARGE_Progress.setStart(25.4f, 0.0f);
     CHARGE_Progress.setEnd(25.5f, 237.0f);

@@ -12,11 +12,11 @@
 #include <touchgfx/widgets/Gauge.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp>
 #include <touchgfx/containers/progress_indicators/LineProgress.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/FadeAnimator.hpp>
-#include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/mixins/Draggable.hpp>
+#include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <gui/containers/LoRA_PopUp.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
@@ -34,10 +34,6 @@ public:
      * Virtual Action Handlers
      */
     virtual void TransitionBegin_Driver()
-    {
-        // Override and implement this function in DRIVER
-    }
-    virtual void TransitionEnd_Driver()
     {
         // Override and implement this function in DRIVER
     }
@@ -63,16 +59,12 @@ protected:
     touchgfx::Gauge POTENCIMETRO_gauge;
     touchgfx::PainterRGB565Bitmap POTENCIMETRO_gaugePainter;
     touchgfx::FadeAnimator< touchgfx::LineProgress > CHARGE_Progress;
-    touchgfx::PainterRGB565 CHARGE_ProgressPainter;
+    touchgfx::PainterRGB565Bitmap CHARGE_ProgressPainter;
     touchgfx::Image PopUp;
-    touchgfx::Button PAGE_Debug;
-    touchgfx::Button PAGE_Safety;
-    touchgfx::Button PAGE_Control;
-    touchgfx::Button PAGE_Drive;
     touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > brake_bias;
     touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > tensao_min;
     touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > temp_max;
-    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > VELOCIMETRO_digital;
+    touchgfx::Draggable< touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > > VELOCIMETRO_digital;
     touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > torque;
     touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > charge_percent;
     touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > hodometro;

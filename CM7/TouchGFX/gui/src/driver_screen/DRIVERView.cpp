@@ -8,6 +8,20 @@ extern bool bottom_state;
 #define TIME_TRANSITION 15U
 
 bool DRIVE_page_Interlock = false;
+int counter = 0;
+
+uint16_t calculate_max(uint16_t temp_array_arg[4])
+{
+	uint16_t max_temp = 0;
+	for (int i = 0; i < 4; i++)
+	{
+		if (temp_array_arg[i] > max_temp)
+		{
+			max_temp = temp_array_arg[i];
+		}
+	}
+	return max_temp;
+}
 
 DRIVERView::DRIVERView() {
 }
@@ -69,6 +83,7 @@ void DRIVERView::LORA_End() {
 }
 
 void DRIVERView::updateTick(void) {
+	counter++;
 #ifndef SIMULATOR
 	BACKGROUND.invalidate();
 	if (bottom_state && !DRIVE_page_Interlock)
@@ -78,14 +93,26 @@ void DRIVERView::updateTick(void) {
 
 	POTENCIMETRO_gauge.setValue(PAGE_DRIVER_Potencia);
 
-	CHARGE_Progress.setValue(100 - PAGE_DRIVER_Charge);
+	// CHARGE_Progress.setValue(100 - PAGE_DRIVER_Charge);
+	CHARGE_Progress.setValue(PAGE_DRIVER_Brake_Graph);
 
-	Unicode::snprintf(VELOCIMETRO_digitalBuffer, VELOCIMETRO_DIGITAL_SIZE,
-			"%02u", (uint8_t) PAGE_DRIVER_Velocidade % 100);
-	VELOCIMETRO_digital.invalidate();
+	uint16_t temp_array[4] = {PAGE_DRIVER_Velocidade_FL, PAGE_DRIVER_Velocidade_FR, PAGE_DRIVER_Velocidade_RL, PAGE_DRIVER_Velocidade_RR};
+	uint16_t max_velocidade = calculate_max(temp_array);
 
-	Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u",
-			(uint8_t) PAGE_DRIVER_Charge);
+	if (counter % 10 == 0) {
+		Unicode::snprintf(VELOCIMETRO_digitalBuffer, VELOCIMETRO_DIGITAL_SIZE,
+				"%02u", (uint16_t) max_velocidade % 100);
+				// "%02u", (uint16_t) PAGE_DRIVER_Velocidade);
+		VELOCIMETRO_digital.invalidate();
+	}
+
+	// Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u",
+	// 		(uint16_t) PAGE_DRIVER_Charge);
+	// charge_percent.invalidate();
+
+	Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%u.%u",
+			(uint16_t) PAGE_DRIVER_Charge / 10,
+			(uint16_t) PAGE_DRIVER_Charge % 10);
 	charge_percent.invalidate();
 
 	Unicode::snprintf(hodometroBuffer, HODOMETRO_SIZE, "%u.%02u",
@@ -106,10 +133,15 @@ void DRIVERView::updateTick(void) {
 			(uint16_t) PAGE_DRIVER_Tensao_Min % 100);
 	tensao_min.invalidate();
 
-	Unicode::snprintf(temp_maxBuffer, TEMP_MAX_SIZE, "%u.%01u",
-			(uint16_t) PAGE_DRIVER_Temp_Max / 10,
-			(uint16_t) PAGE_DRIVER_Temp_Max % 10);
+	Unicode::snprintf(temp_maxBuffer, TEMP_MAX_SIZE, "%u.%02u",
+			(uint16_t) PAGE_DRIVER_Temp_Max / 100,
+			(uint16_t) PAGE_DRIVER_Temp_Max % 100);
 	temp_max.invalidate();
+
+	// Unicode::snprintf(temp_maxBuffer, TEMP_MAX_SIZE, "%u.%01u",
+	// 		(uint16_t) PAGE_DRIVER_Temp_Max / 10,
+	// 		(uint16_t) PAGE_DRIVER_Temp_Max % 10);
+	// temp_max.invalidate();
 
 	setIcon_LoRa((LoRa_Status_t) PAGE_DRIVER_LoRa_State);
 

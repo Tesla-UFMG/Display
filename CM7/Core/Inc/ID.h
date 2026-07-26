@@ -17,6 +17,8 @@
 #ifndef INC_ID_H_
 #define INC_ID_H_
 
+// #define UPDATED_PROTOCOL
+
 /* --- Control --- */
 /* ECU */
 #define CanID_ECU_VELOCIDADE_MED 201
@@ -76,12 +78,12 @@
 #define CanID_ECU_ALARM_ATUAL_MD 252
 
 /* ECU DEBUG */
-#define CanID_ECU_DEBUG_0 260
-#define CanID_ECU_DEBUG_1 261
-#define CanID_ECU_DEBUG_2 262
+#define CanID_ECU_DEBUG_0 460
+#define CanID_ECU_DEBUG_1 461
+#define CanID_ECU_DEBUG_2 462
 /* IMU */
-#define CanID_ECU_ACEL_IMU_Temp 291
-#define CanID_ECU_GIR_IMU_Erro 292
+#define CanID_ECU_ACEL_IMU_Temp 259
+#define CanID_ECU_GIR_IMU_Erro 260
 /* --------------- */
 
 /* --- Data Acquisition --- */
@@ -114,77 +116,78 @@
 
 /* Coletora */
 
-/* MLX Dian. E. */
-#define CanID_AQS_MLX_DE_linha_1 30
-#define CanID_AQS_MLX_DE_linha_2 31
-#define CanID_AQS_MLX_DE_linha_3 32
-#define CanID_AQS_MLX_DE_linha_4 33
-#define CanID_AQS_MLX_DE_linha_5 34
-#define CanID_AQS_MLX_DE_linha_6 35
-#define CanID_AQS_MLX_DE_linha_7 36
-#define CanID_AQS_MLX_DE_linha_8 37
-#define CanID_AQS_MLX_DE_linha_9 38
-#define CanID_AQS_MLX_DE_linha_10 39
-#define CanID_AQS_MLX_DE_linha_11 40
-#define CanID_AQS_MLX_DE_linha_12 41
-#define CanID_AQS_MLX_DE_linha_13 42
-#define CanID_AQS_MLX_DE_linha_14 43
-#define CanID_AQS_MLX_DE_linha_15 44
-#define CanID_AQS_MLX_DE_linha_16 45
+// /* MLX Dian. E. */
+// #define CanID_AQS_MLX_DE_linha_1 30
+// #define CanID_AQS_MLX_DE_linha_2 31
+// #define CanID_AQS_MLX_DE_linha_3 32
+// #define CanID_AQS_MLX_DE_linha_4 33
+// #define CanID_AQS_MLX_DE_linha_5 34
+// #define CanID_AQS_MLX_DE_linha_6 35
+// #define CanID_AQS_MLX_DE_linha_7 36
+// #define CanID_AQS_MLX_DE_linha_8 37
+// #define CanID_AQS_MLX_DE_linha_9 38
+// #define CanID_AQS_MLX_DE_linha_10 39
+// #define CanID_AQS_MLX_DE_linha_11 40
+// #define CanID_AQS_MLX_DE_linha_12 41
+// #define CanID_AQS_MLX_DE_linha_13 42
+// #define CanID_AQS_MLX_DE_linha_14 43
+// #define CanID_AQS_MLX_DE_linha_15 44
+// #define CanID_AQS_MLX_DE_linha_16 45
 
-/* MLX Dian. D. */
-#define CanID_AQS_MLX_DD_linha_1 46
-#define CanID_AQS_MLX_DD_linha_2 47
-#define CanID_AQS_MLX_DD_linha_3 48
-#define CanID_AQS_MLX_DD_linha_4 49
-#define CanID_AQS_MLX_DD_linha_5 50
-#define CanID_AQS_MLX_DD_linha_6 51
-#define CanID_AQS_MLX_DD_linha_7 52
-#define CanID_AQS_MLX_DD_linha_8 53
-#define CanID_AQS_MLX_DD_linha_9 54
-#define CanID_AQS_MLX_DD_linha_10 55
-#define CanID_AQS_MLX_DD_linha_11 56
-#define CanID_AQS_MLX_DD_linha_12 57
-#define CanID_AQS_MLX_DD_linha_13 58
-#define CanID_AQS_MLX_DD_linha_14 59
-#define CanID_AQS_MLX_DD_linha_15 60
-#define CanID_AQS_MLX_DD_linha_16 61
+// /* MLX Dian. D. */
+// #define CanID_AQS_MLX_DD_linha_1 46
+// #define CanID_AQS_MLX_DD_linha_2 47
+// #define CanID_AQS_MLX_DD_linha_3 48
+// #define CanID_AQS_MLX_DD_linha_4 49
+// #define CanID_AQS_MLX_DD_linha_5 50
+// #define CanID_AQS_MLX_DD_linha_6 51
+// #define CanID_AQS_MLX_DD_linha_7 52
+// #define CanID_AQS_MLX_DD_linha_8 53
+// #define CanID_AQS_MLX_DD_linha_9 54
+// #define CanID_AQS_MLX_DD_linha_10 55
+// #define CanID_AQS_MLX_DD_linha_11 56
+// #define CanID_AQS_MLX_DD_linha_12 57
+// #define CanID_AQS_MLX_DD_linha_13 58
+// #define CanID_AQS_MLX_DD_linha_14 59
+// #define CanID_AQS_MLX_DD_linha_15 60
+// #define CanID_AQS_MLX_DD_linha_16 61
 
-/* MLX Tras. E. */
-#define CanID_AQS_MLX_TE_linha_1 62
-#define CanID_AQS_MLX_TE_linha_2 63
-#define CanID_AQS_MLX_TE_linha_3 64
-#define CanID_AQS_MLX_TE_linha_4 65
-#define CanID_AQS_MLX_TE_linha_5 66
-#define CanID_AQS_MLX_TE_linha_6 67
-#define CanID_AQS_MLX_TE_linha_7 68
-#define CanID_AQS_MLX_TE_linha_8 69
-#define CanID_AQS_MLX_TE_linha_9 70
-#define CanID_AQS_MLX_TE_linha_10 71
-#define CanID_AQS_MLX_TE_linha_11 72
-#define CanID_AQS_MLX_TE_linha_12 73
-#define CanID_AQS_MLX_TE_linha_13 74
-#define CanID_AQS_MLX_TE_linha_14 75
-#define CanID_AQS_MLX_TE_linha_15 76
-#define CanID_AQS_MLX_TE_linha_16 77
+// /* MLX Tras. E. */
+// #define CanID_AQS_MLX_TE_linha_1 62
+// #define CanID_AQS_MLX_TE_linha_2 63
+// #define CanID_AQS_MLX_TE_linha_3 64
+// #define CanID_AQS_MLX_TE_linha_4 65
+// #define CanID_AQS_MLX_TE_linha_5 66
+// #define CanID_AQS_MLX_TE_linha_6 67
+// #define CanID_AQS_MLX_TE_linha_7 68
+// #define CanID_AQS_MLX_TE_linha_8 69
+// #define CanID_AQS_MLX_TE_linha_9 70
+// #define CanID_AQS_MLX_TE_linha_10 71
+// #define CanID_AQS_MLX_TE_linha_11 72
+// #define CanID_AQS_MLX_TE_linha_12 73
+// #define CanID_AQS_MLX_TE_linha_13 74
+// #define CanID_AQS_MLX_TE_linha_14 75
+// #define CanID_AQS_MLX_TE_linha_15 76
+// #define CanID_AQS_MLX_TE_linha_16 77
 
-/* MLX Tras. D. */
-#define CanID_AQS_MLX_TD_linha_1 78
-#define CanID_AQS_MLX_TD_linha_2 79
-#define CanID_AQS_MLX_TD_linha_3 80
-#define CanID_AQS_MLX_TD_linha_4 81
-#define CanID_AQS_MLX_TD_linha_5 82
-#define CanID_AQS_MLX_TD_linha_6 83
-#define CanID_AQS_MLX_TD_linha_7 84
-#define CanID_AQS_MLX_TD_linha_8 85
-#define CanID_AQS_MLX_TD_linha_9 86
-#define CanID_AQS_MLX_TD_linha_10 87
-#define CanID_AQS_MLX_TD_linha_11 88
-#define CanID_AQS_MLX_TD_linha_12 89
-#define CanID_AQS_MLX_TD_linha_13 90
-#define CanID_AQS_MLX_TD_linha_14 91
-#define CanID_AQS_MLX_TD_linha_15 92
-#define CanID_AQS_MLX_TD_linha_16 93
+// /* MLX Tras. D. */
+// #define CanID_AQS_MLX_TD_linha_1 78
+// #define CanID_AQS_MLX_TD_linha_2 79
+// #define CanID_AQS_MLX_TD_linha_3 80
+// #define CanID_AQS_MLX_TD_linha_4 81
+// #define CanID_AQS_MLX_TD_linha_5 82
+// #define CanID_AQS_MLX_TD_linha_6 83
+// #define CanID_AQS_MLX_TD_linha_7 84
+// #define CanID_AQS_MLX_TD_linha_8 85
+// #define CanID_AQS_MLX_TD_linha_9 86
+// #define CanID_AQS_MLX_TD_linha_10 87
+// #define CanID_AQS_MLX_TD_linha_11 88
+// #define CanID_AQS_MLX_TD_linha_12 89
+// #define CanID_AQS_MLX_TD_linha_13 90
+// #define CanID_AQS_MLX_TD_linha_14 91
+// #define CanID_AQS_MLX_TD_linha_15 92
+// #define CanID_AQS_MLX_TD_linha_16 93
+
 
 /* --------------- */
 

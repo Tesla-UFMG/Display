@@ -10,7 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/containers/progress_indicators/LineProgress.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/FadeAnimator.hpp>
 #include <touchgfx/widgets/Button.hpp>
@@ -113,7 +113,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Image BACKGROUND;
     touchgfx::FadeAnimator< touchgfx::LineProgress > CHARGE_Progress;
-    touchgfx::PainterRGB565 CHARGE_ProgressPainter;
+    touchgfx::PainterRGB565Bitmap CHARGE_ProgressPainter;
     touchgfx::Image PopUp;
     touchgfx::Button PAGE_Debug;
     touchgfx::Button PAGE_Safety;

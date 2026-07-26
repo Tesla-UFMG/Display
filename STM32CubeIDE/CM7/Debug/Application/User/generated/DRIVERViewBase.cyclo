@@ -1,11 +1,12 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:78:5:touchgfx::colortype::colortype()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:91:5:touchgfx::colortype::colortype(uint32_t)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:114:5:touchgfx::colortype::operator uint32_t() const	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:127:5:touchgfx::Rect::Rect()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:140:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:132:5:touchgfx::Bitmap::Bitmap(touchgfx::BitmapId)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:206:10:touchgfx::Rect touchgfx::Bitmap::getRect() const	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:123:20:touchgfx::ClickEvent::ClickEventType touchgfx::ClickEvent::getType() const	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/events/DragEvent.hpp:122:13:int16_t touchgfx::DragEvent::getDeltaX() const	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/events/DragEvent.hpp:132:13:int16_t touchgfx::DragEvent::getDeltaY() const	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:62:13:touchgfx::Drawable::~Drawable()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:62:13:virtual touchgfx::Drawable::~Drawable()	1
@@ -73,17 +74,6 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:34:7:touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:34:7:virtual touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp:45:5:touchgfx::PainterRGB565Bitmap::PainterRGB565Bitmap(const touchgfx::Bitmap&)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:43:5:touchgfx::AbstractPainterColor::AbstractPainterColor(touchgfx::colortype)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:49:13:touchgfx::AbstractPainterColor::~AbstractPainterColor()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:49:13:virtual touchgfx::AbstractPainterColor::~AbstractPainterColor()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:58:18:virtual void touchgfx::AbstractPainterColor::setColor(touchgfx::colortype)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:42:5:touchgfx::PainterRGB565::PainterRGB565(touchgfx::colortype)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:47:18:virtual void touchgfx::PainterRGB565::setColor(touchgfx::colortype)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:63:10:void touchgfx::AbstractButton::setAction(touchgfx::GenericCallback<const touchgfx::AbstractButton&>&)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:touchgfx::AbstractButton::~AbstractButton()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:virtual touchgfx::AbstractButton::~AbstractButton()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:34:5:touchgfx::Button::Button()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:59:5:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
@@ -109,6 +99,11 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:79:10:void touchgfx::TextAreaWithOneWildcard::setWildcard1(const UnicodeChar*)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:84:41:virtual const UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:98:10:void touchgfx::TextAreaWithOneWildcard::setWildcard(const UnicodeChar*)	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:63:10:void touchgfx::AbstractButton::setAction(touchgfx::GenericCallback<const touchgfx::AbstractButton&>&)	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:touchgfx::AbstractButton::~AbstractButton()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:virtual touchgfx::AbstractButton::~AbstractButton()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:34:5:touchgfx::Button::Button()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:40:7:touchgfx::Container::~Container()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:40:7:virtual touchgfx::Container::~Container()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:37:5:touchgfx::AbstractButtonContainer::AbstractButtonContainer()	1
@@ -133,20 +128,19 @@
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp:20:13:LoRA_PopUp::~LoRA_PopUp()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp:20:13:virtual LoRA_PopUp::~LoRA_PopUp()	1
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:36:18:virtual void DRIVERViewBase::TransitionBegin_Driver()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:40:18:virtual void DRIVERViewBase::TransitionEnd_Driver()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:44:18:virtual void DRIVERViewBase::LORA_Begin()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:48:18:virtual void DRIVERViewBase::LORA_End()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:54:26:FrontendApplication& DRIVERViewBase::application()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:40:18:virtual void DRIVERViewBase::LORA_Begin()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:44:18:virtual void DRIVERViewBase::LORA_End()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:50:26:FrontendApplication& DRIVERViewBase::application()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<DRIVERPresenter>::~View()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<DRIVERPresenter>::~View()	1
 C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:10:1:DRIVERViewBase::DRIVERViewBase()	1
-C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:172:1:DRIVERViewBase::~DRIVERViewBase()	1
-C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:172:1:virtual DRIVERViewBase::~DRIVERViewBase()	1
-C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:177:6:virtual void DRIVERViewBase::setupScreen()	1
-C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:183:6:void DRIVERViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	5
-C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:230:6:void DRIVERViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	2
-C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:241:6:virtual void DRIVERViewBase::transitionBegins()	1
-C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:249:6:virtual void DRIVERViewBase::handleTickEvent()	7
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:164:1:DRIVERViewBase::~DRIVERViewBase()	1
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:164:1:virtual DRIVERViewBase::~DRIVERViewBase()	1
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:169:6:virtual void DRIVERViewBase::setupScreen()	1
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:175:6:void DRIVERViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	2
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:186:6:void DRIVERViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	2
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:197:6:virtual void DRIVERViewBase::transitionBegins()	1
+C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIVERViewBase.cpp:205:6:virtual void DRIVERViewBase::handleTickEvent()	7
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = DRIVERPresenter]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:37:7:touchgfx::AbstractProgressIndicator::~AbstractProgressIndicator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:37:7:virtual touchgfx::AbstractProgressIndicator::~AbstractProgressIndicator()	1
@@ -160,6 +154,9 @@ C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIV
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::TextAreaWithOneWildcard]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard>::~FadeAnimator()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard>::~FadeAnimator()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/Draggable.hpp:36:5:touchgfx::Draggable<T>::Draggable() [with T = touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard>]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::Box]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::ClickButtonTrigger()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	1
@@ -192,8 +189,8 @@ C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIV
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::Box>::~FadeAnimator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::Box>::~FadeAnimator()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard>::~FadeAnimator()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard>::~FadeAnimator()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/Draggable.hpp:32:7:touchgfx::Draggable<touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard> >::~Draggable()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/Draggable.hpp:32:7:virtual touchgfx::Draggable<touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard> >::~Draggable()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::LineProgress>::~FadeAnimator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::LineProgress>::~FadeAnimator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:46:7:touchgfx::TextureMapper::~TextureMapper()	1
@@ -204,8 +201,6 @@ C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIV
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Gauge.hpp:35:7:virtual touchgfx::Gauge::~Gauge()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp:37:7:touchgfx::PainterRGB565Bitmap::~PainterRGB565Bitmap()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp:37:7:virtual touchgfx::PainterRGB565Bitmap::~PainterRGB565Bitmap()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:34:7:touchgfx::PainterRGB565::~PainterRGB565()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:34:7:virtual touchgfx::PainterRGB565::~PainterRGB565()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = DRIVERViewBase; T1 = const touchgfx::AbstractButtonContainer&]	2
@@ -219,6 +214,7 @@ C:/dev/tesla/Display/CM7/TouchGFX/generated/gui_generated/src/driver_screen/DRIV
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::Box]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::Box]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::Box]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/Draggable.hpp:48:18:void touchgfx::Draggable<T>::handleDragEvent(const touchgfx::DragEvent&) [with T = touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard>]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::TextAreaWithOneWildcard]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::TextAreaWithOneWildcard]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::TextAreaWithOneWildcard]	1
